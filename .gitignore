@@ -6,9 +6,7 @@ __pycache__/
 .venv/
 venv/
 
-# 大型中间产物（结果上传前按需保留，勿提交原始网格输出）
-output/problem2/v2_standard_grid/200x100/M1/run_1/
-output/problem2/v2_standard_grid/100x50/M1/run_1/
+# 大型二进制快照（正式 summary/图表照常提交）
 *.npz
 
 # 编译产物

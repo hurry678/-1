@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# 大型中间产物（结果上传前按需保留，勿提交原始网格输出）
+output/problem2/v2_standard_grid/200x100/M1/run_1/
+output/problem2/v2_standard_grid/100x50/M1/run_1/
+*.npz
+
+# 编译产物
+build/
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.xdv
+
+# 临时 / 本地
+tmp/
+.DS_Store
+Thumbs.db

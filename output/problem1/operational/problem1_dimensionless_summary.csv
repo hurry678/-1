@@ -1,0 +1,9 @@
+﻿metric,value
+characteristic_time_s,40000.0
+rossby_number,0.17857142857142858
+inertia_over_retained_sum,0.006656770388403947
+inertia_over_coriolis,0.17857142857142858
+inertia_over_drag,0.008946341463414635
+balanced_relative_speed_mps,0.15710248723046083
+drag_adjustment_time_at_0p5_s,357.8536585365854
+drag_adjustment_time_at_balance_s,1138.9178645263378

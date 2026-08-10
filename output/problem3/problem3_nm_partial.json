@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-08-08T03:11:56.043050+08:00",
+  "phase": "nelder_mead_done",
+  "nelder_mead": {
+    "method": "nelder_mead_multi_start",
+    "parallel_starts": true,
+    "best_parameters": {
+      "cd": 0.007637892723083475,
+      "alpha": 1.4983543395996093
+    },
+    "best_cost": 641.5175621245853,
+    "forward_evaluations": 120,
+    "wall_clock_seconds": 5213.1138549000025
+  },
+  "nelder_mead_records": [
+    {
+      "start": [
+        0.005,
+        1.0
+      ],
+      "estimate": [
+        0.007637892723083475,
+        1.4983543395996093
+      ],
+      "cost": 641.5175621245853,
+      "iterations": 20,
+      "evaluations": 40,
+      "success": false,
+      "message": "Maximum number of function evaluations has been exceeded.",
+      "wall_clock_seconds": 3582.486624399957
+    },
+    {
+      "start": [
+        0.002,
+        0.5
+      ],
+      "estimate": [
+        0.0025208984375000017,
+        0.5
+      ],
+      "cost": 698.1309745016744,
+      "iterations": 21,
+      "evaluations": 40,
+      "success": false,
+      "message": "Maximum number of function evaluations has been exceeded.",
+      "wall_clock_seconds": 5211.334703600034
+    },
+    {
+      "start": [
+        0.012,
+        1.2
+      ],
+      "estimate": [
+        0.014664843750000003,
+        1.5
+      ],
+      "cost": 647.0024239750901,
+      "iterations": 23,
+      "evaluations": 40,
+      "success": false,
+      "message": "Maximum number of function evaluations has been exceeded.",
+      "wall_clock_seconds": 2957.881027699972
+    }
+  ]
+}

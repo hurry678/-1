@@ -1,0 +1,14 @@
+{
+  "operational": {
+    "samples": 20000,
+    "seed": 42,
+    "eta_inertia_lt_0p05_fraction": 0.9988,
+    "output_dir": "C:\\work\\数模\\集训模型1\\output\\problem1\\operational"
+  },
+  "stress": {
+    "samples": 20000,
+    "seed": 42,
+    "eta_inertia_lt_0p05_fraction": 0.5972,
+    "output_dir": "C:\\work\\数模\\集训模型1\\output\\problem1\\stress"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-08-08T13:03:18.326676+08:00",
+  "sensitivity": [
+    {
+      "kappa_s": 0.5,
+      "coeffs": [
+        -0.015824441463073227,
+        0.005855820736546626,
+        0.0013140745830911677,
+        0.011083242403564833,
+        -0.010419359757237335,
+        -0.0018232546492689908,
+        0.0044307401570199524,
+        -0.0037190656721617504,
+        0.001538502479323161,
+        -0.0023249550070039574,
+        0.0011663187677159706,
+        0.0005773452485635762
+      ],
+      "optimized_cost": 6487.720316350427,
+      "baseline_background_cost": 6522.190966277578,
+      "cost_reduction_pct": 0.5285133493541985,
+      "success": false,
+      "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+      "iterations": 10,
+      "evaluations": 20,
+      "wall_clock_seconds": 2706.918070200016,
+      "max_initial_thickness_m": 0.7844805577971875,
+      "min_initial_thickness_m": 0.17257462330284318,
+      "mean_abs_background_deviation_m": 0.016141045719826063,
+      "max_abs_background_deviation_m": 0.037882667280736776,
+      "baseline_predicted_velocity_rms_mps": 0.03802982840479085,
+      "optimized_predicted_velocity_rms_mps": 0.03922944910600282
+    },
+    {
+      "kappa_s": 0.0,
+      "coeffs": [
+        -0.01582185042169176,
+        0.005858462773556631,
+        0.001313025604819859,
+        0.011081244907994222,
+        -0.010418384722953204,
+        -0.0018201604825471354,
+        0.004435044622022273,
+        -0.0037293822377636454,
+        0.0015364380658674844,
+        -0.002321740367979518,
+        0.0011651750085905116,
+        0.0005616132495845926
+      ],
+      "optimized_cost": 1037.728786042374,
+      "baseline_background_cost": 1072.2008361717967,
+      "cost_reduction_pct": 3.215073983014445,
+      "success": false,
+      "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+      "iterations": 10,
+      "evaluations": 20,
+      "wall_clock_seconds": 2694.9381813000073,
+      "max_initial_thickness_m": 0.7844956683531,
+      "min_initial_thickness_m": 0.1725587535705198,
+      "mean_abs_background_deviation_m": 0.016139123826065808,
+      "max_abs_background_deviation_m": 0.03789994785209039,
+      "baseline_predicted_velocity_rms_mps": 0.03802982840479085,
+      "optimized_predicted_velocity_rms_mps": 0.03922926486660896
+    }
+  ],
+  "selected_kappa_s": 0.0,
+  "selected_coeffs": [
+    -0.01582185042169176,
+    0.005858462773556631,
+    0.001313025604819859,
+    0.011081244907994222,
+    -0.010418384722953204,
+    -0.0018201604825471354,
+    0.004435044622022273,
+    -0.0037293822377636454,
+    0.0015364380658674844,
+    -0.002321740367979518,
+    0.0011651750085905116,
+    0.0005616132495845926
+  ]
+}

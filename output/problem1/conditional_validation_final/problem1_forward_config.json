@@ -1,0 +1,47 @@
+{
+  "grid": {
+    "lx": 20000.0,
+    "ly": 10000.0,
+    "mx": 40,
+    "my": 20
+  },
+  "physics": {
+    "rho_i": 917.0,
+    "rho_w": 1025.0,
+    "gravity": 9.8,
+    "coriolis_f": 0.00014,
+    "water_depth": 30.0,
+    "vp_eccentricity": 2.0,
+    "p_star": 5000.0,
+    "h_ref": 1.0,
+    "drag_coefficient": 0.005,
+    "tau_air_x": 0.12,
+    "tau_air_y": 0.04
+  },
+  "numerics": {
+    "dt": 300.0,
+    "hours": 6.0,
+    "delta_min": 2e-06,
+    "zeta_max": 2000000.0,
+    "h_min": 0.0001,
+    "ice_max_iterations": 500,
+    "ice_tolerance": 0.017,
+    "ice_relaxation": 0.08,
+    "max_velocity_increment": 0.04,
+    "momentum_diffusion_cfl": 0.05,
+    "eta_enter": 0.05,
+    "eta_exit": 0.06,
+    "rossby_enter": 0.98,
+    "rossby_exit": 1.0,
+    "cancellation_enter": 0.05,
+    "cancellation_exit": 0.02,
+    "switch_confirmation_steps": 2,
+    "startup_drag_multiples": 3.0,
+    "snapshot_hours": [
+      0.0,
+      1.0,
+      3.0,
+      6.0
+    ]
+  }
+}

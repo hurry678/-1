@@ -1,0 +1,17 @@
+{
+  "grid": {
+    "nx": 40,
+    "ny": 20
+  },
+  "duration_hours": 72.0,
+  "completed_steps": 864,
+  "planned_steps": 864,
+  "max_ice_residual": 0.0009916614393524678,
+  "max_coupling_residual": 9.999767426960396e-06,
+  "ice_volume_relative_error": 0.0,
+  "minimum_thickness_m": 5.071751038557843e-09,
+  "maximum_thickness_m": 0.942587299474823,
+  "cd": 0.015,
+  "alpha": 0.5,
+  "generated_at": "2026-08-08T14:59:43.682101+08:00"
+}

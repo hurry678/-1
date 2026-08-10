@@ -1,0 +1,39 @@
+{
+  "suite": "problem2_v2_engineering_validation",
+  "status": "passed",
+  "mode": "M1",
+  "diagnostic_only": false,
+  "eligible_for_model_selection": true,
+  "checks": {
+    "completed_all_physical_steps": true,
+    "no_nan_or_inf": true,
+    "no_abnormal_speed": true,
+    "thickness_nonnegative": true,
+    "unconverged_physical_steps_zero": true,
+    "mean_thickness_near_0p500000": true,
+    "ice_volume_error_le_1e_6": true,
+    "mean_sea_surface_error_le_1e_10_m": true,
+    "thickness_cfl_le_0p8": true,
+    "ice_boundary_normal_flux_zero": true,
+    "ocean_boundary_normal_flux_zero": true,
+    "drag_impulse_closed": true,
+    "drag_object_reused_all_steps": true,
+    "inactive_drag_exact_zero": true,
+    "picard_residual_frozen": true,
+    "gmres_residual_frozen": true,
+    "coupling_residual_frozen": true,
+    "water_equation_residual_frozen": true,
+    "helmholtz_residual_frozen": true,
+    "source_unchanged_during_run": true
+  },
+  "failure_message": "",
+  "forbidden_actions": {
+    "ran_100x50": false,
+    "ran_200x100": false,
+    "searched_t_sw": false,
+    "optimized_cd_or_alpha": false,
+    "implemented_m3": false,
+    "implemented_mevp": false,
+    "implemented_muscl": false
+  }
+}

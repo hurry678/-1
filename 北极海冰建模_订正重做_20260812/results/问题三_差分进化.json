@@ -1,0 +1,14 @@
+{
+  "method": "differential_evolution",
+  "best_parameters": {
+    "cd": 0.015,
+    "alpha": 0.5
+  },
+  "best_cost": 636.2209003723598,
+  "evaluations": 114,
+  "iterations": 8,
+  "success": false,
+  "message": "Maximum number of iterations has been exceeded.",
+  "wall_clock_seconds": 1710.8585277000093,
+  "generated_at": "2026-08-08T17:39:01.294113+08:00"
+}

@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-08-08T06:29:18.419165+08:00",
+  "stats": {
+    "grid": {
+      "nx": 100,
+      "ny": 50,
+      "dx_m": 200.0,
+      "dy_m": 200.0
+    },
+    "completed_steps": 288,
+    "planned_steps": 288,
+    "status": "passed",
+    "all_frozen_checks_passed": true,
+    "failed_checks": [],
+    "wall_clock_seconds": 15395.640848300012,
+    "total_picard_iterations": 63074,
+    "total_gmres_iterations": 524957,
+    "total_coupling_iterations": 3578,
+    "ilu_builds": 40549,
+    "ilu_reuses": 35988,
+    "retry_steps": 113,
+    "mean_thickness_m": 0.5,
+    "max_thickness_m": 0.9741010468277325,
+    "min_thickness_m": 9.612189125166337e-13,
+    "center_thickness_m": 0.8499745420401732,
+    "max_ice_speed_mps": 0.20884621264669095,
+    "max_speed_center_x_m": 11500.0,
+    "max_speed_center_y_m": 1300.0,
+    "ice_volume_relative_error": 1.4901161193847657e-16,
+    "maximum_ice_residual": 0.0009977133541264418,
+    "maximum_coupling_residual": 9.998161642786678e-06,
+    "source_hash_unchanged": true,
+    "40x20_mean_thickness_m": 0.5000000000000001,
+    "40x20_max_speed_mps": 0.20826438579291986,
+    "40x20_center_thickness_m": 0.844795633003369,
+    "40x20_wall_clock_seconds": 395.41079339996213,
+    "mean_thickness_ratio_100x50_over_40x20": 0.9999999999999998,
+    "max_speed_ratio_100x50_over_40x20": 1.0027936934659083
+  }
+}

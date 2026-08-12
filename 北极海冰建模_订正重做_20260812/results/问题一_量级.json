@@ -1,0 +1,33 @@
+{
+  "characteristic_time_s": 40000.0,
+  "force_magnitudes_N_per_m2": {
+    "inertia": 0.0114625,
+    "coriolis": 0.06419,
+    "water_ice_drag": 1.28125,
+    "rheology": 0.125,
+    "wind": 0.12649110640673517
+  },
+  "scientific_orders": {
+    "inertia": -2,
+    "coriolis": -2,
+    "water_ice_drag": 0,
+    "rheology": -1,
+    "wind": -1
+  },
+  "deleted_terms": [
+    "inertia",
+    "coriolis"
+  ],
+  "retained_terms": [
+    "water_ice_drag",
+    "rheology",
+    "wind"
+  ],
+  "wind_drag_balance": {
+    "ice_velocity_mps": [
+      0.1490405057177323,
+      0.04968016857257744
+    ],
+    "ice_speed_mps": 0.15710248723046083
+  }
+}

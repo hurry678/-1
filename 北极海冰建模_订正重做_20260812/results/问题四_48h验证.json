@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-08T14:41:32.342979+08:00",
+  "verification_48h": {
+    "final_time_hours": 48.0,
+    "mean_thickness_m": 0.4841781495783083,
+    "max_ice_speed_mps": 0.10716591225304475,
+    "center_thickness_m": 0.8095160786836082,
+    "ice_volume_relative_error": 0.0,
+    "minimum_thickness_m": 2.5607135455740944e-08,
+    "maximum_thickness_m": 0.9398233646032342
+  }
+}

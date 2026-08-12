@@ -1,0 +1,28 @@
+{
+  "grid": {
+    "nx": 40,
+    "ny": 20
+  },
+  "completed_steps": 864,
+  "planned_steps": 864,
+  "cd": 0.015,
+  "alpha": 0.5,
+  "wall_clock_seconds": 63.69917925004847,
+  "maximum_ice_residual": 0.0009787536801251844,
+  "maximum_coupling_residual": 9.99721045338417e-06,
+  "maximum_thickness_cfl": 0.0900743804797178,
+  "ice_volume_relative_error_72h": 0.0,
+  "initial_mean_thickness_m": 0.5037901898484879,
+  "forecast_48h": {
+    "mean_thickness_m": 0.5037901898484879,
+    "maximum_ice_speed_mps": 0.108166696802128,
+    "minimum_thickness_m": 2.638437757839255e-08,
+    "maximum_thickness_m": 0.941511372878269,
+    "center_thickness_m": 0.8269775224428513
+  },
+  "forecast_72h": {
+    "mean_thickness_m": 0.5037901898484879,
+    "minimum_thickness_m": 7.2911386471406195e-09,
+    "maximum_thickness_m": 0.9442129421133286
+  }
+}

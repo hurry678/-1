@@ -1,0 +1,84 @@
+{
+  "method": "incremental_variational_assimilation",
+  "control_dimension": 12,
+  "observation_dimension": 36,
+  "fd_step_m": 0.001,
+  "selected_line_factor": 0.75,
+  "selected_coeffs": [
+    0.0037901898484878228,
+    0.04036439009616353,
+    -0.02993495539254865,
+    0.04999461178845981,
+    -0.040290986949310104,
+    -0.01270712551633402,
+    -0.0034123604730142356,
+    0.009163896215067356,
+    0.015610973855571312,
+    -0.0017546455454443832,
+    0.0007769667991208353,
+    0.007595738442068976
+  ],
+  "background_cost": {
+    "total": 536.1004181175639,
+    "observation": 536.1004181175639,
+    "prior": 0.0
+  },
+  "selected_cost": {
+    "total": 510.80180557864634,
+    "observation": 506.36343597759253,
+    "prior": 4.438369601053829
+  },
+  "cost_reduction_pct": 4.719006306271842,
+  "mean_abs_background_deviation_m": 0.04444628581014753,
+  "max_abs_background_deviation_m": 0.14422977613057908,
+  "minimum_initial_thickness_m": 0.13012362554554818,
+  "maximum_initial_thickness_m": 0.7919513342190673,
+  "weighted_jacobian_singular_values": [
+    373.1736424947564,
+    40.12363820090079,
+    24.398023951011027,
+    11.870460321867384,
+    8.673501398614158,
+    2.1783897074942096,
+    1.572990009210385,
+    1.1310667158302938,
+    1.0387062886473166,
+    0.4571707657082694,
+    0.22109144913673093,
+    0.06684956606261346
+  ],
+  "weighted_jacobian_condition_number": 5582.289676274487,
+  "line_search": [
+    {
+      "factor": 0.0,
+      "total_cost": 536.1004181175639,
+      "observation_cost": 536.1004181175639,
+      "prior_cost": 0.0
+    },
+    {
+      "factor": 0.25,
+      "total_cost": 524.1447165826787,
+      "observation_cost": 523.6515644047838,
+      "prior_cost": 0.4931521778948698
+    },
+    {
+      "factor": 0.5,
+      "total_cost": 514.785148617555,
+      "observation_cost": 512.8125399059755,
+      "prior_cost": 1.9726087115794793
+    },
+    {
+      "factor": 0.75,
+      "total_cost": 510.80180557864634,
+      "observation_cost": 506.36343597759253,
+      "prior_cost": 4.438369601053829
+    },
+    {
+      "factor": 1.0,
+      "total_cost": 511.4157178303741,
+      "observation_cost": 503.52528298405616,
+      "prior_cost": 7.890434846317917
+    }
+  ],
+  "wall_clock_seconds": 39.741015791893005
+}

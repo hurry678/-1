@@ -1,0 +1,46 @@
+{
+  "problem1": {
+    "orders": {
+      "inertia": -2,
+      "coriolis": -2,
+      "water_ice_drag": 0,
+      "rheology": -1,
+      "wind": -1
+    },
+    "simplified_model": "div(h_i sigma) + tau_wi + tau_a = 0",
+    "static_water_limit_speed_mps": 0.15710248723046083
+  },
+  "problem2_reproducible_100x50": {
+    "mean_thickness_m": 0.5,
+    "maximum_ice_speed_mps": 0.20884621264669095,
+    "maximum_speed_location_m": [11500.0, 1300.0],
+    "center_thickness_m": 0.8499745420401732,
+    "ice_volume_relative_error": 1.4901161193847657e-16
+  },
+  "problem3": {
+    "cd_star": 0.015,
+    "alpha_star": 0.5,
+    "weighted_least_squares_cost": 636.2209003723598,
+    "status": "best found candidate on parameter-domain boundary"
+  },
+  "problem4_incremental_variational": {
+    "line_factor": 0.75,
+    "cost_reduction_pct": 4.719006306271842,
+    "jacobian_condition_number": 5582.289676274487,
+    "forecast_48h": {
+      "mean_thickness_m": 0.5037901898484879,
+      "maximum_ice_speed_mps": 0.108166696802128,
+      "center_thickness_m": 0.8269775224428513
+    }
+  },
+  "problem5": {
+    "target_m": [15750.0, 250.0],
+    "distance_from_target_to_E_m": 5755.4322166106695,
+    "time_layer_seconds": 1.875,
+    "route_length_m": 16717.5144212722,
+    "total_time_h": 0.6395833333333343,
+    "total_fuel_t": 0.4918785981090844,
+    "maximum_route_concentration": 0.34422737675217774,
+    "optimality_scope": "global optimum on the stated discrete time-expanded graph"
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "selected_label": "ALNS静态调度",
+  "selected_chains": {
+    "OHT01": [
+      "HOSTTRANSFER-20251001155204403"
+    ],
+    "OHT02": [
+      "HOSTTRANSFER-20251001155204428"
+    ],
+    "OHT03": [
+      "HOSTTRANSFER-20251001155204405"
+    ],
+    "OHT04": [
+      "HOSTTRANSFER-20251001155204423",
+      "HOSTTRANSFER-20251001155204415"
+    ],
+    "OHT05": [
+      "HOSTTRANSFER-20251001155204424",
+      "HOSTTRANSFER-20251001155204408"
+    ],
+    "OHT06": [
+      "HOSTTRANSFER-20251001155204418",
+      "HOSTTRANSFER-20251001155204411"
+    ],
+    "OHT07": [
+      "HOSTTRANSFER-20251001155204421",
+      "HOSTTRANSFER-20251001155204410"
+    ],
+    "OHT08": [
+      "HOSTTRANSFER-20251001155204401"
+    ],
+    "OHT09": [
+      "HOSTTRANSFER-20251001155204425"
+    ],
+    "OHT10": [
+      "HOSTTRANSFER-20251001155204399"
+    ],
+    "OHT11": [
+      "HOSTTRANSFER-20251001155204417"
+    ],
+    "OHT12": [
+      "HOSTTRANSFER-20251001155204404"
+    ],
+    "OHT13": [
+      "HOSTTRANSFER-20251001155204426",
+      "HOSTTRANSFER-20251001155204416"
+    ],
+    "OHT14": [
+      "HOSTTRANSFER-20251001155204398",
+      "HOSTTRANSFER-20251001155204427"
+    ],
+    "OHT15": [
+      "HOSTTRANSFER-20251001155204412",
+      "HOSTTRANSFER-20251001155204407"
+    ],
+    "OHT16": [
+      "HOSTTRANSFER-20251001155204422",
+      "HOSTTRANSFER-20251001155204413"
+    ],
+    "OHT17": [
+      "HOSTTRANSFER-20251001155204414",
+      "HOSTTRANSFER-20251001155204400"
+    ],
+    "OHT18": [
+      "HOSTTRANSFER-20251001155204420",
+      "HOSTTRANSFER-20251001155204406"
+    ],
+    "OHT19": [
+      "HOSTTRANSFER-20251001155204402",
+      "HOSTTRANSFER-20251001155204419"
+    ],
+    "OHT20": [
+      "HOSTTRANSFER-20251001155204397",
+      "HOSTTRANSFER-20251001155204409"
+    ]
+  },
+  "baseline_chains": {
+    "OHT01": [
+      "HOSTTRANSFER-20251001155204408",
+      "HOSTTRANSFER-20251001155204428"
+    ],
+    "OHT02": [
+      "HOSTTRANSFER-20251001155204405",
+      "HOSTTRANSFER-20251001155204411"
+    ],
+    "OHT03": [
+      "HOSTTRANSFER-20251001155204403"
+    ],
+    "OHT04": [
+      "HOSTTRANSFER-20251001155204402"
+    ],
+    "OHT05": [
+      "HOSTTRANSFER-20251001155204424",
+      "HOSTTRANSFER-20251001155204415"
+    ],
+    "OHT06": [
+      "HOSTTRANSFER-20251001155204407",
+      "HOSTTRANSFER-20251001155204423"
+    ],
+    "OHT07": [
+      "HOSTTRANSFER-20251001155204421",
+      "HOSTTRANSFER-20251001155204410"
+    ],
+    "OHT08": [
+      "HOSTTRANSFER-20251001155204401"
+    ],
+    "OHT09": [
+      "HOSTTRANSFER-20251001155204400"
+    ],
+    "OHT10": [
+      "HOSTTRANSFER-20251001155204399",
+      "HOSTTRANSFER-20251001155204412"
+    ],
+    "OHT11": [
+      "HOSTTRANSFER-20251001155204417",
+      "HOSTTRANSFER-20251001155204409"
+    ],
+    "OHT12": [
+      "HOSTTRANSFER-20251001155204404",
+      "HOSTTRANSFER-20251001155204418"
+    ],
+    "OHT13": [
+      "HOSTTRANSFER-20251001155204398",
+      "HOSTTRANSFER-20251001155204416"
+    ],
+    "OHT14": [
+      "HOSTTRANSFER-20251001155204397"
+    ],
+    "OHT15": [
+      "HOSTTRANSFER-20251001155204427",
+      "HOSTTRANSFER-20251001155204425"
+    ],
+    "OHT16": [
+      "HOSTTRANSFER-20251001155204422",
+      "HOSTTRANSFER-20251001155204419"
+    ],
+    "OHT17": [
+      "HOSTTRANSFER-20251001155204406"
+    ],
+    "OHT18": [
+      "HOSTTRANSFER-20251001155204413"
+    ],
+    "OHT19": [
+      "HOSTTRANSFER-20251001155204420",
+      "HOSTTRANSFER-20251001155204426"
+    ],
+    "OHT20": [
+      "HOSTTRANSFER-20251001155204414"
+    ]
+  },
+  "insertion_chains": {
+    "OHT01": [
+      "HOSTTRANSFER-20251001155204410"
+    ],
+    "OHT02": [
+      "HOSTTRANSFER-20251001155204408",
+      "HOSTTRANSFER-20251001155204428"
+    ],
+    "OHT03": [
+      "HOSTTRANSFER-20251001155204405",
+      "HOSTTRANSFER-20251001155204423"
+    ],
+    "OHT04": [
+      "HOSTTRANSFER-20251001155204403"
+    ],
+    "OHT05": [
+      "HOSTTRANSFER-20251001155204424",
+      "HOSTTRANSFER-20251001155204415"
+    ],
+    "OHT06": [
+      "HOSTTRANSFER-20251001155204407"
+    ],
+    "OHT07": [
+      "HOSTTRANSFER-20251001155204421",
+      "HOSTTRANSFER-20251001155204411"
+    ],
+    "OHT08": [
+      "HOSTTRANSFER-20251001155204401"
+    ],
+    "OHT09": [
+      "HOSTTRANSFER-20251001155204400"
+    ],
+    "OHT10": [
+      "HOSTTRANSFER-20251001155204399",
+      "HOSTTRANSFER-20251001155204412"
+    ],
+    "OHT11": [
+      "HOSTTRANSFER-20251001155204417",
+      "HOSTTRANSFER-20251001155204409"
+    ],
+    "OHT12": [
+      "HOSTTRANSFER-20251001155204404",
+      "HOSTTRANSFER-20251001155204418"
+    ],
+    "OHT13": [
+      "HOSTTRANSFER-20251001155204402"
+    ],
+    "OHT14": [
+      "HOSTTRANSFER-20251001155204398",
+      "HOSTTRANSFER-20251001155204426",
+      "HOSTTRANSFER-20251001155204416"
+    ],
+    "OHT15": [
+      "HOSTTRANSFER-20251001155204427",
+      "HOSTTRANSFER-20251001155204425"
+    ],
+    "OHT16": [
+      "HOSTTRANSFER-20251001155204422",
+      "HOSTTRANSFER-20251001155204419"
+    ],
+    "OHT17": [
+      "HOSTTRANSFER-20251001155204406"
+    ],
+    "OHT18": [
+      "HOSTTRANSFER-20251001155204413"
+    ],
+    "OHT19": [
+      "HOSTTRANSFER-20251001155204397",
+      "HOSTTRANSFER-20251001155204420"
+    ],
+    "OHT20": [
+      "HOSTTRANSFER-20251001155204414"
+    ]
+  },
+  "alns_chains": {
+    "OHT01": [
+      "HOSTTRANSFER-20251001155204403"
+    ],
+    "OHT02": [
+      "HOSTTRANSFER-20251001155204428"
+    ],
+    "OHT03": [
+      "HOSTTRANSFER-20251001155204405"
+    ],
+    "OHT04": [
+      "HOSTTRANSFER-20251001155204423",
+      "HOSTTRANSFER-20251001155204415"
+    ],
+    "OHT05": [
+      "HOSTTRANSFER-20251001155204424",
+      "HOSTTRANSFER-20251001155204408"
+    ],
+    "OHT06": [
+      "HOSTTRANSFER-20251001155204418",
+      "HOSTTRANSFER-20251001155204411"
+    ],
+    "OHT07": [
+      "HOSTTRANSFER-20251001155204421",
+      "HOSTTRANSFER-20251001155204410"
+    ],
+    "OHT08": [
+      "HOSTTRANSFER-20251001155204401"
+    ],
+    "OHT09": [
+      "HOSTTRANSFER-20251001155204425"
+    ],
+    "OHT10": [
+      "HOSTTRANSFER-20251001155204399"
+    ],
+    "OHT11": [
+      "HOSTTRANSFER-20251001155204417"
+    ],
+    "OHT12": [
+      "HOSTTRANSFER-20251001155204404"
+    ],
+    "OHT13": [
+      "HOSTTRANSFER-20251001155204426",
+      "HOSTTRANSFER-20251001155204416"
+    ],
+    "OHT14": [
+      "HOSTTRANSFER-20251001155204398",
+      "HOSTTRANSFER-20251001155204427"
+    ],
+    "OHT15": [
+      "HOSTTRANSFER-20251001155204412",
+      "HOSTTRANSFER-20251001155204407"
+    ],
+    "OHT16": [
+      "HOSTTRANSFER-20251001155204422",
+      "HOSTTRANSFER-20251001155204413"
+    ],
+    "OHT17": [
+      "HOSTTRANSFER-20251001155204414",
+      "HOSTTRANSFER-20251001155204400"
+    ],
+    "OHT18": [
+      "HOSTTRANSFER-20251001155204420",
+      "HOSTTRANSFER-20251001155204406"
+    ],
+    "OHT19": [
+      "HOSTTRANSFER-20251001155204402",
+      "HOSTTRANSFER-20251001155204419"
+    ],
+    "OHT20": [
+      "HOSTTRANSFER-20251001155204397",
+      "HOSTTRANSFER-20251001155204409"
+    ]
+  },
+  "alns_details": {
+    "algorithm": "surrogate_ALNS",
+    "iterations": 1200,
+    "seed": 20260815,
+    "accepted": 1101,
+    "improvements": 50,
+    "best_surrogate": {
+      "surrogate_sum_completion": 2782.8849111860623,
+      "surrogate_makespan": 158.61956121950408,
+      "surrogate_empty_distance": 574897.6000000001,
+      "surrogate_score": 2807.276342050803
+    }
+  },
+  "baseline_summary": {
+    "label": "baseline",
+    "completed_tasks": 32,
+    "makespan_s": 405.8,
+    "avg_transfer_time_s": 206.41875,
+    "simulation_runtime_s": 1.0439974000037182,
+    "hard_violation_count": 0,
+    "trajectory_rows": 40600,
+    "min_same_link_reference_gap_mm": 1250.0,
+    "max_speed_mm_s": 710.0,
+    "max_acc_mm_s2": 2000.0,
+    "min_acc_mm_s2": -3000.0
+  },
+  "insertion_summary": {
+    "label": "insertion",
+    "completed_tasks": 32,
+    "makespan_s": 401.6,
+    "avg_transfer_time_s": 193.125,
+    "simulation_runtime_s": 1.0387044999952195,
+    "hard_violation_count": 0,
+    "trajectory_rows": 40180,
+    "min_same_link_reference_gap_mm": 1250.0,
+    "max_speed_mm_s": 710.0,
+    "max_acc_mm_s2": 2000.0,
+    "min_acc_mm_s2": -3000.0
+  },
+  "improved_summary": {
+    "label": "ALNS",
+    "completed_tasks": 32,
+    "makespan_s": 352.0,
+    "avg_transfer_time_s": 171.34375,
+    "simulation_runtime_s": 0.9512593999970704,
+    "hard_violation_count": 0,
+    "trajectory_rows": 35220,
+    "min_same_link_reference_gap_mm": 1250.0,
+    "max_speed_mm_s": 710.0,
+    "max_acc_mm_s2": 2000.0000000000002,
+    "min_acc_mm_s2": -3000.0
+  },
+  "configuration": {
+    "dt_s": 0.2,
+    "acc_mm_s2": 2000.0,
+    "dec_mm_s2": 3000.0,
+    "vehicle_length_mm": 950.0,
+    "clear_gap_mm": 300.0,
+    "reference_gap_mm": 1250.0,
+    "pick_time_s": 8.0,
+    "drop_time_s": 8.0,
+    "p17_override": [
+      70,
+      507,
+      303.0
+    ]
+  }
+}

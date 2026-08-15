@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "generated_at": "2026-08-12T16:37:28.146728+08:00",
+  "grid": {
+    "nx": 200,
+    "ny": 100,
+    "dx": 100.0,
+    "dy": 100.0
+  },
+  "duration_hours": 24.0,
+  "completed_steps": 288,
+  "planned_steps": 288,
+  "linear_solver": "splu",
+  "zeta_max": 10000000.0,
+  "wall_clock_seconds": 7675.478370028315,
+  "mean_thickness_m": 0.5,
+  "center_thickness_m": 0.8480414945538376,
+  "minimum_thickness_m": 4.3622440433521233e-16,
+  "maximum_thickness_m": 0.9761125963308863,
+  "final_maximum_ice_speed_mps": 0.1705940188346354,
+  "final_maximum_ice_speed_center_m": {
+    "x": 9150.0,
+    "y": 5250.0
+  },
+  "maximum_ice_speed_mps": 0.19204258440788322,
+  "ice_volume_relative_error": 0.0,
+  "maximum_ice_residual": 0.0009962002922547805,
+  "maximum_linear_residual": 2.287356223927392e-13,
+  "maximum_coupling_residual": 9.997036801269395e-06,
+  "maximum_water_residual": 9.337247016292544e-09,
+  "maximum_helmholtz_residual": 4.126871110249273e-13,
+  "maximum_thickness_cfl": 1.031400716911808,
+  "maximum_effective_thickness_cfl": 0.7967268242866268,
+  "maximum_thickness_substeps": 2,
+  "total_picard_iterations": 69585,
+  "total_linear_iterations": 69585,
+  "total_coupling_iterations": 3376,
+  "retry_steps": 0,
+  "checks": {
+    "completed_288_steps": true,
+    "thickness_nonnegative": true,
+    "ice_volume_error_le_1e_6": true,
+    "ice_residual_le_1e_3": true,
+    "linear_residual_le_1e_8": true,
+    "coupling_residual_le_1e_5": true,
+    "water_residual_le_1e_8": true,
+    "effective_thickness_cfl_le_0p8": true
+  }
+}

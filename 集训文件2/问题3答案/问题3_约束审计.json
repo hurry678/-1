@@ -1,0 +1,77 @@
+{
+  "data_audit": {
+    "counts": {
+      "nodes": 131,
+      "links": 152,
+      "ports": 36,
+      "vehicles": 20,
+      "tasks": 600,
+      "curve_groups": 33,
+      "merges": 21
+    },
+    "p17": {
+      "port_id": "P17",
+      "node_id": 70,
+      "link_id": 507,
+      "offset": 303.0
+    },
+    "clear_gap_mm": 300.0,
+    "reference_gap_mm": 1250.0,
+    "errors": [],
+    "passed": true,
+    "scenario": "问题3",
+    "release_span_s": 1797.0,
+    "different_carriers": 385,
+    "repeated_carriers": 129,
+    "max_carrier_chain": 9
+  },
+  "simulation_summary": {
+    "label": "full",
+    "completed_tasks": 600,
+    "makespan_s": 4231.8,
+    "avg_transfer_time_s": 856.90842,
+    "simulation_runtime_s": 9.494679300012649,
+    "hard_violation_count": 0,
+    "trajectory_rows": 423200,
+    "decision_count": 448,
+    "future_leak_count": 0,
+    "min_same_link_reference_gap_mm": 1250.0,
+    "max_speed_mm_s": 710.0,
+    "max_acc_mm_s2": 2000.0,
+    "min_acc_mm_s2": -3000.0,
+    "reassignment_count": 0,
+    "reservation_event_count": 5245,
+    "fork_trigger_count": 0,
+    "reservation_delay_trigger_count": 0,
+    "deadlock_risk_trigger_count": 0,
+    "wait_graph_cycle_count": 0,
+    "wait_graph_max_edges": 6,
+    "decision_runtime_p95_ms": 0.0,
+    "batch_interval_s": 5.0,
+    "max_ready_backlog": 3,
+    "max_region_pressure": 46.437167,
+    "slot_reservations_created": 4580,
+    "slot_entries": 4444,
+    "slot_reservations_shifted": 226,
+    "deadlock_recovery_count": 0
+  },
+  "task_validation_errors": [],
+  "online_validation_errors": [],
+  "bad_trajectory_steps": [],
+  "traffic_violations": [],
+  "carrier_precedence_edges": 215,
+  "decision_count": 448,
+  "slot_audit": {
+    "created": 4580,
+    "entries": 4580,
+    "shifted": 226,
+    "actual_overlap_errors": []
+  },
+  "wait_graph_audit": {
+    "cycle_count": 0,
+    "max_edges": 6,
+    "recovery_count": 0,
+    "recovery_events": []
+  },
+  "passed": true
+}

@@ -1,0 +1,96 @@
+{
+  "data_audit": {
+    "counts": {
+      "nodes": 131,
+      "links": 152,
+      "ports": 36,
+      "vehicles": 20,
+      "tasks": 190,
+      "curve_groups": 33,
+      "merges": 21
+    },
+    "p17": {
+      "port_id": "P17",
+      "node_id": 70,
+      "link_id": 507,
+      "offset": 303.0
+    },
+    "clear_gap_mm": 300.0,
+    "reference_gap_mm": 1250.0,
+    "errors": [],
+    "passed": true,
+    "scenario": "问题2",
+    "release_span_s": 3558.816,
+    "different_carriers": 110,
+    "repeated_carriers": 54,
+    "max_carrier_chain": 8
+  },
+  "simulation_summary": {
+    "label": "document",
+    "completed_tasks": 190,
+    "makespan_s": 3735.0,
+    "avg_transfer_time_s": 148.04525263157896,
+    "simulation_runtime_s": 13.363748199990368,
+    "hard_violation_count": 0,
+    "trajectory_rows": 373520,
+    "decision_count": 1473,
+    "future_leak_count": 0,
+    "min_same_link_reference_gap_mm": 1250.0,
+    "max_speed_mm_s": 710.0,
+    "max_acc_mm_s2": 2000.0000000000002,
+    "min_acc_mm_s2": -3000.0,
+    "reassignment_count": 3,
+    "reservation_event_count": 4679,
+    "fork_trigger_count": 31,
+    "reservation_delay_trigger_count": 109,
+    "deadlock_risk_trigger_count": 0,
+    "wait_graph_cycle_count": 0,
+    "wait_graph_max_edges": 10,
+    "decision_runtime_p95_ms": 0.2293
+  },
+  "task_validation_errors": [],
+  "online_validation_errors": [],
+  "bad_trajectory_steps": [],
+  "traffic_violations": [],
+  "carrier_chain_count": 80,
+  "decision_count": 1473,
+  "reassignment_audit": {
+    "count": 3,
+    "events": [
+      {
+        "time_s": 2906.6,
+        "task_id": "HOSTTRANSFER-20251001164020930",
+        "from_vehicle": "OHT03",
+        "to_vehicle": "OHT03",
+        "new_queue_position": 0,
+        "predicted_improvement_s": 343.232958,
+        "bid": 335.231303
+      },
+      {
+        "time_s": 2909.6,
+        "task_id": "HOSTTRANSFER-20251001164024067",
+        "from_vehicle": "OHT03",
+        "to_vehicle": "OHT03",
+        "new_queue_position": 0,
+        "predicted_improvement_s": 337.907887,
+        "bid": 328.951504
+      },
+      {
+        "time_s": 2917.8,
+        "task_id": "HOSTTRANSFER-20251001164020930",
+        "from_vehicle": "OHT03",
+        "to_vehicle": "OHT06",
+        "new_queue_position": 0,
+        "predicted_improvement_s": 319.639437,
+        "bid": 342.556019
+      }
+    ],
+    "errors": []
+  },
+  "reservation_audit": {
+    "event_count": 4679,
+    "wait_graph_cycle_count": 0,
+    "wait_graph_max_edges": 10
+  },
+  "passed": true
+}

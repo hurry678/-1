@@ -1,0 +1,2 @@
+﻿QuestionNo,TaskCount,AvgTransferTime,AvgAssignTime,AvgPickupResponseTime,AvgTransportTime,AvgPausingTime,Makespan,AvgEmptyDistance,AvgTotalDistance,SimulationRuntime
+3,600,856.90842,243.219087,508.808667,88.880667,3.775333,4231.8,13256.4845,73875.018334,9.494679

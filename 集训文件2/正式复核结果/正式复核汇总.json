@@ -1,0 +1,787 @@
+{
+  "generated_at": "2026-08-16T17:30:10",
+  "overall_passed": true,
+  "hard_gate": {
+    "minimum_clearance_mm": 300.0,
+    "all_tasks_completed": true,
+    "independent_braking_distance_required": true,
+    "resource_carrier_online_required": true,
+    "independent_continuous_clearance_required": true,
+    "common_core_hash_required": true
+  },
+  "selected_solutions": [
+    {
+      "QuestionNo": 1,
+      "Candidate": "ALNS",
+      "CompletedTasks": 32,
+      "AvgTransferTime_s": 171.39375,
+      "Makespan_s": 332.8,
+      "MinContinuousClearance_mm": 324.99999999999886,
+      "HardViolations": 0,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": 0,
+      "HardGate": "通过",
+      "Selected": "是"
+    },
+    {
+      "QuestionNo": 2,
+      "Candidate": "balanced",
+      "CompletedTasks": 190,
+      "AvgTransferTime_s": 142.9463052631579,
+      "Makespan_s": 3715.2,
+      "MinContinuousClearance_mm": 324.99999999999636,
+      "HardViolations": 0,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": 0,
+      "HardGate": "通过",
+      "Selected": "是"
+    },
+    {
+      "QuestionNo": 3,
+      "Candidate": "direct",
+      "CompletedTasks": 600,
+      "AvgTransferTime_s": 854.55142,
+      "Makespan_s": 4061.8,
+      "MinContinuousClearance_mm": 324.99999999999636,
+      "HardViolations": 0,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": 0,
+      "HardGate": "通过",
+      "Selected": "是"
+    }
+  ],
+  "candidate_results": [
+    {
+      "QuestionNo": 1,
+      "Candidate": "baseline",
+      "CompletedTasks": 32,
+      "AvgTransferTime_s": 206.51875,
+      "Makespan_s": 406.0,
+      "MinContinuousClearance_mm": 324.99999999999886,
+      "HardViolations": 0,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": null,
+      "HardGate": "通过",
+      "Selected": "否"
+    },
+    {
+      "QuestionNo": 1,
+      "Candidate": "insertion",
+      "CompletedTasks": 32,
+      "AvgTransferTime_s": 193.16875,
+      "Makespan_s": 401.6,
+      "MinContinuousClearance_mm": 324.99999999999886,
+      "HardViolations": 0,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": null,
+      "HardGate": "通过",
+      "Selected": "否"
+    },
+    {
+      "QuestionNo": 1,
+      "Candidate": "ALNS",
+      "CompletedTasks": 32,
+      "AvgTransferTime_s": 171.39375,
+      "Makespan_s": 332.8,
+      "MinContinuousClearance_mm": 324.99999999999886,
+      "HardViolations": 0,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": 0,
+      "HardGate": "通过",
+      "Selected": "是"
+    },
+    {
+      "QuestionNo": 2,
+      "Candidate": "baseline",
+      "CompletedTasks": 190,
+      "AvgTransferTime_s": 142.9463052631579,
+      "Makespan_s": 3715.2,
+      "MinContinuousClearance_mm": 324.99999999999636,
+      "HardViolations": 0,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": null,
+      "HardGate": "通过",
+      "Selected": "否"
+    },
+    {
+      "QuestionNo": 2,
+      "Candidate": "rolling",
+      "CompletedTasks": 190,
+      "AvgTransferTime_s": 142.9463052631579,
+      "Makespan_s": 3715.2,
+      "MinContinuousClearance_mm": 324.99999999999636,
+      "HardViolations": 0,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": null,
+      "HardGate": "通过",
+      "Selected": "否"
+    },
+    {
+      "QuestionNo": 2,
+      "Candidate": "balanced",
+      "CompletedTasks": 190,
+      "AvgTransferTime_s": 142.9463052631579,
+      "Makespan_s": 3715.2,
+      "MinContinuousClearance_mm": 324.99999999999636,
+      "HardViolations": 0,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": 0,
+      "HardGate": "通过",
+      "Selected": "是"
+    },
+    {
+      "QuestionNo": 2,
+      "Candidate": "document",
+      "CompletedTasks": 190,
+      "AvgTransferTime_s": 147.71683157894736,
+      "Makespan_s": 3721.2,
+      "MinContinuousClearance_mm": 324.99999999999636,
+      "HardViolations": 0,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": null,
+      "HardGate": "通过",
+      "Selected": "否"
+    },
+    {
+      "QuestionNo": 3,
+      "Candidate": "direct",
+      "CompletedTasks": 600,
+      "AvgTransferTime_s": 854.55142,
+      "Makespan_s": 4061.8,
+      "MinContinuousClearance_mm": 324.99999999999636,
+      "HardViolations": 0,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": 0,
+      "HardGate": "通过",
+      "Selected": "是"
+    },
+    {
+      "QuestionNo": 3,
+      "Candidate": "microbatch",
+      "CompletedTasks": 600,
+      "AvgTransferTime_s": 843.8930866666667,
+      "Makespan_s": 4328.4,
+      "MinContinuousClearance_mm": 298.0,
+      "HardViolations": 2,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": null,
+      "HardGate": "失败",
+      "Selected": "否"
+    },
+    {
+      "QuestionNo": 3,
+      "Candidate": "pressure",
+      "CompletedTasks": 600,
+      "AvgTransferTime_s": 843.25942,
+      "Makespan_s": 4425.0,
+      "MinContinuousClearance_mm": 298.0,
+      "HardViolations": 1,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": null,
+      "HardGate": "失败",
+      "Selected": "否"
+    },
+    {
+      "QuestionNo": 3,
+      "Candidate": "full",
+      "CompletedTasks": 600,
+      "AvgTransferTime_s": 841.4577533333334,
+      "Makespan_s": 4685.8,
+      "MinContinuousClearance_mm": 298.0,
+      "HardViolations": 1,
+      "FutureLeakCount": 0,
+      "IndependentBrakingViolations": null,
+      "HardGate": "失败",
+      "Selected": "否"
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "hard_gate": {
+      "minimum_clearance_mm": 300.0,
+      "all_tasks_completed": true,
+      "resource_carrier_online_required": true
+    },
+    "questions": [
+      {
+        "question": 1,
+        "passed": true,
+        "errors": [],
+        "task_rows": 32,
+        "trajectory_rows": 33300,
+        "steps": 1665,
+        "completed_tasks": 32,
+        "min_continuous_clearance_mm": 324.99999999999886,
+        "hard_violation_count": 0,
+        "future_leak_count": 0,
+        "selected_avg_transfer_time_s": 171.39375,
+        "file_sha256": {
+          "outputs/q1/问题1_任务结果.csv": "5db58aec973c2350e38efff7f1e3f1860f7ed7cb44f660cbef259649e4871214",
+          "outputs/q1/问题1_OHT逐步运行记录.csv": "bc2cd3471f05fe9337434962d45fa0fee7d00ee720c9a45e440b774dd4d9930c",
+          "outputs/q1/问题1_算法评价指标.csv": "88112b3c336545cc14fc118c2e87d5da4ba4e787e27163287ef0dabb6abb7f70",
+          "outputs/q1/问题1_约束审计.json": "646a8c8655bee71e6d70b816062cecb568432f8d89198c2cbf2bde20b3cdf577",
+          "outputs/q1/问题1_方案.json": "82e3d9478b39d6dcce578f35b8c0874462cdedd8b019429da1f83d263fb502a4",
+          "outputs/q1/问题1_结果.xlsx": "4cece92614e1a2b44503da55c44ce92c846969a506690adb69ebae0c8d31830f"
+        }
+      },
+      {
+        "question": 2,
+        "passed": true,
+        "errors": [],
+        "task_rows": 190,
+        "trajectory_rows": 371540,
+        "steps": 18577,
+        "completed_tasks": 190,
+        "min_continuous_clearance_mm": 324.99999999999636,
+        "hard_violation_count": 0,
+        "future_leak_count": 0,
+        "selected_avg_transfer_time_s": 142.9463052631579,
+        "file_sha256": {
+          "outputs/q2/问题2_任务结果.csv": "abc16cf61d82717e0480a4214c657fff96cfd9dd6b63f6db985dec0d06007db5",
+          "outputs/q2/问题2_OHT逐步运行记录.csv": "3cefe0b5861f0e458df6fd8acec87ecf32fd3bcdb507bc887bbbbf4725be9328",
+          "outputs/q2/问题2_算法评价指标.csv": "0890d4c6ff872b3c2e3561ff29d391bd436c5339c87b80f63e131d89caf65a0e",
+          "outputs/q2/问题2_约束审计.json": "21d8af948017286a3515670dae1c2ae58bc27ef619058315e4a23e32443442fc",
+          "outputs/q2/问题2_方案.json": "02997088549cb0ddbcb73d5481068e9cdd799a54c99f2634eb2353dad6e8dddb",
+          "outputs/q2/问题2_结果.xlsx": "970f99d5a0f4b80c2fe4d5f3f4437bf7e27d343a88f693532f6370c397ccb4d8"
+        }
+      },
+      {
+        "question": 3,
+        "passed": true,
+        "errors": [],
+        "task_rows": 600,
+        "trajectory_rows": 406200,
+        "steps": 20310,
+        "completed_tasks": 600,
+        "min_continuous_clearance_mm": 324.99999999999636,
+        "hard_violation_count": 0,
+        "future_leak_count": 0,
+        "selected_avg_transfer_time_s": 854.55142,
+        "file_sha256": {
+          "outputs/q3/问题3_任务结果.csv": "ba0f6b37fb2a340c687f60418aa61de9b3e749a2bd674394f69d2854da9880c6",
+          "outputs/q3/问题3_OHT逐步运行记录.csv": "cb3db20e4aea370bf0782bd9c8fc4be81f8313b3981abb69e0e974a7b28a54bf",
+          "outputs/q3/问题3_算法评价指标.csv": "671ce9314d50a4c72ac0bfdc45a20987f23dfbd760b74444e36a8312b39a310c",
+          "outputs/q3/问题3_约束审计.json": "55760c3b61fe92c23f54177ce112e080ce5c2da8f2cd6d0bb6c15c819b2f23b6",
+          "outputs/q3/问题3_方案.json": "b5b4a528cff49e33a3ac4daa144d159d5e4f920436e2ffabecc68fae64a5c14a",
+          "outputs/q3/问题3_结果.xlsx": "15e5632cc1417f11708f8dcf4e8bc3aac1e3fe85af5a3df34f478ae01644e81c"
+        }
+      }
+    ],
+    "online_counterfactual": {
+      "passed": true,
+      "method": "在3个释放跨度分位点确定性扰动全部未来任务的Source、Destination、Priority、CarrierID并反转任务字典顺序；比较截止时刻前去除运行时字段后的决策日志SHA-256",
+      "tests": [
+        {
+          "question": 2,
+          "cutoff_s": 889.704,
+          "original_hash": "b769d17d82f50539c762ed6945884d52618d6877e55480ccda177f0257413520",
+          "perturbed_hash": "b769d17d82f50539c762ed6945884d52618d6877e55480ccda177f0257413520",
+          "passed": true
+        },
+        {
+          "question": 2,
+          "cutoff_s": 1779.408,
+          "original_hash": "4eca77dff064c277df8e45eaf574eadb4c847a85d22c3747574145dcef7b30c0",
+          "perturbed_hash": "4eca77dff064c277df8e45eaf574eadb4c847a85d22c3747574145dcef7b30c0",
+          "passed": true
+        },
+        {
+          "question": 2,
+          "cutoff_s": 2669.112,
+          "original_hash": "eeba2a289cb22c953312b6edfcb037cc2647cf2445a91d06d50a6b317f667769",
+          "perturbed_hash": "eeba2a289cb22c953312b6edfcb037cc2647cf2445a91d06d50a6b317f667769",
+          "passed": true
+        },
+        {
+          "question": 3,
+          "cutoff_s": 449.25,
+          "original_hash": "99f86c1314b33a936424d33cc4483fc2b96c05409926dd0116c600c39d502365",
+          "perturbed_hash": "99f86c1314b33a936424d33cc4483fc2b96c05409926dd0116c600c39d502365",
+          "passed": true
+        },
+        {
+          "question": 3,
+          "cutoff_s": 898.5,
+          "original_hash": "ba054d16d22e6454ca552163ed89404d268bfedcfadec1564023e36d8c0b7703",
+          "perturbed_hash": "ba054d16d22e6454ca552163ed89404d268bfedcfadec1564023e36d8c0b7703",
+          "passed": true
+        },
+        {
+          "question": 3,
+          "cutoff_s": 1347.75,
+          "original_hash": "d534c45ff00875f4bf0a77a4dc19a504a4de61c922172a16ce44159d6078e471",
+          "perturbed_hash": "d534c45ff00875f4bf0a77a4dc19a504a4de61c922172a16ce44159d6078e471",
+          "passed": true
+        }
+      ]
+    },
+    "independent_continuous_clearance": {
+      "audits": [
+        {
+          "trace": "outputs/q1/问题1_OHT逐步运行记录.csv",
+          "dt_s": 0.2,
+          "vehicle_length_mm": 950.0,
+          "minimum_clearance_mm": 300.0,
+          "profile_counts": {
+            "常加速度": 33182,
+            "滑行-最大制动-静止": 98
+          },
+          "topology_intervals_checked": 2735,
+          "blank_next_unique_successor_queries": 164370,
+          "blank_next_unique_successor_hits": 403,
+          "service_vehicle_pair_checks": 20,
+          "motion_model_error_count": 0,
+          "motion_model_errors": [],
+          "continuous_gap_violation_count": 0,
+          "continuous_gap_violations": [],
+          "minimum_reconstructed_event": {
+            "step": 997,
+            "sim_time_s": 199.29321833323334,
+            "local_time_s": 0.09321833323333333,
+            "back_vehicle": "OHT10",
+            "front_vehicle": "OHT11",
+            "route": [
+              526,
+              527
+            ],
+            "reference_gap_mm": 1274.9995134958335,
+            "clearance_mm": 324.9995134958335
+          },
+          "conservative_clearance_lower_bound_mm": 324.97751349583353,
+          "passed": true,
+          "tolerance_note": "保守下界从重建净空扣除双车位置舍入误差及运动模型容差。"
+        },
+        {
+          "trace": "outputs/q2/问题2_OHT逐步运行记录.csv",
+          "dt_s": 0.2,
+          "vehicle_length_mm": 950.0,
+          "minimum_clearance_mm": 300.0,
+          "profile_counts": {
+            "常加速度": 370475,
+            "滑行-最大制动-静止": 1045
+          },
+          "topology_intervals_checked": 32449,
+          "blank_next_unique_successor_queries": 1160714,
+          "blank_next_unique_successor_hits": 4826,
+          "service_vehicle_pair_checks": 407,
+          "motion_model_error_count": 0,
+          "motion_model_errors": [],
+          "continuous_gap_violation_count": 0,
+          "continuous_gap_violations": [],
+          "minimum_reconstructed_event": {
+            "step": 16527,
+            "sim_time_s": 3305.2176163332338,
+            "local_time_s": 0.01761633323333333,
+            "back_vehicle": "OHT18",
+            "front_vehicle": "OHT03",
+            "route": [
+              539,
+              541
+            ],
+            "reference_gap_mm": 1274.9994971998349,
+            "clearance_mm": 324.9994971998349
+          },
+          "conservative_clearance_lower_bound_mm": 324.9774971998349,
+          "passed": true,
+          "tolerance_note": "保守下界从重建净空扣除双车位置舍入误差及运动模型容差。"
+        },
+        {
+          "trace": "outputs/q3/问题3_OHT逐步运行记录.csv",
+          "dt_s": 0.2,
+          "vehicle_length_mm": 950.0,
+          "minimum_clearance_mm": 300.0,
+          "profile_counts": {
+            "常加速度": 404698,
+            "滑行-最大制动-静止": 1482
+          },
+          "topology_intervals_checked": 31877,
+          "blank_next_unique_successor_queries": 2940333,
+          "blank_next_unique_successor_hits": 16428,
+          "service_vehicle_pair_checks": 1839,
+          "motion_model_error_count": 0,
+          "motion_model_errors": [],
+          "continuous_gap_violation_count": 0,
+          "continuous_gap_violations": [],
+          "minimum_reconstructed_event": {
+            "step": 2387,
+            "sim_time_s": 477.3883286665667,
+            "local_time_s": 0.18832866656666666,
+            "back_vehicle": "OHT03",
+            "front_vehicle": "OHT06",
+            "route": [
+              539
+            ],
+            "reference_gap_mm": 1274.9994699673334,
+            "clearance_mm": 324.9994699673334
+          },
+          "conservative_clearance_lower_bound_mm": 324.97746996733343,
+          "passed": true,
+          "tolerance_note": "保守下界从重建净空扣除双车位置舍入误差及运动模型容差。"
+        }
+      ],
+      "passed": true
+    },
+    "python": "3.10.20 (main, Mar  3 2026, 00:49:35) [Clang 16.0.0 (clang-1600.0.26.6)]"
+  },
+  "independent_verification": {
+    "p17": {
+      "actual": {
+        "node": 70,
+        "link": 507,
+        "offset": 303.0
+      },
+      "expected": {
+        "node": 70,
+        "link": 507,
+        "offset": 303.0
+      },
+      "link507": {
+        "u": 70,
+        "v": 71,
+        "length": 1170.0,
+        "vmax": 3000.0
+      },
+      "passed": true
+    },
+    "questions": {
+      "1": {
+        "task_count": 32,
+        "expected_task_count": 32,
+        "task_errors": [],
+        "metric_difference_recomputed_minus_csv": {
+          "AvgTransferTime": -2.842170943040401e-14,
+          "AvgAssignTime": 0.0,
+          "AvgPickupResponseTime": 1.4210854715202004e-14,
+          "AvgTransportTime": 2.842170943040401e-14,
+          "AvgPausingTime": -4.440892098500626e-16,
+          "AvgEmptyDistance": 3.637978807091713e-12,
+          "AvgTotalDistance": 0.0,
+          "Makespan": 0.0
+        },
+        "trace": {
+          "errors": [],
+          "question_no_counts": {
+            "1": 33300
+          },
+          "steps": 1665,
+          "min_same_link_reference_gap_mm": [
+            1275.0,
+            [
+              274,
+              "OHT15",
+              "OHT10",
+              [
+                488
+              ]
+            ]
+          ],
+          "min_routed_reference_gap_mm": [
+            1274.9999999999995,
+            [
+              1106,
+              "OHT19",
+              "OHT13",
+              [
+                534,
+                535
+              ]
+            ]
+          ],
+          "min_routed_clearance_mm": 324.99999999999955,
+          "max_trapezoid_displacement_error_mm": [
+            15.000000000000185,
+            [
+              354,
+              "OHT03",
+              14.949999999999818,
+              29.950000000000003,
+              200,
+              200,
+              299.5,
+              0.0
+            ]
+          ],
+          "braking_distance_violation_count": 0,
+          "worst_braking_distance_violations": []
+        }
+      },
+      "2": {
+        "task_count": 190,
+        "expected_task_count": 190,
+        "task_errors": [],
+        "metric_difference_recomputed_minus_csv": {
+          "AvgTransferTime": 2.6315788659303507e-07,
+          "AvgAssignTime": -3.157894725713817e-07,
+          "AvgPickupResponseTime": -4.736841887620358e-07,
+          "AvgTransportTime": 5.263161995117116e-08,
+          "AvgPausingTime": 1.0526315730174929e-07,
+          "AvgEmptyDistance": 2.5789631763473153e-06,
+          "AvgTotalDistance": 2.3684551706537604e-06,
+          "Makespan": 0.0
+        },
+        "trace": {
+          "errors": [],
+          "question_no_counts": {
+            "2": 371540
+          },
+          "steps": 18577,
+          "min_same_link_reference_gap_mm": [
+            1275.0,
+            [
+              375,
+              "OHT10",
+              "OHT19",
+              [
+                454
+              ]
+            ]
+          ],
+          "min_routed_reference_gap_mm": [
+            1274.9999999999993,
+            [
+              363,
+              "OHT19",
+              "OHT15",
+              [
+                454,
+                455
+              ]
+            ]
+          ],
+          "min_routed_clearance_mm": 324.9999999999993,
+          "max_trapezoid_displacement_error_mm": [
+            15.000299999999967,
+            [
+              2873,
+              "OHT09",
+              15.008000000000038,
+              30.008300000000006,
+              653,
+              653,
+              300.083,
+              0.0
+            ]
+          ],
+          "braking_distance_violation_count": 0,
+          "worst_braking_distance_violations": []
+        }
+      },
+      "3": {
+        "task_count": 600,
+        "expected_task_count": 600,
+        "task_errors": [],
+        "metric_difference_recomputed_minus_csv": {
+          "AvgTransferTime": -2.2737367544323206e-13,
+          "AvgAssignTime": -3.3333321880490985e-07,
+          "AvgPickupResponseTime": 1.7053025658242404e-13,
+          "AvgTransportTime": 3.3333330407003814e-07,
+          "AvgPausingTime": 1.7763568394002505e-15,
+          "AvgEmptyDistance": -9.999930625781417e-07,
+          "AvgTotalDistance": -6.666377885267138e-07,
+          "Makespan": 0.0
+        },
+        "trace": {
+          "errors": [],
+          "question_no_counts": {
+            "3": 406200
+          },
+          "steps": 20310,
+          "min_same_link_reference_gap_mm": [
+            1275.0,
+            [
+              133,
+              "OHT02",
+              "OHT03",
+              [
+                552
+              ]
+            ]
+          ],
+          "min_routed_reference_gap_mm": [
+            1274.9999999999993,
+            [
+              3533,
+              "OHT19",
+              "OHT20",
+              [
+                454,
+                455
+              ]
+            ]
+          ],
+          "min_routed_clearance_mm": 324.9999999999993,
+          "max_trapezoid_displacement_error_mm": [
+            15.000000000000728,
+            [
+              15988,
+              "OHT14",
+              15.049999999999272,
+              30.05,
+              515,
+              515,
+              300.5,
+              0.0
+            ]
+          ],
+          "braking_distance_violation_count": 0,
+          "worst_braking_distance_violations": []
+        }
+      }
+    }
+  },
+  "independent_continuous_clearance": {
+    "audits": [
+      {
+        "trace": "outputs/q1/问题1_OHT逐步运行记录.csv",
+        "dt_s": 0.2,
+        "vehicle_length_mm": 950.0,
+        "minimum_clearance_mm": 300.0,
+        "profile_counts": {
+          "常加速度": 33182,
+          "滑行-最大制动-静止": 98
+        },
+        "topology_intervals_checked": 2735,
+        "blank_next_unique_successor_queries": 164370,
+        "blank_next_unique_successor_hits": 403,
+        "service_vehicle_pair_checks": 20,
+        "motion_model_error_count": 0,
+        "motion_model_errors": [],
+        "continuous_gap_violation_count": 0,
+        "continuous_gap_violations": [],
+        "minimum_reconstructed_event": {
+          "step": 997,
+          "sim_time_s": 199.29321833323334,
+          "local_time_s": 0.09321833323333333,
+          "back_vehicle": "OHT10",
+          "front_vehicle": "OHT11",
+          "route": [
+            526,
+            527
+          ],
+          "reference_gap_mm": 1274.9995134958335,
+          "clearance_mm": 324.9995134958335
+        },
+        "conservative_clearance_lower_bound_mm": 324.97751349583353,
+        "passed": true,
+        "tolerance_note": "保守下界从重建净空扣除双车位置舍入误差及运动模型容差。"
+      },
+      {
+        "trace": "outputs/q2/问题2_OHT逐步运行记录.csv",
+        "dt_s": 0.2,
+        "vehicle_length_mm": 950.0,
+        "minimum_clearance_mm": 300.0,
+        "profile_counts": {
+          "常加速度": 370475,
+          "滑行-最大制动-静止": 1045
+        },
+        "topology_intervals_checked": 32449,
+        "blank_next_unique_successor_queries": 1160714,
+        "blank_next_unique_successor_hits": 4826,
+        "service_vehicle_pair_checks": 407,
+        "motion_model_error_count": 0,
+        "motion_model_errors": [],
+        "continuous_gap_violation_count": 0,
+        "continuous_gap_violations": [],
+        "minimum_reconstructed_event": {
+          "step": 16527,
+          "sim_time_s": 3305.2176163332338,
+          "local_time_s": 0.01761633323333333,
+          "back_vehicle": "OHT18",
+          "front_vehicle": "OHT03",
+          "route": [
+            539,
+            541
+          ],
+          "reference_gap_mm": 1274.9994971998349,
+          "clearance_mm": 324.9994971998349
+        },
+        "conservative_clearance_lower_bound_mm": 324.9774971998349,
+        "passed": true,
+        "tolerance_note": "保守下界从重建净空扣除双车位置舍入误差及运动模型容差。"
+      },
+      {
+        "trace": "outputs/q3/问题3_OHT逐步运行记录.csv",
+        "dt_s": 0.2,
+        "vehicle_length_mm": 950.0,
+        "minimum_clearance_mm": 300.0,
+        "profile_counts": {
+          "常加速度": 404698,
+          "滑行-最大制动-静止": 1482
+        },
+        "topology_intervals_checked": 31877,
+        "blank_next_unique_successor_queries": 2940333,
+        "blank_next_unique_successor_hits": 16428,
+        "service_vehicle_pair_checks": 1839,
+        "motion_model_error_count": 0,
+        "motion_model_errors": [],
+        "continuous_gap_violation_count": 0,
+        "continuous_gap_violations": [],
+        "minimum_reconstructed_event": {
+          "step": 2387,
+          "sim_time_s": 477.3883286665667,
+          "local_time_s": 0.18832866656666666,
+          "back_vehicle": "OHT03",
+          "front_vehicle": "OHT06",
+          "route": [
+            539
+          ],
+          "reference_gap_mm": 1274.9994699673334,
+          "clearance_mm": 324.9994699673334
+        },
+        "conservative_clearance_lower_bound_mm": 324.97746996733343,
+        "passed": true,
+        "tolerance_note": "保守下界从重建净空扣除双车位置舍入误差及运动模型容差。"
+      }
+    ],
+    "passed": true
+  },
+  "common_core_sha256": "705da63674fcc4164653b3d526567b3088ce338a3e937a3e348d19eb133ced95",
+  "provenance": {
+    "original_git_commit": "e1b4b6e26268347fe6fa16d3b2800a2870bfabe0",
+    "modified_files": [
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\227\\256\\351\\242\\2301\\347\\255\\224\\346\\241\\210/q1_solver.py\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\227\\256\\351\\242\\2301\\347\\255\\224\\346\\241\\210/\\351\\227\\256\\351\\242\\2301_\\347\\273\\223\\346\\236\\234.xlsx\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\227\\256\\351\\242\\2302\\347\\255\\224\\346\\241\\210/q1_solver.py\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\227\\256\\351\\242\\2302\\347\\255\\224\\346\\241\\210/q2_solver.py\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\227\\256\\351\\242\\2302\\347\\255\\224\\346\\241\\210/\\351\\227\\256\\351\\242\\2302_\\347\\273\\223\\346\\236\\234.xlsx\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\227\\256\\351\\242\\2303\\347\\255\\224\\346\\241\\210/q1_solver.py\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\227\\256\\351\\242\\2303\\347\\255\\224\\346\\241\\210/q2_solver.py\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\227\\256\\351\\242\\2303\\347\\255\\224\\346\\241\\210/q3_solver.py\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\231\\204\\344\\273\\2661_\\350\\275\\250\\351\\201\\223\\350\\212\\202\\347\\202\\271\\346\\225\\260\\346\\215\\256.xlsx\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\231\\204\\344\\273\\2662_\\350\\275\\250\\351\\201\\223\\350\\277\\236\\346\\216\\245\\346\\225\\260\\346\\215\\256.xlsx\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\231\\204\\344\\273\\2663_Port\\344\\275\\215\\347\\275\\256\\346\\225\\260\\346\\215\\256.xlsx\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\231\\204\\344\\273\\2664_OHT\\345\\210\\235\\345\\247\\213\\344\\275\\215\\347\\275\\256\\346\\225\\260\\346\\215\\256.xlsx\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\231\\204\\344\\273\\2665_\\351\\235\\231\\346\\200\\201\\344\\273\\273\\345\\212\\241\\346\\225\\260\\346\\215\\256.xlsx\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\231\\204\\344\\273\\2666_\\345\\212\\250\\346\\200\\201\\344\\273\\273\\345\\212\\241\\346\\225\\260\\346\\215\\256.xlsx\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\231\\204\\344\\273\\2667_\\351\\253\\230\\345\\257\\206\\344\\273\\273\\345\\212\\241\\346\\225\\260\\346\\215\\256.xlsx\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\231\\204\\344\\273\\2668_\\350\\277\\220\\350\\241\\214\\345\\217\\202\\346\\225\\260\\344\\270\\216\\346\\216\\247\\345\\210\\266\\345\\257\\271\\350\\261\\241.xlsx\"",
+      "\"\\351\\233\\206\\350\\256\\255\\346\\226\\207\\344\\273\\2662/\\351\\231\\204\\344\\273\\2669_\\347\\273\\223\\346\\236\\234\\346\\217\\220\\344\\272\\244\\346\\250\\241\\346\\235\\277.xlsx\""
+    ],
+    "input_sha256": {
+      "附件1_轨道节点数据.xlsx": "1368b6778bf3fb7b31a86938fe027acaa32ab7ded8478e60f20d622e111c29df",
+      "附件2_轨道连接数据.xlsx": "3728fa85c5beefe4fd8ea9044c2cefa531530c82b8c4c9a625b50492a50a4454",
+      "附件3_Port位置数据.xlsx": "0b07e64b0cbf6f420beeaa0c96b017f5eefc11157ab8ce670b34144eb96c0d2c",
+      "附件4_OHT初始位置数据.xlsx": "8465025b688c22ec45d621b2e07dac87f200e9180db46010ec2641388ab7f259",
+      "附件5_静态任务数据.xlsx": "c0975794830d6a46a9494becf2ce2793ce4f9a4d03a9b63fd386778c2486934e",
+      "附件6_动态任务数据.xlsx": "a5b263f6d06f2127e16add048902212c0e7a4291ff2388d63891b3bd22eca3c6",
+      "附件7_高密任务数据.xlsx": "f5ebce7abe165f2a84d34241c55299fb05f24a7f779e2482c206ce7dbf853a52",
+      "附件8_运行参数与控制对象.xlsx": "780db262740729327a62253c50938ccd8a4f707b32c2d446aa9f46ded7bd99b4",
+      "附件9_结果提交模板.xlsx": "e983f4915cf123d88cd479e452f218c6357f2fadeac5289edff31fe6dd5d4bcf"
+    },
+    "python": "3.10.20",
+    "openpyxl": "3.1.5",
+    "input_change_note": "附件3已将P17源数据由(Node69, Link505, 1473 mm)正式更正为(Node70, Link507, 303 mm)，仅修改P17三项值并保留原格式；三问正式轨迹、结果工作簿及指标未重算、未改变。",
+    "formal_output_immutability": {
+      "status": "已核对",
+      "basis": "附件3更正前后对三问正式OHT轨迹CSV与结果XLSX逐文件比较SHA-256，六个哈希均保持不变。"
+    }
+  },
+  "commands": [
+    "python3 \"问题1答案/q1_solver.py\" --root \"<工作目录>\" --iterations 1200",
+    "python3 \"问题2答案/q2_solver.py\" --root \"<工作目录>\"",
+    "python3 \"问题3答案/q3_solver.py\" --root \"<工作目录>\"",
+    "python3 \"正式复核结果/在线反事实复核.py\"",
+    "python3 \"正式复核结果/二次独立复核.py\"",
+    "python3 \"正式复核结果/复核验证.py\""
+  ]
+}

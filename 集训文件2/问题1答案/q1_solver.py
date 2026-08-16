@@ -24,6 +24,8 @@ DEC = 3000.0
 VEHICLE_LENGTH = 950.0
 CLEAR_GAP = 300.0
 REF_GAP = VEHICLE_LENGTH + CLEAR_GAP
+CONTINUOUS_GAP_MARGIN = 25.0
+CONTROL_REF_GAP = REF_GAP + CONTINUOUS_GAP_MARGIN
 PICK_TIME = 8.0
 DROP_TIME = 8.0
 # 统一采用网络最低限速作为第一版保守巡航上限。这样在任一 Link 切换处均无需
@@ -123,6 +125,7 @@ class Vehicle:
     last_action: str = "待命"
     related_vehicle: str = ""
     idle_links_traversed: int = 0
+    odometer: float = 0.0
 
 
 class DataBundle:
@@ -500,27 +503,33 @@ class StaticScheduler:
 
 class TrafficSimulator:
     MOVING_STATES = {"TO_PICKUP", "TO_DROPOFF", "IDLE"}
+    QUESTION_NO = 1
 
-    def __init__(self, data: DataBundle, graph: GraphEngine, chains: Dict[str, List[str]], label: str):
+    def __init__(self, data: DataBundle, graph: GraphEngine, chains: Dict[str, List[str]], label: str, capture_trajectory: bool = True):
         self.data = data
         self.graph = graph
         self.chains = {v: list(q) for v, q in chains.items()}
         self.label = label
+        self.capture_trajectory = capture_trajectory
         self.time_s = 0.0
         self.step_no = 0
         self.vehicles: Dict[str, Vehicle] = {}
         self.records: Dict[str, TaskRecord] = {}
         self.port_owner: Dict[str, str] = {}
         self.curve_owner: Dict[str, str] = {}
-        self.curve_release: Dict[str, Tuple[str, int, float]] = {}
+        self.curve_release: Dict[str, Tuple[str, float]] = {}
         self.merge_owner: Dict[int, str] = {}
-        self.merge_release: Dict[int, Tuple[str, int, float]] = {}
+        self.merge_release: Dict[int, Tuple[str, float]] = {}
         self.trajectory: List[List[object]] = []
         self.violations: List[Dict[str, object]] = []
         self.max_observed_speed = 0.0
         self.max_observed_acc = 0.0
         self.min_observed_acc = 0.0
         self.min_same_link_gap = math.inf
+        self.min_path_reference_gap = math.inf
+        self.min_continuous_reference_gap = math.inf
+        self.closest_path_event: Optional[Dict[str, object]] = None
+        self.closest_continuous_event: Optional[Dict[str, object]] = None
         self.completed_count = 0
         self._initialize()
 
@@ -621,14 +630,14 @@ class TrafficSimulator:
         return self.data.tasks[vehicle.current_task].priority if vehicle.current_task else -1
 
     def _release_resources(self) -> None:
-        for group, (vehicle_id, link_id, offset) in list(self.curve_release.items()):
+        for group, (vehicle_id, target_odometer) in list(self.curve_release.items()):
             vehicle = self.vehicles[vehicle_id]
-            if vehicle.link_id != link_id or vehicle.offset + EPS >= offset:
+            if vehicle.odometer + EPS >= target_odometer:
                 self.curve_owner.pop(group, None)
                 self.curve_release.pop(group, None)
-        for node, (vehicle_id, link_id, offset) in list(self.merge_release.items()):
+        for node, (vehicle_id, target_odometer) in list(self.merge_release.items()):
             vehicle = self.vehicles[vehicle_id]
-            if vehicle.link_id != link_id or vehicle.offset + EPS >= offset:
+            if vehicle.odometer + EPS >= target_odometer:
                 self.merge_owner.pop(node, None)
                 self.merge_release.pop(node, None)
 
@@ -653,20 +662,59 @@ class TrafficSimulator:
                 result.append(("CURVE", next_link.curve_group, cumulative))
             if cumulative > horizon:
                 break
+        # 任务路径虽止于 Port，Port 后至当前 Link 终点仍属于物理安全区。若该
+        # 终点是汇流节点，必须在到达/作业前预约汇流权，防止另一支路在 Port
+        # 作业期间切入下游。距离按当前位置到节点的真实连续距离计算。
+        if vehicle.route and vehicle.target_port:
+            terminal = vehicle.route[-1]
+            port = self.data.ports[vehicle.target_port]
+            terminal_link = self.data.links[terminal.link_id]
+            if (
+                terminal.link_id == port.link_id
+                and abs(terminal.end - port.offset) <= 1e-4
+                and terminal_link.to_node in self.data.merge_nodes
+            ):
+                distance_to_port = max(0.0, vehicle.route[vehicle.route_index].end - vehicle.offset)
+                distance_to_port += sum(
+                    max(0.0, seg.end - seg.start)
+                    for seg in vehicle.route[vehicle.route_index + 1:]
+                )
+                distance_to_node = distance_to_port + max(0.0, terminal_link.length - terminal.end)
+                marker = ("MERGE", terminal_link.to_node, distance_to_node)
+                if distance_to_node <= horizon + EPS and not any(
+                    kind == marker[0] and resource == marker[1] for kind, resource, _ in result
+                ):
+                    result.append(marker)
+        result.sort(key=lambda item: item[2])
         return result
 
     def _arbitrate_resources(self) -> None:
         self._release_resources()
+        # 位于汇流上游安全区内的 Port 作业车必须保留汇流权；否则另一支路车辆
+        # 在其作业期间切入下游 Link，会在切入瞬间形成跨 Link 车身净空不足。
+        for vehicle in self.vehicles.values():
+            link = self.data.links[vehicle.link_id]
+            if (
+                vehicle.state in {"PICKING", "DROPPING"}
+                and link.to_node in self.data.merge_nodes
+                and link.length - vehicle.offset <= CONTROL_REF_GAP + EPS
+                and link.to_node not in self.merge_owner
+            ):
+                self.merge_owner[link.to_node] = vehicle.vehicle_id
         # 预约尚未生效且车前已有实体时撤销预约，避免队尾车辆持有前方资源、
         # 队首又等待队尾释放资源所形成的循环等待。
         for group, vehicle_id in list(self.curve_owner.items()):
             if group in self.curve_release:
                 continue
             vehicle = self.vehicles[vehicle_id]
+            if self.data.links[vehicle.link_id].curve_group == group:
+                continue
             controls = self._upcoming_controls(vehicle)
             front = self._front_ahead(vehicle)
             match = next((c for c in controls if c[0] == "CURVE" and str(c[1]) == group), None)
-            if match is not None:
+            if match is None:
+                self.curve_owner.pop(group, None)
+            else:
                 revoke_margin = STOP_LINE_BUFFER + vehicle.speed * DT + vehicle.speed * vehicle.speed / (2.0 * DEC) + 100.0
                 if front is not None and front[1] < match[2] + REF_GAP and match[2] > revoke_margin:
                     self.curve_owner.pop(group, None)
@@ -674,12 +722,19 @@ class TrafficSimulator:
             if node in self.merge_release:
                 continue
             vehicle = self.vehicles[vehicle_id]
+            if (
+                vehicle.state in {"PICKING", "DROPPING"}
+                and self.data.links[vehicle.link_id].to_node == node
+            ):
+                continue
             controls = self._upcoming_controls(vehicle)
             front = self._front_ahead(vehicle)
             match = next((c for c in controls if c[0] == "MERGE" and int(c[1]) == node), None)
-            if match is not None:
-                revoke_margin = REF_GAP + vehicle.speed * DT + vehicle.speed * vehicle.speed / (2.0 * DEC) + 100.0
-                if front is not None and front[1] < match[2] + REF_GAP and match[2] > revoke_margin:
+            if match is None:
+                self.merge_owner.pop(node, None)
+            else:
+                revoke_margin = CONTROL_REF_GAP + vehicle.speed * DT + vehicle.speed * vehicle.speed / (2.0 * DEC) + 100.0
+                if front is not None and front[1] < match[2] + CONTROL_REF_GAP and match[2] > revoke_margin:
                     self.merge_owner.pop(node, None)
 
         curve_requests: Dict[str, List[Tuple[Vehicle, float]]] = defaultdict(list)
@@ -714,19 +769,60 @@ class TrafficSimulator:
                 winner, _ = min(requests, key=rank)
                 self.merge_owner[node] = winner.vehicle_id
 
-    def _front_ahead(self, vehicle: Vehicle) -> Optional[Tuple[Vehicle, float]]:
-        segment = self._current_segment(vehicle)
+    def _front_ahead(self, vehicle: Vehicle, horizon: float = 8.0 * REF_GAP) -> Optional[Tuple[Vehicle, float]]:
+        """沿计划路径及 Port 后唯一后继链查找最近实体。
+
+        任务路径止于 Link 中部 Port 时，轨迹中的 NextEdgeID 为空，但物理轨道仍
+        延伸至当前 Link 终点。为避免把 Port 当作拓扑终点，继续审计当前 Link
+        剩余段；若节点只有一个合法出口，再沿唯一后继链继续，遇到分支即停止。
+        """
         best: Optional[Tuple[Vehicle, float]] = None
         cumulative = 0.0
-        for idx in range(vehicle.route_index, min(len(vehicle.route), vehicle.route_index + 8)):
-            seg = vehicle.route[idx]
-            seg_start = vehicle.offset if idx == vehicle.route_index else seg.start
+        seen_links: set[int] = set()
+        scan_segments: List[Segment] = list(vehicle.route[vehicle.route_index:])
+
+        # 只有明确止于当前目标 Port 的路径才补全物理后继，避免替代调度器在
+        # 分支节点作出的路线选择。PICKING/DROPPING 车辆保留同一路径，因此也会
+        # 被纳入该连续拓扑审计。
+        if scan_segments and vehicle.target_port:
+            terminal = scan_segments[-1]
+            port = self.data.ports[vehicle.target_port]
+            if terminal.link_id == port.link_id and abs(terminal.end - port.offset) <= 1e-4:
+                terminal_link = self.data.links[terminal.link_id]
+                if terminal.end < terminal_link.length - EPS:
+                    scan_segments.append(Segment(terminal.link_id, terminal.end, terminal_link.length))
+                current_link_id = terminal.link_id
+                extension_seen = {seg.link_id for seg in scan_segments}
+                extension_distance = sum(max(0.0, seg.end - seg.start) for seg in scan_segments)
+                while extension_distance <= horizon + EPS:
+                    node = self.data.links[current_link_id].to_node
+                    options = self.graph.adj.get(node, [])
+                    if len(options) != 1:
+                        break
+                    next_link = options[0]
+                    if next_link.link_id in extension_seen:
+                        break
+                    scan_segments.append(Segment(next_link.link_id, 0.0, next_link.length))
+                    extension_seen.add(next_link.link_id)
+                    extension_distance += next_link.length
+                    current_link_id = next_link.link_id
+
+        for relative_idx, seg in enumerate(scan_segments):
+            if seg.link_id in seen_links:
+                # 同一 Link 的 Port 后补段是合法的；其他重复表示回路。
+                previous = scan_segments[relative_idx - 1] if relative_idx else None
+                if previous is not None and previous.link_id == seg.link_id and abs(previous.end - seg.start) <= 1e-4:
+                    pass
+                else:
+                    break
+            seen_links.add(seg.link_id)
+            seg_start = vehicle.offset if relative_idx == 0 else seg.start
             for other in self.vehicles.values():
                 if other.vehicle_id == vehicle.vehicle_id or other.link_id != seg.link_id:
                     continue
-                if idx == vehicle.route_index and other.offset <= vehicle.offset + EPS:
+                if relative_idx == 0 and other.offset <= vehicle.offset + EPS:
                     continue
-                if other.offset < seg_start - EPS:
+                if other.offset < seg_start - EPS or other.offset > seg.end + EPS:
                     continue
                 distance = cumulative + other.offset - seg_start
                 if distance <= EPS:
@@ -734,7 +830,7 @@ class TrafficSimulator:
                 if best is None or distance < best[1]:
                     best = (other, distance)
             cumulative += seg.end - seg_start
-            if cumulative > 6.0 * REF_GAP:
+            if cumulative > horizon:
                 break
         return best
 
@@ -764,6 +860,19 @@ class TrafficSimulator:
         reason = "正常运行" if vehicle.current_task else "空闲巡航"
         related = ""
 
+        def minimum_step_movement() -> float:
+            if vehicle.speed >= DEC * DT:
+                return vehicle.speed * DT - 0.5 * DEC * DT * DT
+            return vehicle.speed * vehicle.speed / (2.0 * DEC)
+
+        def resource_stop_distance(raw_distance: float, buffer: float) -> float:
+            """优先保留缓冲；若缓冲导致本步不可制动，则缩小缓冲但不越过边界。"""
+            distance = max(0.0, raw_distance - buffer)
+            stopping_distance = vehicle.speed * vehicle.speed / (2.0 * DEC)
+            if distance < stopping_distance <= raw_distance + 1e-5:
+                distance = min(raw_distance, stopping_distance)
+            return distance
+
         def safe_next_speed(stop_distance: float) -> float:
             """使下一离散步结束后仍保有以 DEC 停车的距离。"""
             d = max(0.0, stop_distance)
@@ -783,7 +892,11 @@ class TrafficSimulator:
         front = self._front_ahead(vehicle)
         if front is not None:
             other, reference_distance = front
-            available = reference_distance - REF_GAP
+            raw_available = max(0.0, reference_distance - REF_GAP)
+            available = max(0.0, raw_available - CONTINUOUS_GAP_MARGIN)
+            stopping_distance = vehicle.speed * vehicle.speed / (2.0 * DEC)
+            if available < stopping_distance <= raw_available + 1e-5:
+                available = min(raw_available, stopping_distance)
             # 将前车视为可立即停车，得到比同减速度假设更保守的跟驰控制。
             safe_v = safe_next_speed(max(0.0, available))
             if safe_v < desired - EPS:
@@ -798,13 +911,13 @@ class TrafficSimulator:
             if kind == "MERGE":
                 owner = self.merge_owner.get(int(resource))
                 block_reason = "汇流避让"
-                buffer = REF_GAP
+                buffer = CONTROL_REF_GAP
             else:
                 owner = self.curve_owner.get(str(resource))
                 block_reason = "弯轨等待"
                 buffer = STOP_LINE_BUFFER
             if owner != vehicle.vehicle_id:
-                distance = max(0.0, distance_to_boundary - buffer)
+                distance = resource_stop_distance(distance_to_boundary, buffer)
                 desired = min(desired, safe_next_speed(distance))
                 hard_stop = min(hard_stop, distance)
                 reason, related = block_reason, owner or ""
@@ -814,8 +927,9 @@ class TrafficSimulator:
             # 未获权车辆停在节点上游，而不是以非零速度贴到 Link 端点；留出小量
             # 数值缓冲也避免浮点舍入导致下一步才发现零制动距离。汇流与下游入口
             # 等待需在上游保留完整参考点间距，防止另一支路车辆切入后间距瞬时不足。
-            buffer = REF_GAP if block_reason in {"汇流避让", "安全跟驰"} else STOP_LINE_BUFFER
-            distance = max(0.0, self._current_segment(vehicle).end - vehicle.offset - buffer)
+            buffer = CONTROL_REF_GAP if block_reason in {"汇流避让", "安全跟驰"} else STOP_LINE_BUFFER
+            raw_distance = max(0.0, self._current_segment(vehicle).end - vehicle.offset)
+            distance = resource_stop_distance(raw_distance, buffer)
             desired = min(desired, safe_next_speed(distance))
             hard_stop = min(hard_stop, distance)
             if desired < link.vmax - EPS or distance < 2.0 * REF_GAP:
@@ -828,13 +942,27 @@ class TrafficSimulator:
         new_speed = max(0.0, min(link.vmax, vehicle.speed + acceleration * DT))
         movement = 0.5 * (vehicle.speed + new_speed) * DT
         if math.isfinite(hard_stop) and movement > hard_stop + 1e-6:
-            feasible_new_speed = max(0.0, 2.0 * hard_stop / DT - vehicle.speed)
-            required_acc = (feasible_new_speed - vehicle.speed) / DT
-            if required_acc < -DEC - 1e-5:
+            min_movement = minimum_step_movement()
+            if hard_stop < min_movement - 1e-5:
                 self._violate("braking", vehicle.vehicle_id, f"停止距离不足 {hard_stop:.3f} mm")
-            new_speed = feasible_new_speed
-            acceleration = required_acc
-            movement = hard_stop
+                acceleration = -DEC
+                new_speed = max(0.0, vehicle.speed - DEC * DT)
+                movement = min_movement
+            elif vehicle.speed < DEC * DT:
+                max_stop_movement = vehicle.speed * DT - min_movement
+                if hard_stop <= max_stop_movement + 1e-6:
+                    # 先匀速、再以最大减速度制动并在步内停稳。
+                    new_speed = 0.0
+                    acceleration = -vehicle.speed / DT
+                    movement = hard_stop
+                else:
+                    new_speed = max(0.0, 2.0 * hard_stop / DT - vehicle.speed)
+                    acceleration = (new_speed - vehicle.speed) / DT
+                    movement = hard_stop
+            else:
+                new_speed = max(0.0, 2.0 * hard_stop / DT - vehicle.speed)
+                acceleration = (new_speed - vehicle.speed) / DT
+                movement = hard_stop
         return movement, new_speed, reason, related
 
     def _cross_boundary(self, vehicle: Vehicle, old_link_id: int, next_link_id: int) -> None:
@@ -844,7 +972,7 @@ class TrafficSimulator:
             group = old_link.curve_group
             if self.curve_owner.get(group) != vehicle.vehicle_id:
                 self._violate("curve_owner", vehicle.vehicle_id, f"无权离开/占用 {group}")
-            self.curve_release[group] = (vehicle.vehicle_id, next_link_id, min(next_link.length, VEHICLE_LENGTH))
+            self.curve_release[group] = (vehicle.vehicle_id, vehicle.odometer + VEHICLE_LENGTH)
         if next_link.curve_group and next_link.curve_group != old_link.curve_group:
             if self.curve_owner.get(next_link.curve_group) != vehicle.vehicle_id:
                 self._violate("curve_entry", vehicle.vehicle_id, f"无权进入 {next_link.curve_group}")
@@ -852,7 +980,35 @@ class TrafficSimulator:
             node = old_link.to_node
             if self.merge_owner.get(node) != vehicle.vehicle_id:
                 self._violate("merge_entry", vehicle.vehicle_id, f"无权通过 Node{node}")
-            self.merge_release[node] = (vehicle.vehicle_id, next_link_id, min(next_link.length, REF_GAP))
+            self.merge_release[node] = (vehicle.vehicle_id, vehicle.odometer + CONTROL_REF_GAP)
+            self._audit_merge_transition(node, vehicle)
+
+    def _audit_merge_transition(self, node: int, entering: Vehicle) -> None:
+        """汇流切入瞬间检查此前分支上新形成的前后车关系。"""
+        for back in self.vehicles.values():
+            if back.vehicle_id == entering.vehicle_id:
+                continue
+            found = self._front_ahead(back)
+            if found is None or found[0].vehicle_id != entering.vehicle_id:
+                continue
+            gap = found[1]
+            if gap < self.min_continuous_reference_gap:
+                self.min_continuous_reference_gap = gap
+                self.closest_continuous_event = {
+                    "time_s": round(self.time_s, 6),
+                    "back_vehicle": back.vehicle_id,
+                    "front_vehicle": entering.vehicle_id,
+                    "back_link": back.link_id,
+                    "front_link": entering.link_id,
+                    "reference_gap_mm": round(gap, 6),
+                    "clearance_mm": round(gap - VEHICLE_LENGTH, 6),
+                    "event": f"merge_transition_Node{node}",
+                }
+            if gap < REF_GAP - 1e-4:
+                self._violate(
+                    "continuous_merge_gap", back.vehicle_id,
+                    f"Node{node}, 前车{entering.vehicle_id}, 间距{gap:.6f}",
+                )
 
     def _advance_vehicle(self, vehicle: Vehicle, movement: float, new_speed: float, boundary_allowed: bool) -> None:
         left = movement
@@ -861,10 +1017,12 @@ class TrafficSimulator:
             available = max(0.0, segment.end - vehicle.offset)
             if left < available - EPS:
                 vehicle.offset += left
+                vehicle.odometer += left
                 left = 0.0
             else:
                 vehicle.offset = segment.end
                 left -= available
+                vehicle.odometer += available
                 next_seg = self._next_segment(vehicle)
                 if next_seg is None:
                     left = 0.0
@@ -968,6 +1126,102 @@ class TrafficSimulator:
             "vehicle_id": vehicle_id, "detail": detail,
         })
 
+    def _audit_continuous_step(
+        self, controls: Dict[str, Tuple[float, float, str, str, float, bool]]
+    ) -> None:
+        """按实际常加速度或“匀速+最大制动+静止”分段轨迹求区间最小值。"""
+        def motion_state(
+            control: Tuple[float, float, str, str, float, bool], t: float
+        ) -> Tuple[float, float, float]:
+            movement, new_speed, _, _, old_speed, _ = control
+            trapezoid = 0.5 * (old_speed + new_speed) * DT
+            if abs(movement - trapezoid) <= 1e-5:
+                acceleration = (new_speed - old_speed) / DT
+                return (
+                    old_speed * t + 0.5 * acceleration * t * t,
+                    old_speed + acceleration * t,
+                    acceleration,
+                )
+            if new_speed <= EPS and old_speed > EPS:
+                min_stop = old_speed * old_speed / (2.0 * DEC)
+                coast = max(0.0, (movement - min_stop) / old_speed)
+                brake_end = min(DT, coast + old_speed / DEC)
+                if t <= coast:
+                    return old_speed * t, old_speed, 0.0
+                if t <= brake_end:
+                    u = t - coast
+                    return (
+                        old_speed * coast + old_speed * u - 0.5 * DEC * u * u,
+                        max(0.0, old_speed - DEC * u),
+                        -DEC,
+                    )
+                return movement, 0.0, 0.0
+            acceleration = (new_speed - old_speed) / DT
+            return (
+                old_speed * t + 0.5 * acceleration * t * t,
+                old_speed + acceleration * t,
+                acceleration,
+            )
+
+        def breakpoints(
+            control: Tuple[float, float, str, str, float, bool]
+        ) -> List[float]:
+            movement, new_speed, _, _, old_speed, _ = control
+            result = [0.0, DT]
+            trapezoid = 0.5 * (old_speed + new_speed) * DT
+            if abs(movement - trapezoid) > 1e-5 and new_speed <= EPS and old_speed > EPS:
+                min_stop = old_speed * old_speed / (2.0 * DEC)
+                coast = max(0.0, (movement - min_stop) / old_speed)
+                result.extend([min(DT, coast), min(DT, coast + old_speed / DEC)])
+            return sorted(set(round(x, 12) for x in result if -EPS <= x <= DT + EPS))
+
+        for back in self.vehicles.values():
+            found = self._front_ahead(back)
+            if found is None:
+                continue
+            front, gap0 = found
+            back_control = controls.get(
+                back.vehicle_id, (0.0, back.speed, "", "", back.speed, False)
+            )
+            front_control = controls.get(
+                front.vehicle_id, (0.0, front.speed, "", "", front.speed, False)
+            )
+            points = sorted(set(breakpoints(back_control) + breakpoints(front_control)))
+            candidates = list(points)
+            for left, right in zip(points, points[1:]):
+                probe = min(right, left + 1e-8)
+                _, back_v, back_a = motion_state(back_control, probe)
+                _, front_v, front_a = motion_state(front_control, probe)
+                rel_a = front_a - back_a
+                if abs(rel_a) <= EPS:
+                    continue
+                stationary = left - (front_v - back_v) / rel_a
+                if left + EPS < stationary < right - EPS:
+                    candidates.append(stationary)
+            values = []
+            for t in candidates:
+                back_s, _, _ = motion_state(back_control, t)
+                front_s, _, _ = motion_state(front_control, t)
+                values.append((gap0 + front_s - back_s, t))
+            gap, local_t = min(values)
+            if gap < self.min_continuous_reference_gap:
+                self.min_continuous_reference_gap = gap
+                self.closest_continuous_event = {
+                    "time_s": round(self.time_s + local_t, 6),
+                    "back_vehicle": back.vehicle_id,
+                    "front_vehicle": front.vehicle_id,
+                    "back_link": back.link_id,
+                    "front_link": front.link_id,
+                    "reference_gap_mm": round(gap, 6),
+                    "clearance_mm": round(gap - VEHICLE_LENGTH, 6),
+                }
+            if gap < REF_GAP - 1e-4:
+                self._violate(
+                    "continuous_path_gap", back.vehicle_id,
+                    f"前车{front.vehicle_id}, t={self.time_s + local_t:.6f}, "
+                    f"Link{back.link_id}->Link{front.link_id}, 间距{gap:.6f}",
+                )
+
     def _audit_state(self, at_s: float) -> None:
         for vehicle in self.vehicles.values():
             link = self.data.links[vehicle.link_id]
@@ -991,6 +1245,28 @@ class TrafficSimulator:
                 self.min_same_link_gap = min(self.min_same_link_gap, gap)
                 if gap < REF_GAP - 1e-4:
                     self._violate("same_link_gap", back.vehicle_id, f"Link{link_id}, 前车{front.vehicle_id}, 间距{gap:.6f}")
+
+        for back in self.vehicles.values():
+            found = self._front_ahead(back)
+            if found is None:
+                continue
+            front, gap = found
+            if gap < self.min_path_reference_gap:
+                self.min_path_reference_gap = gap
+                self.closest_path_event = {
+                    "time_s": round(at_s, 6),
+                    "back_vehicle": back.vehicle_id,
+                    "front_vehicle": front.vehicle_id,
+                    "back_link": back.link_id,
+                    "front_link": front.link_id,
+                    "reference_gap_mm": round(gap, 6),
+                    "clearance_mm": round(gap - VEHICLE_LENGTH, 6),
+                }
+            if gap < REF_GAP - 1e-4:
+                self._violate(
+                    "path_gap", back.vehicle_id,
+                    f"前车{front.vehicle_id}, Link{back.link_id}->Link{front.link_id}, 间距{gap:.6f}",
+                )
 
         group_occupants: Dict[str, List[str]] = defaultdict(list)
         for vehicle in self.vehicles.values():
@@ -1016,11 +1292,13 @@ class TrafficSimulator:
         }.get(vehicle.state, vehicle.state)
 
     def _log_trajectory(self) -> None:
+        if not self.capture_trajectory:
+            return
         for vehicle_id in sorted(self.vehicles):
             vehicle = self.vehicles[vehicle_id]
             next_seg = self._next_segment(vehicle) if vehicle.state in self.MOVING_STATES else None
             self.trajectory.append([
-                1, self.step_no, round(self.time_s, 3), vehicle.vehicle_id,
+                self.QUESTION_NO, self.step_no, round(self.time_s, 3), vehicle.vehicle_id,
                 vehicle.current_task or "", vehicle.carrier_id or "",
                 self._vehicle_state_label(vehicle), vehicle.link_id, round(vehicle.offset, 3),
                 round(vehicle.speed, 3), next_seg.link_id if next_seg else "",
@@ -1046,6 +1324,7 @@ class TrafficSimulator:
                 movement, new_speed, reason, related = self._movement_control(vehicle)
                 controls[vehicle.vehicle_id] = (movement, new_speed, reason, related, old_speed, boundary_allowed)
 
+            self._audit_continuous_step(controls)
             for vehicle_id, (movement, new_speed, reason, related, old_speed, boundary_allowed) in controls.items():
                 vehicle = self.vehicles[vehicle_id]
                 self._advance_vehicle(vehicle, movement, new_speed, boundary_allowed)
@@ -1072,6 +1351,12 @@ class TrafficSimulator:
             "hard_violation_count": len(self.violations),
             "trajectory_rows": len(self.trajectory),
             "min_same_link_reference_gap_mm": None if math.isinf(self.min_same_link_gap) else self.min_same_link_gap,
+            "min_path_reference_gap_mm": None if math.isinf(self.min_path_reference_gap) else self.min_path_reference_gap,
+            "min_path_clearance_mm": None if math.isinf(self.min_path_reference_gap) else self.min_path_reference_gap - VEHICLE_LENGTH,
+            "min_continuous_reference_gap_mm": None if math.isinf(self.min_continuous_reference_gap) else self.min_continuous_reference_gap,
+            "min_continuous_clearance_mm": None if math.isinf(self.min_continuous_reference_gap) else self.min_continuous_reference_gap - VEHICLE_LENGTH,
+            "closest_path_event": self.closest_path_event,
+            "closest_continuous_event": self.closest_continuous_event,
             "max_speed_mm_s": self.max_observed_speed,
             "max_acc_mm_s2": self.max_observed_acc,
             "min_acc_mm_s2": self.min_observed_acc,
@@ -1308,7 +1593,15 @@ def solve(root: Path, iterations: int) -> Dict[str, object]:
         (insertion_summary, insertion_sim, insertion_chains, "全局增量插入"),
         (improved_summary, improved_sim, improved_chains, "ALNS静态调度"),
     ]
-    feasible = [x for x in candidates if x[0]["completed_tasks"] == 32 and x[0]["hard_violation_count"] == 0]
+    for summary, _, _, _ in candidates:
+        clearance = summary.get("min_continuous_clearance_mm")
+        summary["hard_gate_passed"] = (
+            summary["completed_tasks"] == 32
+            and summary["hard_violation_count"] == 0
+            and clearance is not None
+            and float(clearance) >= CLEAR_GAP - 1e-4
+        )
+    feasible = [x for x in candidates if x[0]["hard_gate_passed"] is True]
     if not feasible:
         diagnostics = {
             "baseline": baseline_summary,
@@ -1349,7 +1642,8 @@ def solve(root: Path, iterations: int) -> Dict[str, object]:
         "configuration": {
             "dt_s": DT, "acc_mm_s2": ACC, "dec_mm_s2": DEC,
             "vehicle_length_mm": VEHICLE_LENGTH, "clear_gap_mm": CLEAR_GAP,
-            "reference_gap_mm": REF_GAP, "pick_time_s": PICK_TIME, "drop_time_s": DROP_TIME,
+            "reference_gap_mm": REF_GAP, "control_clearance_mm": CLEAR_GAP + CONTINUOUS_GAP_MARGIN,
+            "control_reference_gap_mm": CONTROL_REF_GAP, "pick_time_s": PICK_TIME, "drop_time_s": DROP_TIME,
             "p17_override": [70, 507, 303.0],
         },
     }
@@ -1366,7 +1660,7 @@ def solve(root: Path, iterations: int) -> Dict[str, object]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="求解 OHT 赛题问题1")
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parent)
+    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--iterations", type=int, default=1200)
     args = parser.parse_args()
     result = solve(args.root.resolve(), args.iterations)

@@ -1,0 +1,206 @@
+{
+  "p17": {
+    "actual": {
+      "node": 70,
+      "link": 507,
+      "offset": 303.0
+    },
+    "expected": {
+      "node": 70,
+      "link": 507,
+      "offset": 303.0
+    },
+    "link507": {
+      "u": 70,
+      "v": 71,
+      "length": 1170.0,
+      "vmax": 3000.0
+    },
+    "passed": true
+  },
+  "questions": {
+    "1": {
+      "task_count": 32,
+      "expected_task_count": 32,
+      "task_errors": [],
+      "metric_difference_recomputed_minus_csv": {
+        "AvgTransferTime": -2.842170943040401e-14,
+        "AvgAssignTime": 0.0,
+        "AvgPickupResponseTime": 1.4210854715202004e-14,
+        "AvgTransportTime": 2.842170943040401e-14,
+        "AvgPausingTime": -4.440892098500626e-16,
+        "AvgEmptyDistance": 3.637978807091713e-12,
+        "AvgTotalDistance": 0.0,
+        "Makespan": 0.0
+      },
+      "trace": {
+        "errors": [],
+        "question_no_counts": {
+          "1": 33300
+        },
+        "steps": 1665,
+        "min_same_link_reference_gap_mm": [
+          1275.0,
+          [
+            274,
+            "OHT15",
+            "OHT10",
+            [
+              488
+            ]
+          ]
+        ],
+        "min_routed_reference_gap_mm": [
+          1274.9999999999995,
+          [
+            1106,
+            "OHT19",
+            "OHT13",
+            [
+              534,
+              535
+            ]
+          ]
+        ],
+        "min_routed_clearance_mm": 324.99999999999955,
+        "max_trapezoid_displacement_error_mm": [
+          15.000000000000185,
+          [
+            354,
+            "OHT03",
+            14.949999999999818,
+            29.950000000000003,
+            200,
+            200,
+            299.5,
+            0.0
+          ]
+        ],
+        "braking_distance_violation_count": 0,
+        "worst_braking_distance_violations": []
+      }
+    },
+    "2": {
+      "task_count": 190,
+      "expected_task_count": 190,
+      "task_errors": [],
+      "metric_difference_recomputed_minus_csv": {
+        "AvgTransferTime": 2.6315788659303507e-07,
+        "AvgAssignTime": -3.157894725713817e-07,
+        "AvgPickupResponseTime": -4.736841887620358e-07,
+        "AvgTransportTime": 5.263161995117116e-08,
+        "AvgPausingTime": 1.0526315730174929e-07,
+        "AvgEmptyDistance": 2.5789631763473153e-06,
+        "AvgTotalDistance": 2.3684551706537604e-06,
+        "Makespan": 0.0
+      },
+      "trace": {
+        "errors": [],
+        "question_no_counts": {
+          "2": 371540
+        },
+        "steps": 18577,
+        "min_same_link_reference_gap_mm": [
+          1275.0,
+          [
+            375,
+            "OHT10",
+            "OHT19",
+            [
+              454
+            ]
+          ]
+        ],
+        "min_routed_reference_gap_mm": [
+          1274.9999999999993,
+          [
+            363,
+            "OHT19",
+            "OHT15",
+            [
+              454,
+              455
+            ]
+          ]
+        ],
+        "min_routed_clearance_mm": 324.9999999999993,
+        "max_trapezoid_displacement_error_mm": [
+          15.000299999999967,
+          [
+            2873,
+            "OHT09",
+            15.008000000000038,
+            30.008300000000006,
+            653,
+            653,
+            300.083,
+            0.0
+          ]
+        ],
+        "braking_distance_violation_count": 0,
+        "worst_braking_distance_violations": []
+      }
+    },
+    "3": {
+      "task_count": 600,
+      "expected_task_count": 600,
+      "task_errors": [],
+      "metric_difference_recomputed_minus_csv": {
+        "AvgTransferTime": -2.2737367544323206e-13,
+        "AvgAssignTime": -3.3333321880490985e-07,
+        "AvgPickupResponseTime": 1.7053025658242404e-13,
+        "AvgTransportTime": 3.3333330407003814e-07,
+        "AvgPausingTime": 1.7763568394002505e-15,
+        "AvgEmptyDistance": -9.999930625781417e-07,
+        "AvgTotalDistance": -6.666377885267138e-07,
+        "Makespan": 0.0
+      },
+      "trace": {
+        "errors": [],
+        "question_no_counts": {
+          "3": 406200
+        },
+        "steps": 20310,
+        "min_same_link_reference_gap_mm": [
+          1275.0,
+          [
+            133,
+            "OHT02",
+            "OHT03",
+            [
+              552
+            ]
+          ]
+        ],
+        "min_routed_reference_gap_mm": [
+          1274.9999999999993,
+          [
+            3533,
+            "OHT19",
+            "OHT20",
+            [
+              454,
+              455
+            ]
+          ]
+        ],
+        "min_routed_clearance_mm": 324.9999999999993,
+        "max_trapezoid_displacement_error_mm": [
+          15.000000000000728,
+          [
+            15988,
+            "OHT14",
+            15.049999999999272,
+            30.05,
+            515,
+            515,
+            300.5,
+            0.0
+          ]
+        ],
+        "braking_distance_violation_count": 0,
+        "worst_braking_distance_violations": []
+      }
+    }
+  }
+}

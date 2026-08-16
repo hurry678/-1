@@ -108,6 +108,8 @@ class HighDensityScheduler(online.OnlineScheduler):
                     )
                     if empty_to_source < braking_acceptance - core.EPS:
                         score += 1_000_000.0
+                    if not self._route_admissible(sim, vehicle, task):
+                        score += 1_000_000.0
                 if self.q3_mode == "microbatch":
                     score += 1.5 * len(chain) + 0.5 * port_pressure
                     score += 0.01 * max(0.0, finish - now_s)
@@ -154,6 +156,8 @@ class HighDensityScheduler(online.OnlineScheduler):
 
 
 class HighDensitySimulator(online.OnlineTrafficSimulator):
+    QUESTION_NO = 3
+
     def __init__(
         self,
         data: core.DataBundle,
@@ -633,6 +637,8 @@ def export_excel(
             if isinstance(value, datetime):
                 cell.number_format = "yyyy-mm-dd hh:mm:ss.000"
     for row in trajectory:
+        if int(row[0]) != 3:
+            raise ValueError(f"问题3轨迹问题号错误: {row[0]}")
         ws_trace.append(row)
     for col_idx, value in enumerate(metrics, start=1):
         ws_metric.cell(4, col_idx, value)
@@ -644,6 +650,8 @@ def export_excel(
         raise ValueError("轨迹写入行数不一致")
     if check["算法评价指标"].cell(4, 2).value != 600:
         raise ValueError("问题3指标未正确写入")
+    if any(int(row[0].value) != 3 for row in check["OHT逐步运行记录表"].iter_rows(min_row=2, max_col=1)):
+        raise ValueError("问题3 Excel轨迹问题号错误")
 
 
 def audit_result(
@@ -777,20 +785,28 @@ def solve(root: Path) -> Dict[str, object]:
         print(f"运行问题3 {mode} 无轨迹对比仿真……", flush=True)
         sim = HighDensitySimulator(data, graph, mode, capture_trajectory=False)
         summaries[mode] = sim.run()
+        summaries[mode]["hard_gate_passed"] = (
+            summaries[mode]["completed_tasks"] == 600
+            and summaries[mode]["hard_violation_count"] == 0
+            and summaries[mode]["future_leak_count"] == 0
+            and summaries[mode]["min_continuous_clearance_mm"] is not None
+            and float(summaries[mode]["min_continuous_clearance_mm"]) >= core.CLEAR_GAP - 1e-4
+        )
         print(json.dumps(summaries[mode], ensure_ascii=False, indent=2), flush=True)
-    feasible = [
-        mode for mode, s in summaries.items()
-        if s["completed_tasks"] == 600 and s["hard_violation_count"] == 0
-        and s["future_leak_count"] == 0
-    ]
+    feasible = [mode for mode, summary in summaries.items() if summary["hard_gate_passed"] is True]
     if not feasible:
         (out / "问题3_失败诊断.json").write_text(
             json.dumps(summaries, ensure_ascii=False, indent=2), encoding="utf-8"
         )
         raise RuntimeError("问题3候选算法均未得到零违规完整解")
-    if "full" not in feasible:
-        raise RuntimeError("文档指定的第三问完整主模型未得到零违规完整解")
-    selected = "full"
+    selected = min(
+        feasible,
+        key=lambda mode: (
+            summaries[mode]["avg_transfer_time_s"],
+            summaries[mode]["makespan_s"],
+            mode,
+        ),
+    )
     print(f"全日志复跑最终方案：{selected}……", flush=True)
     sim = HighDensitySimulator(data, graph, selected, capture_trajectory=True)
     final_summary = sim.run()
@@ -866,7 +882,7 @@ def solve(root: Path) -> Dict[str, object]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="求解OHT赛题问题3")
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parent)
+    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args()
     print(json.dumps(solve(args.root.resolve()), ensure_ascii=False, indent=2), flush=True)
 

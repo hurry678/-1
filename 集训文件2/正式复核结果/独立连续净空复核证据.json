@@ -1,0 +1,106 @@
+{
+  "audits": [
+    {
+      "trace": "outputs/q1/问题1_OHT逐步运行记录.csv",
+      "dt_s": 0.2,
+      "vehicle_length_mm": 950.0,
+      "minimum_clearance_mm": 300.0,
+      "profile_counts": {
+        "常加速度": 33182,
+        "滑行-最大制动-静止": 98
+      },
+      "topology_intervals_checked": 2735,
+      "blank_next_unique_successor_queries": 164370,
+      "blank_next_unique_successor_hits": 403,
+      "service_vehicle_pair_checks": 20,
+      "motion_model_error_count": 0,
+      "motion_model_errors": [],
+      "continuous_gap_violation_count": 0,
+      "continuous_gap_violations": [],
+      "minimum_reconstructed_event": {
+        "step": 997,
+        "sim_time_s": 199.29321833323334,
+        "local_time_s": 0.09321833323333333,
+        "back_vehicle": "OHT10",
+        "front_vehicle": "OHT11",
+        "route": [
+          526,
+          527
+        ],
+        "reference_gap_mm": 1274.9995134958335,
+        "clearance_mm": 324.9995134958335
+      },
+      "conservative_clearance_lower_bound_mm": 324.97751349583353,
+      "passed": true,
+      "tolerance_note": "保守下界从重建净空扣除双车位置舍入误差及运动模型容差。"
+    },
+    {
+      "trace": "outputs/q2/问题2_OHT逐步运行记录.csv",
+      "dt_s": 0.2,
+      "vehicle_length_mm": 950.0,
+      "minimum_clearance_mm": 300.0,
+      "profile_counts": {
+        "常加速度": 370475,
+        "滑行-最大制动-静止": 1045
+      },
+      "topology_intervals_checked": 32449,
+      "blank_next_unique_successor_queries": 1160714,
+      "blank_next_unique_successor_hits": 4826,
+      "service_vehicle_pair_checks": 407,
+      "motion_model_error_count": 0,
+      "motion_model_errors": [],
+      "continuous_gap_violation_count": 0,
+      "continuous_gap_violations": [],
+      "minimum_reconstructed_event": {
+        "step": 16527,
+        "sim_time_s": 3305.2176163332338,
+        "local_time_s": 0.01761633323333333,
+        "back_vehicle": "OHT18",
+        "front_vehicle": "OHT03",
+        "route": [
+          539,
+          541
+        ],
+        "reference_gap_mm": 1274.9994971998349,
+        "clearance_mm": 324.9994971998349
+      },
+      "conservative_clearance_lower_bound_mm": 324.9774971998349,
+      "passed": true,
+      "tolerance_note": "保守下界从重建净空扣除双车位置舍入误差及运动模型容差。"
+    },
+    {
+      "trace": "outputs/q3/问题3_OHT逐步运行记录.csv",
+      "dt_s": 0.2,
+      "vehicle_length_mm": 950.0,
+      "minimum_clearance_mm": 300.0,
+      "profile_counts": {
+        "常加速度": 404698,
+        "滑行-最大制动-静止": 1482
+      },
+      "topology_intervals_checked": 31877,
+      "blank_next_unique_successor_queries": 2940333,
+      "blank_next_unique_successor_hits": 16428,
+      "service_vehicle_pair_checks": 1839,
+      "motion_model_error_count": 0,
+      "motion_model_errors": [],
+      "continuous_gap_violation_count": 0,
+      "continuous_gap_violations": [],
+      "minimum_reconstructed_event": {
+        "step": 2387,
+        "sim_time_s": 477.3883286665667,
+        "local_time_s": 0.18832866656666666,
+        "back_vehicle": "OHT03",
+        "front_vehicle": "OHT06",
+        "route": [
+          539
+        ],
+        "reference_gap_mm": 1274.9994699673334,
+        "clearance_mm": 324.9994699673334
+      },
+      "conservative_clearance_lower_bound_mm": 324.97746996733343,
+      "passed": true,
+      "tolerance_note": "保守下界从重建净空扣除双车位置舍入误差及运动模型容差。"
+    }
+  ],
+  "passed": true
+}

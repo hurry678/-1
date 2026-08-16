@@ -9,7 +9,7 @@ from pathlib import Path
 import openpyxl
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs" / "q1"
 DT = 0.2
 ACC = 2000.0
@@ -103,6 +103,16 @@ def main() -> None:
         errors.append("Excel轨迹行数与CSV不一致")
     if wb["算法评价指标"].cell(2, 2).value != 32:
         errors.append("Excel指标任务数错误")
+
+    QUESTION_NO = 1
+    evidence_path = ROOT / "正式复核结果" / "独立连续净空复核证据.json"
+    if not evidence_path.exists():
+        errors.append("缺少独立连续净空复核证据")
+    else:
+        evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+        matches = [x for x in evidence.get("audits", []) if f"outputs/q{QUESTION_NO}/" in x.get("trace", "")]
+        if len(matches) != 1 or not matches[0].get("passed"):
+            errors.append("独立连续净空复核未通过")
 
     result = {
         "passed": not errors,

@@ -152,6 +152,55 @@ class OnlineScheduler:
         history_scale = completed_pause_s / max(1, len(sim.records))
         return pressure + 0.5 * resource_waits + 0.1 * active_resources + 0.02 * history_scale
 
+    def _route_admissible(
+        self, sim: "OnlineTrafficSimulator", vehicle: core.Vehicle, task: core.Task
+    ) -> bool:
+        """空闲巡航车改道前检查前车与短 Link 后控制边界的可制动接纳距离。"""
+        route, _, _, _ = self.graph.position_path(
+            vehicle.link_id, vehicle.offset, self.data.ports[task.source]
+        )
+        required_stop = vehicle.speed * core.DT + vehicle.speed * vehicle.speed / (2.0 * core.DEC)
+        cumulative = 0.0
+        for idx, segment in enumerate(route):
+            start = vehicle.offset if idx == 0 else segment.start
+            for other in sim.vehicles.values():
+                if other.vehicle_id == vehicle.vehicle_id or other.link_id != segment.link_id:
+                    continue
+                if other.offset < start - core.EPS:
+                    continue
+                distance = cumulative + other.offset - start
+                if distance < core.REF_GAP + core.CONTINUOUS_GAP_MARGIN + required_stop - core.EPS:
+                    return False
+            cumulative += segment.end - start
+            if idx + 1 >= len(route):
+                continue
+            link = self.data.links[segment.link_id]
+            nxt = self.data.links[route[idx + 1].link_id]
+            if link.to_node in self.data.merge_nodes:
+                owner = sim.merge_owner.get(link.to_node)
+                if owner not in {None, vehicle.vehicle_id} and cumulative < core.REF_GAP + required_stop - core.EPS:
+                    return False
+            if nxt.curve_group and nxt.curve_group != link.curve_group:
+                owner = sim.curve_owner.get(nxt.curve_group)
+                if owner not in {None, vehicle.vehicle_id} and cumulative < core.STOP_LINE_BUFFER + required_stop - core.EPS:
+                    return False
+        return True
+
+    def _idle_task_admissible(
+        self, sim: "OnlineTrafficSimulator", vehicle: core.Vehicle, task: core.Task
+    ) -> bool:
+        """高速空闲车只有在本步即可物理制动到 Source 时才允许立即接单。"""
+        empty_to_source, _ = self._travel((vehicle.link_id, vehicle.offset), task.source)
+        braking_acceptance = (
+            vehicle.speed * core.DT
+            + vehicle.speed * vehicle.speed / (2.0 * core.DEC)
+            + core.STOP_LINE_BUFFER
+        )
+        return (
+            empty_to_source >= braking_acceptance - core.EPS
+            and self._route_admissible(sim, vehicle, task)
+        )
+
     def _best_document_insertion(
         self, sim: "OnlineTrafficSimulator", task_id: str, now_s: float
     ) -> Tuple[str, int, float, float]:
@@ -184,15 +233,7 @@ class OnlineScheduler:
                 score -= 0.08 * max(0.0, now_s - sim.release_s[task_id])
                 score += 0.02 * (sum(completions) - base_sum)
                 if vehicle.current_task is None and not vehicle.queue and pos == 0:
-                    empty_to_source, _ = self._travel(
-                        (vehicle.link_id, vehicle.offset), task.source
-                    )
-                    braking_acceptance = (
-                        vehicle.speed * core.DT
-                        + vehicle.speed * vehicle.speed / (2.0 * core.DEC)
-                        + core.STOP_LINE_BUFFER
-                    )
-                    if empty_to_source < braking_acceptance - core.EPS:
+                    if not self._idle_task_admissible(sim, vehicle, task):
                         score += 1_000_000.0
                 candidate = (score, vehicle_id, pos, predicted_completion)
                 if best is None or candidate < best:
@@ -241,6 +282,12 @@ class OnlineScheduler:
                 origin = (vehicle.link_id, vehicle.offset)
             _, empty_t = self._travel(origin, task.source)
             score = available + empty_t
+            if (
+                vehicle.current_task is None
+                and not vehicle.queue
+                and not self._idle_task_admissible(sim, vehicle, task)
+            ):
+                score += 1_000_000.0
             candidate = (score, vehicle_id, len(vehicle.queue))
             if best is None or candidate < best:
                 best = candidate
@@ -266,6 +313,13 @@ class OnlineScheduler:
                 priority_weight = 1.0 + max(0, task.priority - 50) / 100.0
                 score = delta_sum + 0.15 * flow / priority_weight
                 score += 1e-5 * (empty_distance - base_empty)
+                if (
+                    vehicle.current_task is None
+                    and not vehicle.queue
+                    and pos == 0
+                    and not self._idle_task_admissible(sim, vehicle, task)
+                ):
+                    score += 1_000_000.0
                 if self.mode == "balanced":
                     score += 2.0 * len(chain) + 0.8 * self._port_pressure(sim, task)
                     score += 0.02 * max(0.0, finish - now_s)
@@ -299,6 +353,8 @@ class OnlineScheduler:
 
 
 class OnlineTrafficSimulator(core.TrafficSimulator):
+    QUESTION_NO = 2
+
     def __init__(
         self,
         data: core.DataBundle,
@@ -496,6 +552,7 @@ class OnlineTrafficSimulator(core.TrafficSimulator):
                         "new_queue_position": pos,
                         "predicted_improvement_s": round(improvement, 6),
                         "bid": round(bid, 6),
+                        "event_type": "跨车重分配" if previous_vehicle != vehicle_id else "同车队列重排",
                     }
                     changes.append(event)
                     self.reassignment_log.append(event)
@@ -648,6 +705,7 @@ class OnlineTrafficSimulator(core.TrafficSimulator):
                 controls[vehicle.vehicle_id] = (
                     movement, new_speed, reason, related, old_speed, boundary_allowed,
                 )
+            self._audit_continuous_step(controls)
             for vehicle_id, values in controls.items():
                 movement, new_speed, reason, related, old_speed, boundary_allowed = values
                 vehicle = self.vehicles[vehicle_id]
@@ -683,6 +741,12 @@ class OnlineTrafficSimulator(core.TrafficSimulator):
             "decision_count": len(self.decision_log),
             "future_leak_count": sum(bool(x["future_leak"]) for x in self.decision_log),
             "min_same_link_reference_gap_mm": None if math.isinf(self.min_same_link_gap) else self.min_same_link_gap,
+            "min_path_reference_gap_mm": None if math.isinf(self.min_path_reference_gap) else self.min_path_reference_gap,
+            "min_path_clearance_mm": None if math.isinf(self.min_path_reference_gap) else self.min_path_reference_gap - core.VEHICLE_LENGTH,
+            "min_continuous_reference_gap_mm": None if math.isinf(self.min_continuous_reference_gap) else self.min_continuous_reference_gap,
+            "min_continuous_clearance_mm": None if math.isinf(self.min_continuous_reference_gap) else self.min_continuous_reference_gap - core.VEHICLE_LENGTH,
+            "closest_path_event": self.closest_path_event,
+            "closest_continuous_event": self.closest_continuous_event,
             "max_speed_mm_s": self.max_observed_speed,
             "max_acc_mm_s2": self.max_observed_acc,
             "min_acc_mm_s2": self.min_observed_acc,
@@ -777,6 +841,8 @@ def export_excel(
             if isinstance(value, datetime):
                 cell.number_format = "yyyy-mm-dd hh:mm:ss.000"
     for row in trajectory:
+        if int(row[0]) != 2:
+            raise ValueError(f"问题2轨迹问题号错误: {row[0]}")
         ws_trace.append(row)
     for col_idx, value in enumerate(metrics, start=1):
         ws_metric.cell(3, col_idx, value)
@@ -788,6 +854,8 @@ def export_excel(
         raise ValueError("轨迹写入行数不一致")
     if check["算法评价指标"].cell(3, 2).value != 190:
         raise ValueError("问题2指标未正确写入")
+    if any(int(row[0].value) != 2 for row in check["OHT逐步运行记录表"].iter_rows(min_row=2, max_col=1)):
+        raise ValueError("问题2 Excel轨迹问题号错误")
 
 
 def audit_result(
@@ -915,20 +983,28 @@ def solve(root: Path) -> Dict[str, object]:
         print(f"运行问题2 {mode} 无轨迹对比仿真……", flush=True)
         sim = OnlineTrafficSimulator(data, graph, mode, capture_trajectory=False)
         summaries[mode] = sim.run()
+        summaries[mode]["hard_gate_passed"] = (
+            summaries[mode]["completed_tasks"] == 190
+            and summaries[mode]["hard_violation_count"] == 0
+            and summaries[mode]["future_leak_count"] == 0
+            and summaries[mode]["min_continuous_clearance_mm"] is not None
+            and float(summaries[mode]["min_continuous_clearance_mm"]) >= core.CLEAR_GAP - 1e-4
+        )
         print(json.dumps(summaries[mode], ensure_ascii=False, indent=2), flush=True)
-    feasible = [
-        mode for mode, s in summaries.items()
-        if s["completed_tasks"] == 190 and s["hard_violation_count"] == 0
-        and s["future_leak_count"] == 0
-    ]
+    feasible = [mode for mode, summary in summaries.items() if summary["hard_gate_passed"] is True]
     if not feasible:
         (out / "问题2_失败诊断.json").write_text(
             json.dumps(summaries, ensure_ascii=False, indent=2), encoding="utf-8"
         )
         raise RuntimeError("问题2候选在线算法均未得到零违规完整解")
-    if "document" not in feasible:
-        raise RuntimeError("文档指定的第二问主模型未得到零违规完整解")
-    selected = "document"
+    selected = min(
+        feasible,
+        key=lambda mode: (
+            summaries[mode]["avg_transfer_time_s"],
+            summaries[mode]["makespan_s"],
+            mode,
+        ),
+    )
     print(f"全日志复跑最终方案：{selected}……", flush=True)
     sim = OnlineTrafficSimulator(data, graph, selected, capture_trajectory=True)
     final_summary = sim.run()
@@ -995,7 +1071,7 @@ def solve(root: Path) -> Dict[str, object]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="求解OHT赛题问题2")
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parent)
+    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args()
     print(json.dumps(solve(args.root.resolve()), ensure_ascii=False, indent=2), flush=True)
 

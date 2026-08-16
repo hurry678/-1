@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "method": "在3个释放跨度分位点确定性扰动全部未来任务的Source、Destination、Priority、CarrierID并反转任务字典顺序；比较截止时刻前去除运行时字段后的决策日志SHA-256",
+  "tests": [
+    {
+      "question": 2,
+      "cutoff_s": 889.704,
+      "original_hash": "b769d17d82f50539c762ed6945884d52618d6877e55480ccda177f0257413520",
+      "perturbed_hash": "b769d17d82f50539c762ed6945884d52618d6877e55480ccda177f0257413520",
+      "passed": true
+    },
+    {
+      "question": 2,
+      "cutoff_s": 1779.408,
+      "original_hash": "4eca77dff064c277df8e45eaf574eadb4c847a85d22c3747574145dcef7b30c0",
+      "perturbed_hash": "4eca77dff064c277df8e45eaf574eadb4c847a85d22c3747574145dcef7b30c0",
+      "passed": true
+    },
+    {
+      "question": 2,
+      "cutoff_s": 2669.112,
+      "original_hash": "eeba2a289cb22c953312b6edfcb037cc2647cf2445a91d06d50a6b317f667769",
+      "perturbed_hash": "eeba2a289cb22c953312b6edfcb037cc2647cf2445a91d06d50a6b317f667769",
+      "passed": true
+    },
+    {
+      "question": 3,
+      "cutoff_s": 449.25,
+      "original_hash": "99f86c1314b33a936424d33cc4483fc2b96c05409926dd0116c600c39d502365",
+      "perturbed_hash": "99f86c1314b33a936424d33cc4483fc2b96c05409926dd0116c600c39d502365",
+      "passed": true
+    },
+    {
+      "question": 3,
+      "cutoff_s": 898.5,
+      "original_hash": "ba054d16d22e6454ca552163ed89404d268bfedcfadec1564023e36d8c0b7703",
+      "perturbed_hash": "ba054d16d22e6454ca552163ed89404d268bfedcfadec1564023e36d8c0b7703",
+      "passed": true
+    },
+    {
+      "question": 3,
+      "cutoff_s": 1347.75,
+      "original_hash": "d534c45ff00875f4bf0a77a4dc19a504a4de61c922172a16ce44159d6078e471",
+      "perturbed_hash": "d534c45ff00875f4bf0a77a4dc19a504a4de61c922172a16ce44159d6078e471",
+      "passed": true
+    }
+  ]
+}

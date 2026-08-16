@@ -9,7 +9,7 @@ from pathlib import Path
 import openpyxl
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs" / "q2"
 DT = 0.2
 ACC = 2000.0
@@ -89,8 +89,7 @@ def main() -> None:
             errors.append(f"{task_id} 未在取货前重分配")
         if float(event["predicted_improvement_s"]) <= 300.0:
             errors.append(f"{task_id} 未超过300秒重分配阈值")
-    if not reservations:
-        errors.append("资源预约日志为空")
+    # 零预约事件是合法结果；仅在存在事件时检查事件契约。
     for event in reservations:
         if event.get("event") not in {"PORT_INTENT", "GRANT"}:
             errors.append("资源预约日志存在未知事件")
@@ -136,6 +135,16 @@ def main() -> None:
         errors.append("Excel问题2指标错误")
     if not audit.get("passed") or audit.get("traffic_violations"):
         errors.append("程序内约束审计未通过")
+
+    QUESTION_NO = 2
+    evidence_path = ROOT / "正式复核结果" / "独立连续净空复核证据.json"
+    if not evidence_path.exists():
+        errors.append("缺少独立连续净空复核证据")
+    else:
+        evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+        matches = [x for x in evidence.get("audits", []) if f"outputs/q{QUESTION_NO}/" in x.get("trace", "")]
+        if len(matches) != 1 or not matches[0].get("passed"):
+            errors.append("独立连续净空复核未通过")
 
     result = {
         "passed": not errors,

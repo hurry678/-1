@@ -1,0 +1,39 @@
+{
+  "questions": {
+    "1": {
+      "问题1_OHT逐步运行记录.csv": "bc2cd3471f05fe9337434962d45fa0fee7d00ee720c9a45e440b774dd4d9930c",
+      "问题1_任务结果.csv": "5db58aec973c2350e38efff7f1e3f1860f7ed7cb44f660cbef259649e4871214",
+      "问题1_方案.json": "82e3d9478b39d6dcce578f35b8c0874462cdedd8b019429da1f83d263fb502a4",
+      "问题1_算法评价指标.csv": "88112b3c336545cc14fc118c2e87d5da4ba4e787e27163287ef0dabb6abb7f70",
+      "问题1_约束审计.json": "646a8c8655bee71e6d70b816062cecb568432f8d89198c2cbf2bde20b3cdf577",
+      "问题1_结果.xlsx": "4cece92614e1a2b44503da55c44ce92c846969a506690adb69ebae0c8d31830f",
+      "问题1_结果说明.md": "60dbaf001ace9b9ddf7b710e2be89b145692bc7154530c20e6cd5332bcf70289"
+    },
+    "2": {
+      "问题2_OHT逐步运行记录.csv": "3cefe0b5861f0e458df6fd8acec87ecf32fd3bcdb507bc887bbbbf4725be9328",
+      "问题2_任务结果.csv": "abc16cf61d82717e0480a4214c657fff96cfd9dd6b63f6db985dec0d06007db5",
+      "问题2_在线决策日志.json": "a2bd1e690ba500c3fb4f3cb4c75ab402689e47cdfd744a86bd25f7e0e467866f",
+      "问题2_方案.json": "02997088549cb0ddbcb73d5481068e9cdd799a54c99f2634eb2353dad6e8dddb",
+      "问题2_算法评价指标.csv": "0890d4c6ff872b3c2e3561ff29d391bd436c5339c87b80f63e131d89caf65a0e",
+      "问题2_约束审计.json": "21d8af948017286a3515670dae1c2ae58bc27ef619058315e4a23e32443442fc",
+      "问题2_结果.xlsx": "970f99d5a0f4b80c2fe4d5f3f4437bf7e27d343a88f693532f6370c397ccb4d8",
+      "问题2_结果说明.md": "22ec511d41f7cec0cf0969d7e82bad868056964ec878eb20b8a5a12920e3ec5c",
+      "问题2_资源预约日志.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "问题2_重分配日志.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "3": {
+      "问题3_OHT逐步运行记录.csv": "cb3db20e4aea370bf0782bd9c8fc4be81f8313b3981abb69e0e974a7b28a54bf",
+      "问题3_任务结果.csv": "ba0f6b37fb2a340c687f60418aa61de9b3e749a2bd674394f69d2854da9880c6",
+      "问题3_在线决策日志.json": "1b7d6e5c1689931413984fb31f5bc74dde2443f1586d2e3f5580ab6b5df4a100",
+      "问题3_方案.json": "b5b4a528cff49e33a3ac4daa144d159d5e4f920436e2ffabecc68fae64a5c14a",
+      "问题3_算法评价指标.csv": "671ce9314d50a4c72ac0bfdc45a20987f23dfbd760b74444e36a8312b39a310c",
+      "问题3_约束审计.json": "55760c3b61fe92c23f54177ce112e080ce5c2da8f2cd6d0bb6c15c819b2f23b6",
+      "问题3_结果.xlsx": "15e5632cc1417f11708f8dcf4e8bc3aac1e3fe85af5a3df34f478ae01644e81c",
+      "问题3_结果说明.md": "6fe683c476625430509a5c674c4922e4bd676795122fdfc50ec746abfb3dc17d",
+      "问题3_资源时隙日志.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "问题3_资源预约日志.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "问题3_防死锁日志.json": "46b154695dc60e56a8e95bfcece9ad3c021ae8551ec373801e188bd5f557d73b"
+    }
+  },
+  "common_core_sha256": "705da63674fcc4164653b3d526567b3088ce338a3e937a3e348d19eb133ced95"
+}

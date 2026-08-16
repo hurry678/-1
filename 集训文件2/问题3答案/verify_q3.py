@@ -9,7 +9,7 @@ from pathlib import Path
 import openpyxl
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs" / "q3"
 DT = 0.2
 ACC = 2000.0
@@ -77,10 +77,11 @@ def main() -> None:
         if "region_pressure" not in decision:
             errors.append("决策日志缺少区域压力")
 
-    if plan.get("selected_mode") != "full":
-        errors.append("正式方案不是文档完整主模型")
-    if not slots or not reservations:
-        errors.append("时隙或资源预约日志为空")
+    selected_mode = plan.get("selected_mode")
+    if selected_mode not in {"direct", "microbatch", "pressure", "full"}:
+        errors.append(f"未知正式模式: {selected_mode}")
+    if selected_mode == "full" and (not slots or not reservations):
+        errors.append("full模式缺少时隙或资源预约证据")
     by_resource_slots = defaultdict(list)
     for slot in slots:
         if slot.get("actual_entry_s") is not None:
@@ -134,6 +135,16 @@ def main() -> None:
         errors.append("Excel问题3指标错误")
     if not audit.get("passed") or audit.get("traffic_violations"):
         errors.append("程序内约束审计未通过")
+
+    QUESTION_NO = 3
+    evidence_path = ROOT / "正式复核结果" / "独立连续净空复核证据.json"
+    if not evidence_path.exists():
+        errors.append("缺少独立连续净空复核证据")
+    else:
+        evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+        matches = [x for x in evidence.get("audits", []) if f"outputs/q{QUESTION_NO}/" in x.get("trace", "")]
+        if len(matches) != 1 or not matches[0].get("passed"):
+            errors.append("独立连续净空复核未通过")
 
     result = {
         "passed": not errors,

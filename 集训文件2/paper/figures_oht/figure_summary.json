@@ -1,0 +1,13 @@
+{
+  "arrival_rate_q2": 0.05338854270633829,
+  "arrival_rate_q3": 0.333889816360601,
+  "figures": [
+    "arrival_curves.png",
+    "candidate_comparisons.png",
+    "network_topology.png",
+    "priority_transfer_scatter.png",
+    "time_components.png",
+    "time_distribution_and_completion.png",
+    "vehicle_workload.png"
+  ]
+}

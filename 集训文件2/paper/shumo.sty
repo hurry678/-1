@@ -1,0 +1,97 @@
+\usepackage{textcomp,booktabs}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{colortbl,arydshln}
+\usepackage{amsmath,graphicx,booktabs,options,geometry,color,verbatim,float,array,subfig}
+\usepackage{ctex}%中文宏包
+\usepackage{titlesec,titlecaps,fontspec}
+\usepackage{xunicode}
+\usepackage{gensymb}
+\usepackage{listings} %附录程序代码
+\usepackage{type1cm}
+\usepackage{fancyhdr} %调用页眉页脚设置宏包
+%\usepackage{slashbox} 
+%\usepackage{multirow} %制表宏包
+%\usepackage{diagbox}	%制表宏包，没用制表就不添加
+%\usepackage{amssymb}  %更多的公式符号，一般不添加
+\usepackage{babel}
+\usepackage[font=small,labelfont=bf,tableposition=top]{caption}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{titletoc,enumitem}
+\usepackage{setspace}%使用间距宏包
+%===========================================
+%###########################################
+%表格颜色改变
+\definecolor{mygray}{gray}{.9}
+\definecolor{mypink}{rgb}{.99,.91,.95}
+\definecolor{mycyan}{cmyk}{.3,0,0,0}
+\definecolor{myblue}{cmyk}{.1,0,0,0}
+%###########################################
+%前面为调用的宏包不需要改动
+%==========================================
+%=======定义恒间距下划线（不需要改动）==========
+\makeatletter
+\newcommand\dlmu[2][4cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\def\maketitle{%
+	%  \thispagestyle{empty}%这部分是另标题单独占一页
+	%  \vfill
+
+	\begin{center}%\leavevmode
+		\normalfont
+		
+		{\fontsize{20pt}{0pt} \@title\par}%
+		\vskip 0.1cm    %缩小题目和作者名字之间的行距，这里是1毫米
+		{\Large \@author\par}%
+		\vskip 1cm
+		%{\Large \@date\par}%去掉%显示日期
+	\end{center}%
+	%  \vfill
+	%  \cleardoublepage  %结束当前页，下一页从奇数页开始
+}
+
+\makeatother	
+%==========================================
+%============定义字体（不需要改动）=============
+\renewcommand\thesection{\chinese{section}}
+\renewcommand\thesubsection{\arabic{section}\thinspace.\thinspace\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection\thinspace.\thinspace\arabic{subsubsection}}
+\newcommand{\sihao}{\fontsize{14pt}{3.2pt}\selectfont}
+\newcommand*{\AdobeHT}{\CJKfamily{AHT}}%Adobe黑体
+\newcommand{\xiaosihao}{\fontsize{12.1pt}{\baselineskip}\selectfont}  %小四号 
+\newcommand{\xiaosanhao}{\fontsize{15.1pt}{2pt}\selectfont}  %小三号 
+\newcommand{\sanhao}{\fontsize{15.75}{\baselineskip}\selectfont}
+
+\titleformat*{\section}{\sihao \heiti \centering}
+
+\titleformat*{\subsection}{\sihao \heiti }
+%章节序号与标题的字号及间距修改
+\titleformat*{\subsubsection}{\sihao \heiti }
+%=================================================
+%=================================================
+%=================================================
+%\noindent  %使用则第一段首行不缩进
+%\thispagestyle{empty}       %若使用则本页不显示页码
+\linespread{1.25}  %设置全文的默认行距
+
+%设置样例，已经设置好，请勿动用
+\pagestyle{plain}
+
+%R：页面右边；O：奇数页；\leftmark：表示“一级标题”
+%\fancyhead[RO]{\leftmark}
+%L：页面左边；E：偶数页；\rightmark：表示“二级标题”
+%\fancyhead[LE]{\rightmark}
+%============================================
+%C：页面中间
+%\fancyhead[CO, CE]{文章题目}
+%============================================
+%同上，但是不同位置放置不同信息
+%\fancyhead[LO, RE]{其他信息}
+% 设置页脚，页眉的位置上也可以放置页码
+%\fancyfoot[RO, LE]{\thepage}
+%\fancyfoot[LO, RE]{其他信息}
+% 设置页眉页脚横线及样式
+%页眉线宽，设为0可以去页眉线
+%\renewcommand{\headrulewidth}{0.5mm} 
+%页脚线宽，设为0可以去页眉线
+%\renewcommand{\footrulewidth}{0.1mm} 
+%

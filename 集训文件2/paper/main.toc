@@ -1,0 +1,42 @@
+\babel@toc {nil}{}\relax 
+\contentsline {section}{\numberline {一}绪论}{3}{section.1}%
+\contentsline {subsection}{\numberline {1\,.\,1}研究背景与问题意义}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1\,.\,2}问题重述}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1\,.\,3}建模难点与解决策略}{3}{subsection.1.3}%
+\contentsline {section}{\numberline {二}总体建模框架}{4}{section.2}%
+\contentsline {subsection}{\numberline {2\,.\,1}分层协同结构}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2\,.\,2}统一假设与符号}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2\,.\,3}评价指标的统一定义}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2\,.\,4}求解参数与复现实验设置}{7}{subsection.2.4}%
+\contentsline {section}{\numberline {三}共用路网、资源与运动控制模型}{8}{section.3}%
+\contentsline {subsection}{\numberline {3\,.\,1}位置感知有向路径}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3\,.\,2}任务与互斥资源约束}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3\,.\,3}净空化简与制动速度上界}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3\,.\,4}安全速度的手算工况示例}{11}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3\,.\,5}步内连续净空验证}{11}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3\,.\,6}分层求解的规模化简}{12}{subsection.3.6}%
+\contentsline {section}{\numberline {四}问题一：静态任务分配与协同运行}{12}{section.4}%
+\contentsline {subsection}{\numberline {4\,.\,1}模型选择理由}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4\,.\,2}静态 PDVRP-RC 模型}{13}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4\,.\,3}ALNS 求解过程}{14}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4\,.\,4}算法比较与结果}{16}{subsection.4.4}%
+\contentsline {section}{\numberline {五}问题二：190 项动态任务在线调度}{17}{section.5}%
+\contentsline {subsection}{\numberline {5\,.\,1}在线状态与模型选择}{17}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5\,.\,2}滚动拍卖报价及化简}{18}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5\,.\,3}事件触发与稳定机制}{19}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5\,.\,4}算法比较与正式结果}{20}{subsection.5.4}%
+\contentsline {section}{\numberline {六}问题三：高负载动态任务协同调度}{20}{section.6}%
+\contentsline {subsection}{\numberline {6\,.\,1}高密场景特征与正式模型}{20}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6\,.\,2}压力感知与微批候选}{21}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6\,.\,3}候选比较与硬门淘汰}{23}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6\,.\,4}正式结果与负载影响分析}{23}{subsection.6.4}%
+\contentsline {section}{\numberline {七}模型验证与结果可信度}{25}{section.7}%
+\contentsline {subsection}{\numberline {7\,.\,1}统一硬约束审计}{25}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7\,.\,2}在线信息隔离与输出一致性}{26}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7\,.\,3}安全裕量与误差传播分析}{26}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7\,.\,4}结果可重复性与边界}{27}{subsection.7.4}%
+\contentsline {section}{\numberline {八}模型评价与改进}{27}{section.8}%
+\contentsline {subsection}{\numberline {8\,.\,1}模型优点}{27}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8\,.\,2}局限与改进}{28}{subsection.8.2}%
+\contentsline {section}{\numberline {九}结论}{28}{section.9}%
+\contentsfinish 

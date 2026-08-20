@@ -1,0 +1,3191 @@
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.25)  13 AUG 2026 20:03
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-05-15>
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/ctexart.cls
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
+File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2026-05-15 L3 programming layer (loader) 
+
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2026-02-18 L3 backend support: XeTeX
+\g__graphics_track_int=\count272
+\g__pdfannot_backend_int=\count273
+\g__pdfannot_backend_link_int=\count274
+))
+Document Class: ctexart 2022/07/14 v2.5.10 Chinese adapter for class article (C
+TEX)
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/ctexhook.sty
+Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/ctexpatch.sty
+Package: ctexpatch 2022/07/14 v2.5.10 Patching commands (CTEX)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+
+(c:/texlive/2026/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+LaTeX Encoding Info:    Redeclaring text command \capitalcedilla (encoding TS1)
+ on input line 49.
+LaTeX Encoding Info:    Redeclaring text command \capitalogonek (encoding TS1) 
+on input line 52.
+LaTeX Encoding Info:    Redeclaring text command \capitalgrave (encoding TS1) o
+n input line 55.
+LaTeX Encoding Info:    Redeclaring text command \capitalacute (encoding TS1) o
+n input line 56.
+LaTeX Encoding Info:    Redeclaring text command \capitalcircumflex (encoding T
+S1) on input line 57.
+LaTeX Encoding Info:    Redeclaring text command \capitaltilde (encoding TS1) o
+n input line 58.
+LaTeX Encoding Info:    Redeclaring text command \capitaldieresis (encoding TS1
+) on input line 59.
+LaTeX Encoding Info:    Redeclaring text command \capitalhungarumlaut (encoding
+ TS1) on input line 60.
+LaTeX Encoding Info:    Redeclaring text command \capitalring (encoding TS1) on
+ input line 61.
+LaTeX Encoding Info:    Redeclaring text command \capitalcaron (encoding TS1) o
+n input line 62.
+LaTeX Encoding Info:    Redeclaring text command \capitalbreve (encoding TS1) o
+n input line 63.
+LaTeX Encoding Info:    Redeclaring text command \capitalmacron (encoding TS1) 
+on input line 64.
+LaTeX Encoding Info:    Redeclaring text command \capitaldotaccent (encoding TS
+1) on input line 65.
+LaTeX Encoding Info:    Redeclaring text command \t (encoding TS1) on input lin
+e 66.
+LaTeX Encoding Info:    Redeclaring text command \capitaltie (encoding TS1) on 
+input line 67.
+LaTeX Encoding Info:    Redeclaring text command \newtie (encoding TS1) on inpu
+t line 68.
+LaTeX Encoding Info:    Redeclaring text command \capitalnewtie (encoding TS1) 
+on input line 69.
+LaTeX Encoding Info:    Redeclaring text symbol \textcapitalcompwordmark (encod
+ing TS1) on input line 70.
+LaTeX Encoding Info:    Redeclaring text symbol \textascendercompwordmark (enco
+ding TS1) on input line 71.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotestraightbase (encodin
+g TS1) on input line 72.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotestraightdblbase (enco
+ding TS1) on input line 73.
+LaTeX Encoding Info:    Redeclaring text symbol \texttwelveudash (encoding TS1)
+ on input line 74.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreequartersemdash (encod
+ing TS1) on input line 75.
+LaTeX Encoding Info:    Redeclaring text symbol \textleftarrow (encoding TS1) o
+n input line 76.
+LaTeX Encoding Info:    Redeclaring text symbol \textrightarrow (encoding TS1) 
+on input line 77.
+LaTeX Encoding Info:    Redeclaring text symbol \textblank (encoding TS1) on in
+put line 78.
+LaTeX Encoding Info:    Redeclaring text symbol \textdollar (encoding TS1) on i
+nput line 79.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotesingle (encoding TS1)
+ on input line 80.
+LaTeX Encoding Info:    Redeclaring text command \textasteriskcentered (encodin
+g TS1) on input line 81.
+LaTeX Encoding Info:    Redeclaring text symbol \textdblhyphen (encoding TS1) o
+n input line 92.
+LaTeX Encoding Info:    Redeclaring text symbol \textfractionsolidus (encoding 
+TS1) on input line 93.
+LaTeX Encoding Info:    Redeclaring text symbol \textzerooldstyle (encoding TS1
+) on input line 94.
+LaTeX Encoding Info:    Redeclaring text symbol \textoneoldstyle (encoding TS1)
+ on input line 95.
+LaTeX Encoding Info:    Redeclaring text symbol \texttwooldstyle (encoding TS1)
+ on input line 96.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreeoldstyle (encoding TS
+1) on input line 97.
+LaTeX Encoding Info:    Redeclaring text symbol \textfouroldstyle (encoding TS1
+) on input line 98.
+LaTeX Encoding Info:    Redeclaring text symbol \textfiveoldstyle (encoding TS1
+) on input line 99.
+LaTeX Encoding Info:    Redeclaring text symbol \textsixoldstyle (encoding TS1)
+ on input line 100.
+LaTeX Encoding Info:    Redeclaring text symbol \textsevenoldstyle (encoding TS
+1) on input line 101.
+LaTeX Encoding Info:    Redeclaring text symbol \texteightoldstyle (encoding TS
+1) on input line 102.
+LaTeX Encoding Info:    Redeclaring text symbol \textnineoldstyle (encoding TS1
+) on input line 103.
+LaTeX Encoding Info:    Redeclaring text symbol \textlangle (encoding TS1) on i
+nput line 104.
+LaTeX Encoding Info:    Redeclaring text symbol \textminus (encoding TS1) on in
+put line 105.
+LaTeX Encoding Info:    Redeclaring text symbol \textrangle (encoding TS1) on i
+nput line 106.
+LaTeX Encoding Info:    Redeclaring text symbol \textmho (encoding TS1) on inpu
+t line 107.
+LaTeX Encoding Info:    Redeclaring text symbol \textbigcircle (encoding TS1) o
+n input line 108.
+LaTeX Encoding Info:    Redeclaring text command \textcircled (encoding TS1) on
+ input line 109.
+LaTeX Encoding Info:    Redeclaring text symbol \textohm (encoding TS1) on inpu
+t line 115.
+LaTeX Encoding Info:    Redeclaring text symbol \textlbrackdbl (encoding TS1) o
+n input line 116.
+LaTeX Encoding Info:    Redeclaring text symbol \textrbrackdbl (encoding TS1) o
+n input line 117.
+LaTeX Encoding Info:    Redeclaring text symbol \textuparrow (encoding TS1) on 
+input line 118.
+LaTeX Encoding Info:    Redeclaring text symbol \textdownarrow (encoding TS1) o
+n input line 119.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciigrave (encoding TS1) 
+on input line 120.
+LaTeX Encoding Info:    Redeclaring text symbol \textborn (encoding TS1) on inp
+ut line 121.
+LaTeX Encoding Info:    Redeclaring text symbol \textdivorced (encoding TS1) on
+ input line 122.
+LaTeX Encoding Info:    Redeclaring text symbol \textdied (encoding TS1) on inp
+ut line 123.
+LaTeX Encoding Info:    Redeclaring text symbol \textleaf (encoding TS1) on inp
+ut line 124.
+LaTeX Encoding Info:    Redeclaring text symbol \textmarried (encoding TS1) on 
+input line 125.
+LaTeX Encoding Info:    Redeclaring text symbol \textmusicalnote (encoding TS1)
+ on input line 126.
+LaTeX Encoding Info:    Redeclaring text symbol \texttildelow (encoding TS1) on
+ input line 127.
+LaTeX Encoding Info:    Redeclaring text symbol \textdblhyphenchar (encoding TS
+1) on input line 128.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciibreve (encoding TS1) 
+on input line 129.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciicaron (encoding TS1) 
+on input line 130.
+LaTeX Encoding Info:    Redeclaring text symbol \textacutedbl (encoding TS1) on
+ input line 131.
+LaTeX Encoding Info:    Redeclaring text symbol \textgravedbl (encoding TS1) on
+ input line 132.
+LaTeX Encoding Info:    Redeclaring text symbol \textdagger (encoding TS1) on i
+nput line 133.
+LaTeX Encoding Info:    Redeclaring text symbol \textdaggerdbl (encoding TS1) o
+n input line 134.
+LaTeX Encoding Info:    Redeclaring text symbol \textbardbl (encoding TS1) on i
+nput line 135.
+LaTeX Encoding Info:    Redeclaring text symbol \textperthousand (encoding TS1)
+ on input line 136.
+LaTeX Encoding Info:    Redeclaring text symbol \textbullet (encoding TS1) on i
+nput line 137.
+LaTeX Encoding Info:    Redeclaring text symbol \textcelsius (encoding TS1) on 
+input line 138.
+LaTeX Encoding Info:    Redeclaring text symbol \textdollaroldstyle (encoding T
+S1) on input line 139.
+LaTeX Encoding Info:    Redeclaring text symbol \textcentoldstyle (encoding TS1
+) on input line 140.
+LaTeX Encoding Info:    Redeclaring text symbol \textflorin (encoding TS1) on i
+nput line 141.
+LaTeX Encoding Info:    Redeclaring text symbol \textcolonmonetary (encoding TS
+1) on input line 142.
+LaTeX Encoding Info:    Redeclaring text symbol \textwon (encoding TS1) on inpu
+t line 143.
+LaTeX Encoding Info:    Redeclaring text symbol \textnaira (encoding TS1) on in
+put line 144.
+LaTeX Encoding Info:    Redeclaring text symbol \textguarani (encoding TS1) on 
+input line 145.
+LaTeX Encoding Info:    Redeclaring text symbol \textpeso (encoding TS1) on inp
+ut line 146.
+LaTeX Encoding Info:    Redeclaring text symbol \textlira (encoding TS1) on inp
+ut line 147.
+LaTeX Encoding Info:    Redeclaring text symbol \textrecipe (encoding TS1) on i
+nput line 148.
+LaTeX Encoding Info:    Redeclaring text symbol \textinterrobang (encoding TS1)
+ on input line 149.
+LaTeX Encoding Info:    Redeclaring text symbol \textinterrobangdown (encoding 
+TS1) on input line 150.
+LaTeX Encoding Info:    Redeclaring text symbol \textdong (encoding TS1) on inp
+ut line 151.
+LaTeX Encoding Info:    Redeclaring text symbol \texttrademark (encoding TS1) o
+n input line 152.
+LaTeX Encoding Info:    Redeclaring text symbol \textpertenthousand (encoding T
+S1) on input line 153.
+LaTeX Encoding Info:    Redeclaring text symbol \textpilcrow (encoding TS1) on 
+input line 154.
+LaTeX Encoding Info:    Redeclaring text symbol \textbaht (encoding TS1) on inp
+ut line 155.
+LaTeX Encoding Info:    Redeclaring text symbol \textnumero (encoding TS1) on i
+nput line 156.
+LaTeX Encoding Info:    Redeclaring text symbol \textdiscount (encoding TS1) on
+ input line 157.
+LaTeX Encoding Info:    Redeclaring text symbol \textestimated (encoding TS1) o
+n input line 158.
+LaTeX Encoding Info:    Redeclaring text symbol \textopenbullet (encoding TS1) 
+on input line 159.
+LaTeX Encoding Info:    Redeclaring text symbol \textservicemark (encoding TS1)
+ on input line 160.
+LaTeX Encoding Info:    Redeclaring text symbol \textlquill (encoding TS1) on i
+nput line 161.
+LaTeX Encoding Info:    Redeclaring text symbol \textrquill (encoding TS1) on i
+nput line 162.
+LaTeX Encoding Info:    Redeclaring text symbol \textcent (encoding TS1) on inp
+ut line 163.
+LaTeX Encoding Info:    Redeclaring text symbol \textsterling (encoding TS1) on
+ input line 164.
+LaTeX Encoding Info:    Redeclaring text symbol \textcurrency (encoding TS1) on
+ input line 165.
+LaTeX Encoding Info:    Redeclaring text symbol \textyen (encoding TS1) on inpu
+t line 166.
+LaTeX Encoding Info:    Redeclaring text symbol \textbrokenbar (encoding TS1) o
+n input line 167.
+LaTeX Encoding Info:    Redeclaring text symbol \textsection (encoding TS1) on 
+input line 168.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciidieresis (encoding TS
+1) on input line 169.
+LaTeX Encoding Info:    Redeclaring text symbol \textcopyright (encoding TS1) o
+n input line 170.
+LaTeX Encoding Info:    Redeclaring text symbol \textordfeminine (encoding TS1)
+ on input line 171.
+LaTeX Encoding Info:    Redeclaring text symbol \textcopyleft (encoding TS1) on
+ input line 172.
+LaTeX Encoding Info:    Redeclaring text symbol \textlnot (encoding TS1) on inp
+ut line 173.
+LaTeX Encoding Info:    Redeclaring text symbol \textcircledP (encoding TS1) on
+ input line 174.
+LaTeX Encoding Info:    Redeclaring text symbol \textregistered (encoding TS1) 
+on input line 175.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciimacron (encoding TS1)
+ on input line 176.
+LaTeX Encoding Info:    Redeclaring text symbol \textdegree (encoding TS1) on i
+nput line 177.
+LaTeX Encoding Info:    Redeclaring text symbol \textpm (encoding TS1) on input
+ line 178.
+LaTeX Encoding Info:    Redeclaring text symbol \texttwosuperior (encoding TS1)
+ on input line 179.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreesuperior (encoding TS
+1) on input line 180.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciiacute (encoding TS1) 
+on input line 181.
+LaTeX Encoding Info:    Redeclaring text symbol \textmu (encoding TS1) on input
+ line 182.
+LaTeX Encoding Info:    Redeclaring text symbol \textparagraph (encoding TS1) o
+n input line 183.
+LaTeX Encoding Info:    Redeclaring text symbol \textperiodcentered (encoding T
+S1) on input line 184.
+LaTeX Encoding Info:    Redeclaring text symbol \textreferencemark (encoding TS
+1) on input line 185.
+LaTeX Encoding Info:    Redeclaring text symbol \textonesuperior (encoding TS1)
+ on input line 186.
+LaTeX Encoding Info:    Redeclaring text symbol \textordmasculine (encoding TS1
+) on input line 187.
+LaTeX Encoding Info:    Redeclaring text symbol \textsurd (encoding TS1) on inp
+ut line 188.
+LaTeX Encoding Info:    Redeclaring text symbol \textonequarter (encoding TS1) 
+on input line 189.
+LaTeX Encoding Info:    Redeclaring text symbol \textonehalf (encoding TS1) on 
+input line 190.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreequarters (encoding TS
+1) on input line 191.
+LaTeX Encoding Info:    Redeclaring text symbol \texteuro (encoding TS1) on inp
+ut line 192.
+LaTeX Encoding Info:    Redeclaring text symbol \texttimes (encoding TS1) on in
+put line 193.
+LaTeX Encoding Info:    Redeclaring text symbol \textdiv (encoding TS1) on inpu
+t line 194.
+))
+\l__ctex_tmp_int=\count275
+\l__ctex_tmp_box=\box53
+\l__ctex_tmp_dim=\dimen150
+\g__ctex_section_depth_int=\count276
+\g__ctex_font_size_int=\count277
+
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+File: ctexopts.cfg 2022/07/14 v2.5.10 Option configuration file (CTEX)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count278
+\c@section=\count279
+\c@subsection=\count280
+\c@subsubsection=\count281
+\c@paragraph=\count282
+\c@subparagraph=\count283
+\c@figure=\count284
+\c@table=\count285
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen151
+)
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+File: ctex-engine-xetex.def 2022/07/14 v2.5.10 XeLaTeX adapter (CTEX)
+
+(c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
+
+(c:/texlive/2026/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2025-10-09 L3 Experimental prototype document functions
+)
+\l__xeCJK_tmp_int=\count286
+\l__xeCJK_tmp_box=\box54
+\l__xeCJK_tmp_dim=\dimen152
+\l__xeCJK_tmp_skip=\skip51
+\g__xeCJK_space_factor_int=\count287
+\l__xeCJK_begin_int=\count288
+\l__xeCJK_end_int=\count289
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip52
+\c__xeCJK_none_node=\count290
+\g__xeCJK_node_int=\count291
+\c__xeCJK_CJK_node_dim=\dimen153
+\c__xeCJK_CJK-space_node_dim=\dimen154
+\c__xeCJK_default_node_dim=\dimen155
+\c__xeCJK_CJK-widow_node_dim=\dimen156
+\c__xeCJK_normalspace_node_dim=\dimen157
+\c__xeCJK_default-space_node_skip=\skip53
+\l__xeCJK_ccglue_skip=\skip54
+\l__xeCJK_ecglue_skip=\skip55
+\l__xeCJK_punct_kern_skip=\skip56
+\l__xeCJK_indent_box=\box55
+\l__xeCJK_last_penalty_int=\count292
+\l__xeCJK_last_bound_dim=\dimen158
+\l__xeCJK_last_kern_dim=\dimen159
+\l__xeCJK_widow_penalty_int=\count293
+
+LaTeX template Info: Declaring template type 'xeCJK/punctuation' taking 0
+(template)           argument(s) on line 2396.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen160
+\l__xeCJK_mixed_punct_width_dim=\dimen161
+\l__xeCJK_middle_punct_width_dim=\dimen162
+\l__xeCJK_fixed_margin_width_dim=\dimen163
+\l__xeCJK_mixed_margin_width_dim=\dimen164
+\l__xeCJK_middle_margin_width_dim=\dimen165
+\l__xeCJK_bound_punct_width_dim=\dimen166
+\l__xeCJK_bound_margin_width_dim=\dimen167
+\l__xeCJK_margin_minimum_dim=\dimen168
+\l__xeCJK_kerning_total_width_dim=\dimen169
+\l__xeCJK_same_align_margin_dim=\dimen170
+\l__xeCJK_different_align_margin_dim=\dimen171
+\l__xeCJK_kerning_margin_width_dim=\dimen172
+\l__xeCJK_kerning_margin_minimum_dim=\dimen173
+\l__xeCJK_bound_dim=\dimen174
+\l__xeCJK_reverse_bound_dim=\dimen175
+\l__xeCJK_margin_dim=\dimen176
+\l__xeCJK_minimum_bound_dim=\dimen177
+\l__xeCJK_kerning_margin_dim=\dimen178
+\g__xeCJK_family_int=\count294
+\l__xeCJK_fam_int=\count295
+\g__xeCJK_fam_allocation_int=\count296
+\l__xeCJK_verb_case_int=\count297
+\l__xeCJK_verb_exspace_skip=\skip57
+
+(c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+
+(c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count298
+\l__fontspec_language_int=\count299
+\l__fontspec_strnum_int=\count300
+\l__fontspec_tmp_int=\count301
+\l__fontspec_tmpa_int=\count302
+\l__fontspec_tmpb_int=\count303
+\l__fontspec_tmpc_int=\count304
+\l__fontspec_em_int=\count305
+\l__fontspec_emdef_int=\count306
+\l__fontspec_strong_int=\count307
+\l__fontspec_strongdef_int=\count308
+\l__fontspec_tmpa_dim=\dimen179
+\l__fontspec_tmpb_dim=\dimen180
+\l__fontspec_tmpc_dim=\dimen181
+
+(c:/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
+))
+\ccwd=\dimen182
+\l__ctex_ccglue_skip=\skip58
+)
+\l__ctex_ziju_dim=\dimen183
+
+(c:/texlive/2026/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+Package: zhnumber 2022/07/14 v3.0 Typesetting numbers with Chinese glyphs
+\l__zhnum_scale_int=\count309
+\l__zhnum_tmp_int=\count310
+
+(c:/texlive/2026/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+File: zhnumber-utf8.cfg 2022/07/14 v3.0 Chinese numerals with UTF8 encoding
+))
+\l__ctex_heading_skip=\skip59
+
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-article.d
+ef
+File: ctex-scheme-chinese-article.def 2022/07/14 v2.5.10 Chinese scheme for art
+icle (CTEX)
+ (c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+File: ctex-name-utf8.cfg 2022/07/14 v2.5.10 Caption with encoding UTF-8 (CTEX)
+))
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/ctex-c5size.clo
+File: ctex-c5size.clo 2022/07/14 v2.5.10 c5size option (CTEX)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-windows.def
+File: ctex-fontset-windows.def 2022/07/14 v2.5.10 Windows fonts definition (CTE
+X)
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "KaiTi/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimHei/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimSun/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'SimSun(0)' created for font 'SimSun' with
+(fontspec)             options
+(fontspec)             [Script={CJK},BoldFont={SimHei},ItalicFont={KaiTi}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"SimHei/OT:script=hani;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"KaiTi/OT:script=hani;language=dflt;"
+
+))
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctex.cfg
+File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
+) (./shumo.sty
+(c:/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen184
+\lightrulewidth=\dimen185
+\cmidrulewidth=\dimen186
+\belowrulesep=\dimen187
+\belowbottomsep=\dimen188
+\aboverulesep=\dimen189
+\abovetopsep=\dimen190
+\cmidrulesep=\dimen191
+\cmidrulekern=\dimen192
+\defaultaddspace=\dimen193
+\@cmidla=\count311
+\@cmidlb=\count312
+\@aboverulesep=\dimen194
+\@belowrulesep=\dimen195
+\@thisruleclass=\count313
+\@lastruleclass=\count314
+\@thisrulewidth=\dimen196
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 149.
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(c:/texlive/2026/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2026/05/01 v1.0l Color table columns (DPC)
+
+(c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen197
+\ar@mcellbox=\box56
+\extrarowheight=\dimen198
+\NC@list=\toks17
+\extratabsurround=\skip60
+\backup@length=\skip61
+\ar@cellbox=\box57
+)
+\everycr=\toks18
+\minrowclearance=\skip62
+\rownum=\count315
+)
+(c:/texlive/2026/texmf-dist/tex/latex/arydshln/arydshln.sty
+Package: arydshln 2019/02/21 v1.76 
+\dashlinedash=\dimen199
+\dashlinegap=\dimen256
+\adl@box=\box58
+\adl@height=\dimen257
+\adl@heightsave=\dimen258
+\adl@depth=\dimen259
+\adl@depthsave=\dimen260
+\adl@finaldepth=\dimen261
+\adl@columns=\count316
+\adl@ncol=\count317
+\adl@currentcolumn=\count318
+\adl@currentcolumnsave=\count319
+\adl@totalheight=\count320
+\adl@totalheightsave=\count321
+\adl@dash=\count322
+\adl@gap=\count323
+\adl@cla=\count324
+\adl@clb=\count325
+\adl@everyvbox=\toks19
+\adl@LTpagetotal=\dimen262
+)
+==> First Aid for arydshln.sty applied!
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip63
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen263
+))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen264
+)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count326
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count327
+\leftroot@=\count328
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count329
+\DOTSCASE@=\count330
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box59
+\strutbox@=\box60
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen265
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count331
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count332
+\dotsspace@=\muskip17
+\c@parentequation=\count333
+\dspbrk@lvl=\count334
+\tag@help=\toks21
+\row@=\count335
+\column@=\count336
+\maxfields@=\count337
+\andhelp@=\toks22
+\eqnshift@=\dimen266
+\alignsep@=\dimen267
+\tagshift@=\dimen268
+\tagwidth@=\dimen269
+\totwidth@=\dimen270
+\lineht@=\dimen271
+\@envbody=\toks23
+\multlinegap=\skip64
+\multlinetaggap=\skip65
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+)
+\Gin@req@height=\dimen272
+\Gin@req@width=\dimen273
+)
+(c:/texlive/2026/texmf-dist/tex/latex/options/options.sty
+Package: options 2015/03/01, Daan Leijen, Provides convenient path-value (or ke
+y-value) options
+
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count338
+)
+(c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+LaTeX Info: Redefining \color on input line 762.
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+\opt@nesting=\count339
+\opt@idx=\count340
+\opt@choiceord=\count341
+)
+(c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count342
+\Gm@cntv=\count343
+\c@Gm@tempcnt=\count344
+\Gm@bindingoffset=\dimen274
+\Gm@wd@mp=\dimen275
+\Gm@odd@mp=\dimen276
+\Gm@even@mp=\dimen277
+\Gm@layoutwidth=\dimen278
+\Gm@layoutheight=\dimen279
+\Gm@layouthoffset=\dimen280
+\Gm@layoutvoffset=\dimen281
+\Gm@dimlist=\toks26
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks27
+\verbatim@line=\toks28
+\verbatim@in@stream=\read2
+)
+(c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count345
+\float@exts=\toks29
+\float@box=\box61
+\@float@everytoks=\toks30
+\@floatcapt=\box62
+)
+(c:/texlive/2026/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen282
+\captionmargin=\dimen283
+\caption@leftmargin=\dimen284
+\caption@rightmargin=\dimen285
+\caption@width=\dimen286
+\caption@indent=\dimen287
+\caption@parindent=\dimen288
+\caption@hangindent=\dimen289
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count346
+\c@continuedfloat=\count347
+Package caption Info: float package is loaded.
+)
+\c@KVtest=\count348
+\sf@farskip=\skip66
+\sf@captopadj=\dimen290
+\sf@capskip=\skip67
+\sf@nearskip=\skip68
+\c@subfigure=\count349
+\c@subfigure@save=\count350
+\c@lofdepth=\count351
+\c@subtable=\count352
+\c@subtable@save=\count353
+\c@lotdepth=\count354
+\sf@top=\skip69
+\sf@bottom=\skip70
+)
+
+Package ctexhook Warning: Package `ctex' can not be loaded with `ctexart'.
+
+LaTeX Info: Package 'ctex.sty' has been disabled.
+            Load request ignored on input line 6.
+(c:/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box63
+\beforetitleunit=\skip71
+\aftertitleunit=\skip72
+\ttl@plus=\dimen291
+\ttl@minus=\dimen292
+\ttl@toksa=\toks31
+\titlewidth=\dimen293
+\titlewidthlast=\dimen294
+\titlewidthfirst=\dimen295
+)
+(c:/texlive/2026/texmf-dist/tex/latex/titlecaps/titlecaps.sty
+Package: titlecaps 2022/04/12\ 1.3\ Routines for setting rich-text input into T
+itling Caps
+
+(c:/texlive/2026/texmf-dist/tex/latex/ifnextok/ifnextok.sty
+Package: ifnextok 2011/06/27 v0.3 test next token (UL)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\c@lcword@index=\count355
+\c@word@count=\count356
+\c@lc@words=\count357
+\c@dia@count=\count358
+\c@arg@@@index=\count359
+)
+(c:/texlive/2026/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
+other characters in Unicode lower plane
+
+(c:/texlive/2026/texmf-dist/tex/latex/tipa/t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "Microsoft YaHei Bold/I" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "Microsoft YaHei/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'MicrosoftYaHei(0)' created for font
+(fontspec)             'Microsoft YaHei' with options
+(fontspec)             [Script={CJK},BoldFont={* Bold}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Microsoft
+(fontspec)             YaHei/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Microsoft YaHei
+(fontspec)             Bold/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Microsoft
+(fontspec)             YaHei/BI/OT:script=hani;language=dflt;"
+
+)
+\tipaTiiicode=\count360
+\tipasavetokens=\toks32
+\tipachecktokens=\toks33
+LaTeX Encoding Info:    Redeclaring text command \nobreakspace (encoding TU) on
+ input line 1725.
+LaTeX Encoding Info:    Redeclaring text command \copyright (encoding TU) on in
+put line 1739.
+LaTeX Encoding Info:    Redeclaring text command \AA (encoding TU) on input lin
+e 1785.
+LaTeX Encoding Info:    Redeclaring text command \aa (encoding TU) on input lin
+e 1842.
+LaTeX Encoding Info:    Redeclaring text command \textrhookopeno (encoding TU) 
+on input line 3119.
+LaTeX Encoding Info:    Redeclaring text command \hbar (encoding TU) on input l
+ine 3636.
+LaTeX Encoding Info:    Redeclaring text command \textaolig (encoding TU) on in
+put line 3729.
+)
+(c:/texlive/2026/texmf-dist/tex/latex/gensymb/gensymb.sty
+Package: gensymb 2022/10/17 v1.0.2 (KJH)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count361
+\lst@gtempboxa=\box64
+\lst@token=\toks34
+\lst@length=\count362
+\lst@currlwidth=\dimen296
+\lst@column=\count363
+\lst@pos=\count364
+\lst@lostspace=\dimen297
+\lst@width=\dimen298
+\lst@newlines=\count365
+\lst@lineno=\count366
+\lst@maxwidth=\dimen299
+
+(c:/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count367
+\lst@skipnumbers=\count368
+\lst@framebox=\box65
+)
+(c:/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+(c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+Package: xeCJK-listings 2022/08/05 v3.9.1 xeCJK patch file for listings
+\l__xeCJK_listings_max_char_int=\count369
+\l__xeCJK_listings_flag_int=\count370
+)
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(c:/texlive/2026/texmf-dist/tex/latex/type1cm/type1cm.sty
+Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, p
+atched RF)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip73
+\f@nch@offset@elh=\skip74
+\f@nch@offset@erh=\skip75
+\f@nch@offset@olh=\skip76
+\f@nch@offset@orh=\skip77
+\f@nch@offset@elf=\skip78
+\f@nch@offset@erf=\skip79
+\f@nch@offset@olf=\skip80
+\f@nch@offset@orf=\skip81
+\f@nch@height=\skip82
+\f@nch@footalignment=\skip83
+\f@nch@widthL=\skip84
+\f@nch@widthC=\skip85
+\f@nch@widthR=\skip86
+\@temptokenb=\toks35
+)
+(c:/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2026/05/20 v26.8 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
+\babel@savecnt=\count371
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2084.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2086.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2088.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2089.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2090.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2092.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2117.
+\U@D=\dimen300
+\l@unhyphenated=\language91
+
+(c:/texlive/2026/texmf-dist/tex/generic/babel/xebabel.def)
+\bbl@readstream=\read3
+\bbl@dirlevel=\count372
+Package babel Info: You haven't specified a language as a class or package
+(babel)             option. I'll load 'nil'. Reported on input line 4287.
+Package babel Info: Importing font and identification data for nil
+(babel)             from babel-und-x-nil.ini. Reported on input line 4356.
+
+(c:/texlive/2026/texmf-dist/tex/generic/babel/nil.ldf
+Language: nil 2026/05/20 v26.8 Nil language
+\l@nil=\language92
+))
+(c:/texlive/2026/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box66
+)
+(c:/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2025/01/04 v2.17 TOC entries
+\ttl@leftsep=\dimen301
+)
+(c:/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip87
+\enit@outerparindent=\dimen302
+\enit@toks=\toks36
+\enit@inbox=\box67
+\enit@count@id=\count373
+\enitdp@description=\count374
+)
+(c:/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+))
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xunicode-addon.sty
+Package: xunicode-addon 2022/08/05 v3.9.1 addon file for xunicode
+\l__xunadd_tmp_coffin=\box68
+\l__xunadd_circle_coffin=\box69
+\l_xunadd_slot_int=\count375
+)
+(c:/texlive/2026/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
+other characters in Unicode lower plane
+
+*** Reloading Xunicode for encoding 'TU' ***
+LaTeX Encoding Info:    Redeclaring text command \textoverh (encoding TU) on in
+put line 400.
+LaTeX Encoding Info:    Redeclaring text command \textoverheng (encoding TU) on
+ input line 402.
+LaTeX Encoding Info:    Redeclaring text command \textoverj (encoding TU) on in
+put line 404.
+LaTeX Encoding Info:    Redeclaring text command \textoverh (encoding TU) on in
+put line 406.
+LaTeX Encoding Info:    Redeclaring text command \textoverw (encoding TU) on in
+put line 408.
+LaTeX Encoding Info:    Redeclaring text command \textovery (encoding TU) on in
+put line 411.
+LaTeX Encoding Info:    Redeclaring text command \textspleftarrow (encoding TU)
+ on input line 417.
+LaTeX Encoding Info:    Redeclaring text command \textsbleftarrow (encoding TU)
+ on input line 423.
+LaTeX Encoding Info:    Redeclaring text command \textgravedbl (encoding TU) on
+ input line 428.
+LaTeX Encoding Info:    Redeclaring text command \texttildebelow (encoding TU) 
+on input line 429.
+LaTeX Encoding Info:    Redeclaring text command \textopencorner (encoding TU) 
+on input line 431.
+LaTeX Encoding Info:    Redeclaring text command \textcorner (encoding TU) on i
+nput line 432.
+LaTeX Encoding Info:    Redeclaring text command \textsubdoublearrow (encoding 
+TU) on input line 440.
+LaTeX Encoding Info:    Redeclaring text command \textrptr (encoding TU) on inp
+ut line 441.
+LaTeX Encoding Info:    Redeclaring text command \textsubrightarrow (encoding T
+U) on input line 442.
+LaTeX Encoding Info:    Redeclaring text command \` (encoding TU) on input line
+ 445.
+LaTeX Encoding Info:    Redeclaring text command \capitalgrave (encoding TU) on
+ input line 447.
+LaTeX Encoding Info:    Redeclaring text command \' (encoding TU) on input line
+ 448.
+LaTeX Encoding Info:    Redeclaring text command \capitalacute (encoding TU) on
+ input line 450.
+LaTeX Encoding Info:    Redeclaring text command \^ (encoding TU) on input line
+ 451.
+LaTeX Encoding Info:    Redeclaring text command \capitalcircumflex (encoding T
+U) on input line 453.
+LaTeX Encoding Info:    Redeclaring text command \~ (encoding TU) on input line
+ 454.
+LaTeX Encoding Info:    Redeclaring text command \capitaltilde (encoding TU) on
+ input line 456.
+LaTeX Encoding Info:    Redeclaring text command \= (encoding TU) on input line
+ 457.
+LaTeX Encoding Info:    Redeclaring text command \capitalmacron (encoding TU) o
+n input line 459.
+LaTeX Encoding Info:    Redeclaring text command \textoverline (encoding OT1) o
+n input line 460.
+LaTeX Encoding Info:    Redeclaring text command \textoverline (encoding TU) on
+ input line 461.
+LaTeX Encoding Info:    Redeclaring text command \u (encoding TU) on input line
+ 462.
+LaTeX Encoding Info:    Redeclaring text command \capitalbreve (encoding TU) on
+ input line 464.
+LaTeX Encoding Info:    Redeclaring text command \. (encoding TU) on input line
+ 465.
+LaTeX Encoding Info:    Redeclaring text command \capitaldotaccent (encoding TU
+) on input line 467.
+LaTeX Encoding Info:    Redeclaring text command \" (encoding TU) on input line
+ 468.
+LaTeX Encoding Info:    Redeclaring text command \capitaldieresis (encoding TU)
+ on input line 470.
+LaTeX Encoding Info:    Redeclaring text command \m (encoding TU) on input line
+ 472.
+LaTeX Encoding Info:    Redeclaring text command \texthookabove (encoding OT1) 
+on input line 473.
+LaTeX Encoding Info:    Redeclaring text command \texthookabove (encoding TU) o
+n input line 474.
+LaTeX Encoding Info:    Redeclaring text command \r (encoding TU) on input line
+ 475.
+LaTeX Encoding Info:    Redeclaring text command \capitalring (encoding TU) on 
+input line 477.
+LaTeX Encoding Info:    Redeclaring text command \H (encoding TU) on input line
+ 478.
+LaTeX Encoding Info:    Redeclaring text command \capitalhungarumlaut (encoding
+ TU) on input line 480.
+LaTeX Encoding Info:    Redeclaring text command \v (encoding TU) on input line
+ 481.
+LaTeX Encoding Info:    Redeclaring text command \capitalcaron (encoding TU) on
+ input line 483.
+LaTeX Encoding Info:    Redeclaring text command \textvbaraccent (encoding TU) 
+on input line 485.
+LaTeX Encoding Info:    Redeclaring text command \textdoublevbaraccent (encodin
+g TU) on input line 487.
+LaTeX Encoding Info:    Redeclaring text command \U (encoding TU) on input line
+ 489.
+LaTeX Encoding Info:    Redeclaring text command \textdoublegrave (encoding TU)
+ on input line 491.
+LaTeX Encoding Info:    Redeclaring text command \G (encoding TU) on input line
+ 493.
+LaTeX Encoding Info:    Redeclaring text command \textdotbreve (encoding TU) on
+ input line 495.
+LaTeX Encoding Info:    Redeclaring text command \textroundcap (encoding TU) on
+ input line 497.
+LaTeX Encoding Info:    Redeclaring text command \newtie (encoding TU) on input
+ line 499.
+LaTeX Encoding Info:    Redeclaring text command \capitalnewtie (encoding TU) o
+n input line 501.
+LaTeX Encoding Info:    Redeclaring text command \textturncommaabove (encoding 
+OT1) on input line 506.
+LaTeX Encoding Info:    Redeclaring text command \textturncommaabove (encoding 
+TU) on input line 507.
+LaTeX Encoding Info:    Redeclaring text command \textcommaabove (encoding OT1)
+ on input line 508.
+LaTeX Encoding Info:    Redeclaring text command \textcommaabove (encoding TU) 
+on input line 509.
+LaTeX Encoding Info:    Redeclaring text command \textrevcommaabove (encoding O
+T1) on input line 510.
+LaTeX Encoding Info:    Redeclaring text command \textrevcommaabove (encoding T
+U) on input line 511.
+LaTeX Encoding Info:    Redeclaring text command \textcommaabover (encoding OT1
+) on input line 512.
+LaTeX Encoding Info:    Redeclaring text command \textcommaabover (encoding TU)
+ on input line 513.
+LaTeX Encoding Info:    Redeclaring text command \textsubgrave (encoding TU) on
+ input line 515.
+LaTeX Encoding Info:    Redeclaring text command \textsubacute (encoding TU) on
+ input line 517.
+LaTeX Encoding Info:    Redeclaring text command \textadvancing (encoding TU) o
+n input line 519.
+LaTeX Encoding Info:    Redeclaring text command \textretracting (encoding TU) 
+on input line 521.
+LaTeX Encoding Info:    Redeclaring text command \textlangleabove (encoding OT1
+) on input line 522.
+LaTeX Encoding Info:    Redeclaring text command \textlangleabove (encoding TU)
+ on input line 523.
+LaTeX Encoding Info:    Redeclaring text command \textrighthorn (encoding OT1) 
+on input line 524.
+LaTeX Encoding Info:    Redeclaring text command \textrighthorn (encoding TU) o
+n input line 525.
+LaTeX Encoding Info:    Redeclaring text command \textsublhalfring (encoding TU
+) on input line 527.
+LaTeX Encoding Info:    Redeclaring text command \textraising (encoding TU) on 
+input line 529.
+LaTeX Encoding Info:    Redeclaring text command \textlowering (encoding TU) on
+ input line 531.
+LaTeX Encoding Info:    Redeclaring text command \textsubplus (encoding TU) on 
+input line 533.
+LaTeX Encoding Info:    Redeclaring text command \textsubminus (encoding TU) on
+ input line 535.
+LaTeX Encoding Info:    Redeclaring text command \textpalhookbelow (encoding OT
+1) on input line 536.
+LaTeX Encoding Info:    Redeclaring text command \textpalhookbelow (encoding TU
+) on input line 537.
+LaTeX Encoding Info:    Redeclaring text command \M (encoding TU) on input line
+ 539.
+LaTeX Encoding Info:    Redeclaring text command \textrethookbelow (encoding OT
+1) on input line 540.
+LaTeX Encoding Info:    Redeclaring text command \textrethookbelow (encoding TU
+) on input line 541.
+LaTeX Encoding Info:    Redeclaring text command \d (encoding TU) on input line
+ 542.
+LaTeX Encoding Info:    Redeclaring text command \textsubdot (encoding TU) on i
+nput line 544.
+LaTeX Encoding Info:    Redeclaring text command \textsubumlaut (encoding TU) o
+n input line 546.
+LaTeX Encoding Info:    Redeclaring text command \textsubring (encoding TU) on 
+input line 548.
+LaTeX Encoding Info:    Redeclaring text command \textcommabelow (encoding OT1)
+ on input line 549.
+LaTeX Encoding Info:    Redeclaring text command \textcommabelow (encoding TU) 
+on input line 550.
+LaTeX Encoding Info:    Redeclaring text command \c (encoding TU) on input line
+ 551.
+LaTeX Encoding Info:    Redeclaring text command \capitalcedilla (encoding TU) 
+on input line 553.
+LaTeX Encoding Info:    Redeclaring text command \k (encoding TU) on input line
+ 554.
+LaTeX Encoding Info:    Redeclaring text command \capitalogonek (encoding TU) o
+n input line 556.
+LaTeX Encoding Info:    Redeclaring text command \textpolhook (encoding TU) on 
+input line 558.
+LaTeX Encoding Info:    Redeclaring text command \textsyllabic (encoding TU) on
+ input line 560.
+LaTeX Encoding Info:    Redeclaring text command \textsubbridge (encoding TU) o
+n input line 562.
+LaTeX Encoding Info:    Redeclaring text command \textsubw (encoding TU) on inp
+ut line 565.
+LaTeX Encoding Info:    Redeclaring text command \textsubwedge (encoding TU) on
+ input line 567.
+LaTeX Encoding Info:    Redeclaring text command \textsubcircum (encoding TU) o
+n input line 569.
+LaTeX Encoding Info:    Redeclaring text command \textundertie (encoding TU) on
+ input line 571.
+LaTeX Encoding Info:    Redeclaring text command \textsubarch (encoding TU) on 
+input line 573.
+LaTeX Encoding Info:    Redeclaring text command \textsubtilde (encoding TU) on
+ input line 576.
+LaTeX Encoding Info:    Redeclaring text command \textsubbar (encoding TU) on i
+nput line 578.
+LaTeX Encoding Info:    Redeclaring text command \b (encoding TU) on input line
+ 579.
+LaTeX Encoding Info:    Redeclaring text command \subdoublebar (encoding TU) on
+ input line 581.
+LaTeX Encoding Info:    Redeclaring text command \textsuperimposetilde (encodin
+g OT1) on input line 583.
+LaTeX Encoding Info:    Redeclaring text command \textsuperimposetilde (encodin
+g TU) on input line 584.
+LaTeX Encoding Info:    Redeclaring text command \B (encoding TU) on input line
+ 586.
+LaTeX Encoding Info:    Redeclaring text command \textsstrokethru (encoding OT1
+) on input line 587.
+LaTeX Encoding Info:    Redeclaring text command \textsstrokethru (encoding TU)
+ on input line 588.
+LaTeX Encoding Info:    Redeclaring text command \textlstrokethru (encoding OT1
+) on input line 589.
+LaTeX Encoding Info:    Redeclaring text command \textlstrokethru (encoding TU)
+ on input line 590.
+LaTeX Encoding Info:    Redeclaring text command \textsstrikethru (encoding OT1
+) on input line 591.
+LaTeX Encoding Info:    Redeclaring text command \textsstrikethru (encoding TU)
+ on input line 592.
+LaTeX Encoding Info:    Redeclaring text command \textlstrikethru (encoding OT1
+) on input line 593.
+LaTeX Encoding Info:    Redeclaring text command \textlstrikethru (encoding TU)
+ on input line 594.
+LaTeX Encoding Info:    Redeclaring text command \textsubrhalfring (encoding TU
+) on input line 596.
+LaTeX Encoding Info:    Redeclaring text command \textinvsubbridge (encoding TU
+) on input line 598.
+LaTeX Encoding Info:    Redeclaring text command \textsubsquare (encoding TU) o
+n input line 600.
+LaTeX Encoding Info:    Redeclaring text command \textseagull (encoding TU) on 
+input line 602.
+LaTeX Encoding Info:    Redeclaring text command \textovercross (encoding TU) o
+n input line 604.
+LaTeX Encoding Info:    Redeclaring text command \textdoubleoverline (encoding 
+TU) on input line 607.
+LaTeX Encoding Info:    Redeclaring text command \overbridge (encoding TU) on i
+nput line 615.
+LaTeX Encoding Info:    Redeclaring text command \subdoublevert (encoding TU) o
+n input line 620.
+LaTeX Encoding Info:    Redeclaring text command \subcorner (encoding TU) on in
+put line 622.
+LaTeX Encoding Info:    Redeclaring text command \crtilde (encoding TU) on inpu
+t line 626.
+LaTeX Encoding Info:    Redeclaring text command \dottedtilde (encoding TU) on 
+input line 628.
+LaTeX Encoding Info:    Redeclaring text command \doubletilde (encoding TU) on 
+input line 630.
+LaTeX Encoding Info:    Redeclaring text command \spreadlips (encoding TU) on i
+nput line 632.
+LaTeX Encoding Info:    Redeclaring text command \whistle (encoding TU) on inpu
+t line 634.
+LaTeX Encoding Info:    Redeclaring text command \textgraphemejoin (encoding OT
+1) on input line 635.
+LaTeX Encoding Info:    Redeclaring text command \textgraphemejoin (encoding TU
+) on input line 636.
+LaTeX Encoding Info:    Redeclaring text command \textrightarrowhead (encoding 
+OT1) on input line 637.
+LaTeX Encoding Info:    Redeclaring text command \textrightarrowhead (encoding 
+TU) on input line 638.
+LaTeX Encoding Info:    Redeclaring text command \textlefthalfring (encoding OT
+1) on input line 639.
+LaTeX Encoding Info:    Redeclaring text command \textlefthalfring (encoding TU
+) on input line 640.
+LaTeX Encoding Info:    Redeclaring text command \sublptr (encoding TU) on inpu
+t line 644.
+LaTeX Encoding Info:    Redeclaring text command \subrptr (encoding TU) on inpu
+t line 646.
+LaTeX Encoding Info:    Redeclaring text command \textrightuparrowhead (encodin
+g OT1) on input line 647.
+LaTeX Encoding Info:    Redeclaring text command \textrightuparrowhead (encodin
+g TU) on input line 648.
+LaTeX Encoding Info:    Redeclaring text command \textrighthalfring (encoding O
+T1) on input line 649.
+LaTeX Encoding Info:    Redeclaring text command \textrighthalfring (encoding T
+U) on input line 650.
+LaTeX Encoding Info:    Redeclaring text command \textdoublebrevebelow (encodin
+g TU) on input line 656.
+LaTeX Encoding Info:    Redeclaring text command \textdoublebreve (encoding OT1
+) on input line 657.
+LaTeX Encoding Info:    Redeclaring text command \textdoublebreve (encoding TU)
+ on input line 658.
+LaTeX Encoding Info:    Redeclaring text command \textdoublemacron (encoding OT
+1) on input line 659.
+LaTeX Encoding Info:    Redeclaring text command \textdoublemacron (encoding TU
+) on input line 660.
+LaTeX Encoding Info:    Redeclaring text command \textdoublemacronbelow (encodi
+ng OT1) on input line 661.
+LaTeX Encoding Info:    Redeclaring text command \textdoublemacronbelow (encodi
+ng TU) on input line 662.
+LaTeX Encoding Info:    Redeclaring text command \textdoubletilde (encoding OT1
+) on input line 663.
+LaTeX Encoding Info:    Redeclaring text command \textdoubletilde (encoding TU)
+ on input line 664.
+LaTeX Encoding Info:    Redeclaring text command \t (encoding TU) on input line
+ 666.
+LaTeX Encoding Info:    Redeclaring text command \capitaltie (encoding TU) on i
+nput line 668.
+LaTeX Encoding Info:    Redeclaring text command \texttoptiebar (encoding TU) o
+n input line 670.
+LaTeX Encoding Info:    Redeclaring text command \sliding (encoding TU) on inpu
+t line 692.
+LaTeX Encoding Info:    Redeclaring text command \texthighrise (encoding OT1) o
+n input line 717.
+LaTeX Encoding Info:    Redeclaring text command \texthighrise (encoding TU) on
+ input line 718.
+LaTeX Encoding Info:    Redeclaring text command \textlowrise (encoding OT1) on
+ input line 719.
+LaTeX Encoding Info:    Redeclaring text command \textlowrise (encoding TU) on 
+input line 720.
+LaTeX Encoding Info:    Redeclaring text command \textrisefall (encoding OT1) o
+n input line 723.
+LaTeX Encoding Info:    Redeclaring text command \textrisefall (encoding TU) on
+ input line 724.
+LaTeX Encoding Info:    Redeclaring text command \textfallrise (encoding OT1) o
+n input line 725.
+LaTeX Encoding Info:    Redeclaring text command \textfallrise (encoding TU) on
+ input line 726.
+LaTeX Encoding Info:    Redeclaring text command \textaolig (encoding TU) on in
+put line 738.
+LaTeX Encoding Info:    Redeclaring text command \bibridge (encoding TU) on inp
+ut line 768.
+LaTeX Encoding Info:    Redeclaring text command \textmidacute (encoding TU) on
+ input line 770.
+LaTeX Encoding Info:    Redeclaring text command \textgravemid (encoding TU) on
+ input line 772.
+LaTeX Encoding Info:    Redeclaring text command \textgravecircum (encoding TU)
+ on input line 774.
+LaTeX Encoding Info:    Redeclaring text command \textcircumacute (encoding TU)
+ on input line 776.
+LaTeX Encoding Info:    Redeclaring text command \textgravedot (encoding TU) on
+ input line 778.
+LaTeX Encoding Info:    Redeclaring text command \textdotacute (encoding TU) on
+ input line 780.
+LaTeX Encoding Info:    Redeclaring text command \textacutemacron (encoding TU)
+ on input line 782.
+LaTeX Encoding Info:    Redeclaring text command \textgravemacron (encoding TU)
+ on input line 784.
+LaTeX Encoding Info:    Redeclaring text command \textacutewedge (encoding TU) 
+on input line 786.
+LaTeX Encoding Info:    Redeclaring text command \textcircumdot (encoding TU) o
+n input line 788.
+LaTeX Encoding Info:    Redeclaring text command \texttildedot (encoding TU) on
+ input line 790.
+LaTeX Encoding Info:    Redeclaring text command \textringmacron (encoding TU) 
+on input line 792.
+LaTeX Encoding Info:    Redeclaring text command \textbrevemacron (encoding TU)
+ on input line 794.
+LaTeX Encoding Info:    Redeclaring text command \texthookcircum (encoding TU) 
+on input line 797.
+LaTeX Encoding Info:    Redeclaring text command \texttildecircum (encoding TU)
+ on input line 799.
+LaTeX Encoding Info:    Redeclaring text command \textdieresisoverline (encodin
+g TU) on input line 801.
+LaTeX Encoding Info:    Redeclaring text command \textdieresisacute (encoding T
+U) on input line 803.
+LaTeX Encoding Info:    Redeclaring text command \textdieresisgrave (encoding T
+U) on input line 805.
+LaTeX Encoding Info:    Redeclaring text command \textdieresiscaron (encoding T
+U) on input line 807.
+LaTeX Encoding Info:    Redeclaring text command \texttildeoverline (encoding T
+U) on input line 809.
+LaTeX Encoding Info:    Redeclaring text command \textdotoverline (encoding TU)
+ on input line 811.
+LaTeX Encoding Info:    Redeclaring text command \textringacute (encoding TU) o
+n input line 813.
+LaTeX Encoding Info:    Redeclaring text command \textcircumdotbelow (encoding 
+TU) on input line 815.
+LaTeX Encoding Info:    Redeclaring text command \textbreveacute (encoding TU) 
+on input line 817.
+LaTeX Encoding Info:    Redeclaring text command \textbrevegrave (encoding TU) 
+on input line 819.
+LaTeX Encoding Info:    Redeclaring text command \textbrevehook (encoding TU) o
+n input line 821.
+LaTeX Encoding Info:    Redeclaring text command \textbrevetilde (encoding TU) 
+on input line 823.
+LaTeX Encoding Info:    Redeclaring text command \textbrevedotbelow (encoding T
+U) on input line 825.
+LaTeX Encoding Info:    Redeclaring text command \textacutehorn (encoding TU) o
+n input line 827.
+LaTeX Encoding Info:    Redeclaring text command \textgravehorn (encoding TU) o
+n input line 829.
+LaTeX Encoding Info:    Redeclaring text command \texthookhorn (encoding TU) on
+ input line 831.
+LaTeX Encoding Info:    Redeclaring text command \texttildehorn (encoding TU) o
+n input line 833.
+LaTeX Encoding Info:    Redeclaring text command \textdotbelowhorn (encoding TU
+) on input line 835.
+LaTeX Encoding Info:    Redeclaring text command \textogonekoverline (encoding 
+TU) on input line 837.
+LaTeX Encoding Info:    Redeclaring text command \textmiddledot (encoding TU) o
+n input line 840.
+LaTeX Encoding Info:    Redeclaring text command \TIPAvertmacro (encoding TU) o
+n input line 842.
+LaTeX Encoding Info:    Redeclaring text command \textupstep (encoding TU) on i
+nput line 844.
+LaTeX Encoding Info:    Redeclaring text command \textdownstep (encoding TU) on
+ input line 845.
+LaTeX Encoding Info:    Redeclaring text command \textquotedbl (encoding TU) on
+ input line 1706.
+LaTeX Encoding Info:    Redeclaring text command \texthash (encoding TU) on inp
+ut line 1707.
+LaTeX Encoding Info:    Redeclaring text command \textdollar (encoding TU) on i
+nput line 1708.
+LaTeX Encoding Info:    Redeclaring text command \textpercent (encoding TU) on 
+input line 1709.
+LaTeX Encoding Info:    Redeclaring text command \textampersand (encoding TU) o
+n input line 1710.
+LaTeX Encoding Info:    Redeclaring text command \textquotesingle (encoding TU)
+ on input line 1711.
+LaTeX Encoding Info:    Redeclaring text command \textasteriskcentered (encodin
+g TU) on input line 1712.
+LaTeX Encoding Info:    Redeclaring text command \textless (encoding TU) on inp
+ut line 1713.
+LaTeX Encoding Info:    Redeclaring text command \textequals (encoding TU) on i
+nput line 1714.
+LaTeX Encoding Info:    Redeclaring text command \textgreater (encoding TU) on 
+input line 1715.
+LaTeX Encoding Info:    Redeclaring text command \textbackslash (encoding TU) o
+n input line 1716.
+LaTeX Encoding Info:    Redeclaring text command \textasciicircum (encoding TU)
+ on input line 1717.
+LaTeX Encoding Info:    Redeclaring text command \textunderscore (encoding TU) 
+on input line 1718.
+LaTeX Encoding Info:    Redeclaring text command \textasciigrave (encoding TU) 
+on input line 1719.
+LaTeX Encoding Info:    Redeclaring text command \textg (encoding TU) on input 
+line 1720.
+LaTeX Encoding Info:    Redeclaring text command \textbraceleft (encoding TU) o
+n input line 1721.
+LaTeX Encoding Info:    Redeclaring text command \textbar (encoding TU) on inpu
+t line 1722.
+LaTeX Encoding Info:    Redeclaring text command \textbraceright (encoding TU) 
+on input line 1723.
+LaTeX Encoding Info:    Redeclaring text command \textasciitilde (encoding TU) 
+on input line 1724.
+LaTeX Encoding Info:    Redeclaring text command \textexclamdown (encoding TU) 
+on input line 1726.
+LaTeX Encoding Info:    Redeclaring text command \textcent (encoding TU) on inp
+ut line 1727.
+LaTeX Encoding Info:    Redeclaring text command \textsterling (encoding TU) on
+ input line 1729.
+LaTeX Encoding Info:    Redeclaring text command \textcurrency (encoding TU) on
+ input line 1731.
+LaTeX Encoding Info:    Redeclaring text command \textyen (encoding TU) on inpu
+t line 1732.
+LaTeX Encoding Info:    Redeclaring text command \textbrokenbar (encoding TU) o
+n input line 1734.
+LaTeX Encoding Info:    Redeclaring text command \textsection (encoding TU) on 
+input line 1735.
+LaTeX Encoding Info:    Redeclaring text command \textasciidieresis (encoding T
+U) on input line 1737.
+LaTeX Encoding Info:    Redeclaring text command \textcopyright (encoding TU) o
+n input line 1738.
+LaTeX Encoding Info:    Redeclaring text command \copyright (encoding TU) on in
+put line 1739.
+LaTeX Encoding Info:    Redeclaring text command \textordfeminine (encoding TU)
+ on input line 1740.
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding TU) o
+n input line 1742.
+LaTeX Encoding Info:    Redeclaring text command \textlogicalnot (encoding TU) 
+on input line 1743.
+LaTeX Encoding Info:    Redeclaring text command \textregistered (encoding TU) 
+on input line 1746.
+LaTeX Encoding Info:    Redeclaring text command \textasciimacron (encoding TU)
+ on input line 1747.
+LaTeX Encoding Info:    Redeclaring text command \textdegree (encoding TU) on i
+nput line 1748.
+LaTeX Encoding Info:    Redeclaring text command \textpm (encoding TU) on input
+ line 1749.
+LaTeX Encoding Info:    Redeclaring text command \texttwosuperior (encoding TU)
+ on input line 1751.
+LaTeX Encoding Info:    Redeclaring text command \textthreesuperior (encoding T
+U) on input line 1753.
+LaTeX Encoding Info:    Redeclaring text command \textasciiacute (encoding TU) 
+on input line 1755.
+LaTeX Encoding Info:    Redeclaring text command \textmu (encoding TU) on input
+ line 1756.
+LaTeX Encoding Info:    Redeclaring text command \textparagraph (encoding TU) o
+n input line 1758.
+LaTeX Encoding Info:    Redeclaring text command \textpilcrow (encoding TU) on 
+input line 1759.
+LaTeX Encoding Info:    Redeclaring text command \textcentereddot (encoding TU)
+ on input line 1761.
+LaTeX Encoding Info:    Redeclaring text command \textperiodcentered (encoding 
+TU) on input line 1762.
+LaTeX Encoding Info:    Redeclaring text command \textasciicedilla (encoding TU
+) on input line 1763.
+LaTeX Encoding Info:    Redeclaring text command \textonesuperior (encoding TU)
+ on input line 1764.
+LaTeX Encoding Info:    Redeclaring text command \textordmasculine (encoding TU
+) on input line 1766.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding TU) 
+on input line 1768.
+LaTeX Encoding Info:    Redeclaring text command \textonequarter (encoding TU) 
+on input line 1769.
+LaTeX Encoding Info:    Redeclaring text command \textonehalf (encoding TU) on 
+input line 1770.
+LaTeX Encoding Info:    Redeclaring text command \textthreequarters (encoding T
+U) on input line 1771.
+LaTeX Encoding Info:    Redeclaring text command \textquestiondown (encoding TU
+) on input line 1772.
+LaTeX Encoding Info:    Redeclaring text command \AA (encoding TU) on input lin
+e 1785.
+LaTeX Encoding Info:    Redeclaring text command \AE (encoding TU) on input lin
+e 1786.
+LaTeX Encoding Info:    Redeclaring text command \DH (encoding TU) on input lin
+e 1806.
+LaTeX Encoding Info:    Redeclaring text command \texttimes (encoding TU) on in
+put line 1819.
+LaTeX Encoding Info:    Redeclaring text command \O (encoding TU) on input line
+ 1821.
+LaTeX Encoding Info:    Redeclaring text command \TH (encoding TU) on input lin
+e 1832.
+LaTeX Encoding Info:    Redeclaring text command \Thorn (encoding TU) on input 
+line 1833.
+LaTeX Encoding Info:    Redeclaring text command \ss (encoding TU) on input lin
+e 1834.
+LaTeX Encoding Info:    Redeclaring text command \aa (encoding TU) on input lin
+e 1842.
+LaTeX Encoding Info:    Redeclaring text command \ae (encoding TU) on input lin
+e 1843.
+LaTeX Encoding Info:    Redeclaring text command \dh (encoding TU) on input lin
+e 1857.
+LaTeX Encoding Info:    Redeclaring text command \textdiv (encoding TU) on inpu
+t line 1864.
+LaTeX Encoding Info:    Redeclaring text command \o (encoding TU) on input line
+ 1866.
+LaTeX Encoding Info:    Redeclaring text command \th (encoding TU) on input lin
+e 1872.
+LaTeX Encoding Info:    Redeclaring text command \textthorn (encoding TU) on in
+put line 1873.
+LaTeX Encoding Info:    Redeclaring text command \textthornvari (encoding TU) o
+n input line 1874.
+LaTeX Encoding Info:    Redeclaring text command \textthornvarii (encoding TU) 
+on input line 1875.
+LaTeX Encoding Info:    Redeclaring text command \textthornvariii (encoding TU)
+ on input line 1876.
+LaTeX Encoding Info:    Redeclaring text command \textthornvariv (encoding TU) 
+on input line 1877.
+LaTeX Encoding Info:    Redeclaring text command \Aogonek (encoding TU) on inpu
+t line 1887.
+LaTeX Encoding Info:    Redeclaring text command \aogonek (encoding TU) on inpu
+t line 1890.
+LaTeX Encoding Info:    Redeclaring text command \DJ (encoding TU) on input lin
+e 1907.
+LaTeX Encoding Info:    Redeclaring text command \dj (encoding TU) on input lin
+e 1909.
+LaTeX Encoding Info:    Redeclaring text command \textcrd (encoding TU) on inpu
+t line 1910.
+LaTeX Encoding Info:    Redeclaring text command \textHbar (encoding TU) on inp
+ut line 1943.
+LaTeX Encoding Info:    Redeclaring text command \textcrh (encoding TU) on inpu
+t line 1945.
+LaTeX Encoding Info:    Redeclaring text command \texthbar (encoding TU) on inp
+ut line 1946.
+LaTeX Encoding Info:    Redeclaring text command \i (encoding TU) on input line
+ 1965.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding TU) on input lin
+e 1966.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding TU) on input lin
+e 1967.
+LaTeX Encoding Info:    Redeclaring text command \textkra (encoding TU) on inpu
+t line 1975.
+LaTeX Encoding Info:    Redeclaring text command \Lcaron (encoding TU) on input
+ line 1984.
+LaTeX Encoding Info:    Redeclaring text command \lcaron (encoding TU) on input
+ line 1986.
+LaTeX Encoding Info:    Redeclaring text command \L (encoding TU) on input line
+ 1990.
+LaTeX Encoding Info:    Redeclaring text command \Lstroke (encoding TU) on inpu
+t line 1991.
+LaTeX Encoding Info:    Redeclaring text command \l (encoding TU) on input line
+ 1993.
+LaTeX Encoding Info:    Redeclaring text command \lstroke (encoding TU) on inpu
+t line 1994.
+LaTeX Encoding Info:    Redeclaring text command \textbarl (encoding TU) on inp
+ut line 1995.
+LaTeX Encoding Info:    Redeclaring text command \NG (encoding TU) on input lin
+e 2008.
+LaTeX Encoding Info:    Redeclaring text command \ng (encoding TU) on input lin
+e 2010.
+LaTeX Encoding Info:    Redeclaring text command \OE (encoding TU) on input lin
+e 2020.
+LaTeX Encoding Info:    Redeclaring text command \oe (encoding TU) on input lin
+e 2021.
+LaTeX Encoding Info:    Redeclaring text command \Racute (encoding TU) on input
+ line 2024.
+LaTeX Encoding Info:    Redeclaring text command \racute (encoding TU) on input
+ line 2026.
+LaTeX Encoding Info:    Redeclaring text command \Sacute (encoding TU) on input
+ line 2035.
+LaTeX Encoding Info:    Redeclaring text command \sacute (encoding TU) on input
+ line 2037.
+LaTeX Encoding Info:    Redeclaring text command \Scedilla (encoding TU) on inp
+ut line 2043.
+LaTeX Encoding Info:    Redeclaring text command \scedilla (encoding TU) on inp
+ut line 2045.
+LaTeX Encoding Info:    Redeclaring text command \Scaron (encoding TU) on input
+ line 2048.
+LaTeX Encoding Info:    Redeclaring text command \scaron (encoding TU) on input
+ line 2050.
+LaTeX Encoding Info:    Redeclaring text command \Tcaron (encoding TU) on input
+ line 2056.
+LaTeX Encoding Info:    Redeclaring text command \tcaron (encoding TU) on input
+ line 2058.
+LaTeX Encoding Info:    Redeclaring text command \textTstroke (encoding TU) on 
+input line 2060.
+LaTeX Encoding Info:    Redeclaring text command \textTbar (encoding TU) on inp
+ut line 2061.
+LaTeX Encoding Info:    Redeclaring text command \texttstroke (encoding TU) on 
+input line 2063.
+LaTeX Encoding Info:    Redeclaring text command \texttbar (encoding TU) on inp
+ut line 2064.
+LaTeX Encoding Info:    Redeclaring text command \Zdotaccent (encoding TU) on i
+nput line 2097.
+LaTeX Encoding Info:    Redeclaring text command \zdotaccent (encoding TU) on i
+nput line 2099.
+LaTeX Encoding Info:    Redeclaring text command \Zcaron (encoding TU) on input
+ line 2102.
+LaTeX Encoding Info:    Redeclaring text command \zcaron (encoding TU) on input
+ line 2104.
+LaTeX Encoding Info:    Redeclaring text command \textcrb (encoding TU) on inpu
+t line 2107.
+LaTeX Encoding Info:    Redeclaring text command \textBhook (encoding TU) on in
+put line 2109.
+LaTeX Encoding Info:    Redeclaring text command \textOopen (encoding TU) on in
+put line 2115.
+LaTeX Encoding Info:    Redeclaring text command \textChook (encoding TU) on in
+put line 2117.
+LaTeX Encoding Info:    Redeclaring text command \texthtc (encoding TU) on inpu
+t line 2119.
+LaTeX Encoding Info:    Redeclaring text command \textchook (encoding TU) on in
+put line 2120.
+LaTeX Encoding Info:    Redeclaring text command \textDafrican (encoding TU) on
+ input line 2122.
+LaTeX Encoding Info:    Redeclaring text command \textDhook (encoding TU) on in
+put line 2124.
+LaTeX Encoding Info:    Redeclaring text command \textEreversed (encoding TU) o
+n input line 2128.
+LaTeX Encoding Info:    Redeclaring text command \textEopen (encoding TU) on in
+put line 2132.
+LaTeX Encoding Info:    Redeclaring text command \textFhook (encoding TU) on in
+put line 2134.
+LaTeX Encoding Info:    Redeclaring text command \textflorin (encoding TU) on i
+nput line 2136.
+LaTeX Encoding Info:    Redeclaring text command \textgamma (encoding TU) on in
+put line 2139.
+LaTeX Encoding Info:    Redeclaring text command \textGammaafrican (encoding TU
+) on input line 2140.
+LaTeX Encoding Info:    Redeclaring text command \hv (encoding TU) on input lin
+e 2141.
+LaTeX Encoding Info:    Redeclaring text command \texthvlig (encoding TU) on in
+put line 2142.
+LaTeX Encoding Info:    Redeclaring text command \textIotaafrican (encoding TU)
+ on input line 2144.
+LaTeX Encoding Info:    Redeclaring text command \textKhook (encoding TU) on in
+put line 2150.
+LaTeX Encoding Info:    Redeclaring text command \texthtk (encoding TU) on inpu
+t line 2152.
+LaTeX Encoding Info:    Redeclaring text command \textkhook (encoding TU) on in
+put line 2153.
+LaTeX Encoding Info:    Redeclaring text command \textbarl (encoding TU) on inp
+ut line 2155.
+LaTeX Encoding Info:    Redeclaring text command \textcrlambda (encoding TU) on
+ input line 2157.
+LaTeX Encoding Info:    Redeclaring text command \textNhookleft (encoding TU) o
+n input line 2160.
+LaTeX Encoding Info:    Redeclaring text command \textnrleg (encoding TU) on in
+put line 2161.
+LaTeX Encoding Info:    Redeclaring text command \Ohorn (encoding TU) on input 
+line 2163.
+LaTeX Encoding Info:    Redeclaring text command \ohorn (encoding TU) on input 
+line 2165.
+LaTeX Encoding Info:    Redeclaring text command \textPhook (encoding TU) on in
+put line 2170.
+LaTeX Encoding Info:    Redeclaring text command \texthtp (encoding TU) on inpu
+t line 2172.
+LaTeX Encoding Info:    Redeclaring text command \textphook (encoding TU) on in
+put line 2173.
+LaTeX Encoding Info:    Redeclaring text command \ESH (encoding TU) on input li
+ne 2177.
+LaTeX Encoding Info:    Redeclaring text command \textEsh (encoding TU) on inpu
+t line 2178.
+LaTeX Encoding Info:    Redeclaring text command \textlooptoprevesh (encoding T
+U) on input line 2179.
+LaTeX Encoding Info:    Redeclaring text command \textlhtlongi (encoding TU) on
+ input line 2180.
+LaTeX Encoding Info:    Redeclaring text command \textlhookt (encoding TU) on i
+nput line 2182.
+LaTeX Encoding Info:    Redeclaring text command \textThook (encoding TU) on in
+put line 2184.
+LaTeX Encoding Info:    Redeclaring text command \texthtt (encoding TU) on inpu
+t line 2186.
+LaTeX Encoding Info:    Redeclaring text command \textthook (encoding TU) on in
+put line 2187.
+LaTeX Encoding Info:    Redeclaring text command \textTretroflexhook (encoding 
+TU) on input line 2189.
+LaTeX Encoding Info:    Redeclaring text command \Uhorn (encoding TU) on input 
+line 2190.
+LaTeX Encoding Info:    Redeclaring text command \uhorn (encoding TU) on input 
+line 2192.
+LaTeX Encoding Info:    Redeclaring text command \textupsilon (encoding TU) on 
+input line 2194.
+LaTeX Encoding Info:    Redeclaring text command \textVhook (encoding TU) on in
+put line 2197.
+LaTeX Encoding Info:    Redeclaring text command \textYhook (encoding TU) on in
+put line 2199.
+LaTeX Encoding Info:    Redeclaring text command \textyhook (encoding TU) on in
+put line 2201.
+LaTeX Encoding Info:    Redeclaring text command \Zbar (encoding TU) on input l
+ine 2203.
+LaTeX Encoding Info:    Redeclaring text command \EZH (encoding TU) on input li
+ne 2206.
+LaTeX Encoding Info:    Redeclaring text command \textEzh (encoding TU) on inpu
+t line 2207.
+LaTeX Encoding Info:    Redeclaring text command \textrevyogh (encoding TU) on 
+input line 2211.
+LaTeX Encoding Info:    Redeclaring text command \textbenttailyogh (encoding TU
+) on input line 2212.
+LaTeX Encoding Info:    Redeclaring text command \textcrtwo (encoding TU) on in
+put line 2214.
+LaTeX Encoding Info:    Redeclaring text command \textcrinvglotstop (encoding T
+U) on input line 2217.
+LaTeX Encoding Info:    Redeclaring text command \wynn (encoding TU) on input l
+ine 2218.
+LaTeX Encoding Info:    Redeclaring text command \textpipe (encoding TU) on inp
+ut line 2219.
+LaTeX Encoding Info:    Redeclaring text command \textpipevar (encoding TU) on 
+input line 2220.
+LaTeX Encoding Info:    Redeclaring text command \textvertline (encoding TU) on
+ input line 2221.
+LaTeX Encoding Info:    Redeclaring text command \textdoublepipe (encoding TU) 
+on input line 2223.
+LaTeX Encoding Info:    Redeclaring text command \textdoublepipevar (encoding T
+U) on input line 2224.
+LaTeX Encoding Info:    Redeclaring text command \textdoublebarpipe (encoding T
+U) on input line 2225.
+LaTeX Encoding Info:    Redeclaring text command \textdoublebarpipevar (encodin
+g TU) on input line 2226.
+LaTeX Encoding Info:    Redeclaring text command \textrclick (encoding TU) on i
+nput line 2228.
+LaTeX Encoding Info:    Redeclaring text command \LJ (encoding TU) on input lin
+e 2232.
+LaTeX Encoding Info:    Redeclaring text command \Lj (encoding TU) on input lin
+e 2233.
+LaTeX Encoding Info:    Redeclaring text command \lj (encoding TU) on input lin
+e 2234.
+LaTeX Encoding Info:    Redeclaring text command \NJ (encoding TU) on input lin
+e 2235.
+LaTeX Encoding Info:    Redeclaring text command \Nj (encoding TU) on input lin
+e 2236.
+LaTeX Encoding Info:    Redeclaring text command \nj (encoding TU) on input lin
+e 2237.
+LaTeX Encoding Info:    Redeclaring text command \inve (encoding TU) on input l
+ine 2268.
+LaTeX Encoding Info:    Redeclaring text command \texteturned (encoding TU) on 
+input line 2269.
+LaTeX Encoding Info:    Redeclaring text command \textcrg (encoding TU) on inpu
+t line 2282.
+LaTeX Encoding Info:    Redeclaring text command \textEzh (encoding TU) on inpu
+t line 2298.
+LaTeX Encoding Info:    Redeclaring text command \textezh (encoding TU) on inpu
+t line 2300.
+LaTeX Encoding Info:    Redeclaring text command \DZ (encoding TU) on input lin
+e 2303.
+LaTeX Encoding Info:    Redeclaring text command \Dz (encoding TU) on input lin
+e 2304.
+LaTeX Encoding Info:    Redeclaring text command \dz (encoding TU) on input lin
+e 2305.
+LaTeX Encoding Info:    Redeclaring text command \HV (encoding TU) on input lin
+e 2310.
+LaTeX Encoding Info:    Redeclaring text command \WYNN (encoding TU) on input l
+ine 2311.
+LaTeX Encoding Info:    Redeclaring text command \textwynn (encoding TU) on inp
+ut line 2312.
+LaTeX Encoding Info:    Redeclaring text command \YOGH (encoding TU) on input l
+ine 2353.
+LaTeX Encoding Info:    Redeclaring text command \yogh (encoding TU) on input l
+ine 2354.
+LaTeX Encoding Info:    Redeclaring text command \textctd (encoding TU) on inpu
+t line 2361.
+LaTeX Encoding Info:    Redeclaring text command \textcommatailz (encoding TU) 
+on input line 2366.
+LaTeX Encoding Info:    Redeclaring text command \textctl (encoding TU) on inpu
+t line 2392.
+LaTeX Encoding Info:    Redeclaring text command \textctn (encoding TU) on inpu
+t line 2394.
+LaTeX Encoding Info:    Redeclaring text command \textctt (encoding TU) on inpu
+t line 2396.
+LaTeX Encoding Info:    Redeclaring text command \textdotlessj (encoding TU) on
+ input line 2397.
+LaTeX Encoding Info:    Redeclaring text command \textdblig (encoding TU) on in
+put line 2398.
+LaTeX Encoding Info:    Redeclaring text command \textqplig (encoding TU) on in
+put line 2399.
+LaTeX Encoding Info:    Redeclaring text command \textstrokea (encoding TU) on 
+input line 2400.
+LaTeX Encoding Info:    Redeclaring text command \textstrokecapitalc (encoding 
+TU) on input line 2401.
+LaTeX Encoding Info:    Redeclaring text command \textstrokec (encoding TU) on 
+input line 2402.
+LaTeX Encoding Info:    Redeclaring text command \textbarcapitall (encoding TU)
+ on input line 2403.
+LaTeX Encoding Info:    Redeclaring text command \textstrokecapitalt (encoding 
+TU) on input line 2404.
+LaTeX Encoding Info:    Redeclaring text command \textrts (encoding TU) on inpu
+t line 2405.
+LaTeX Encoding Info:    Redeclaring text command \textrtz (encoding TU) on inpu
+t line 2406.
+LaTeX Encoding Info:    Redeclaring text command \textglotstopvari (encoding TU
+) on input line 2407.
+LaTeX Encoding Info:    Redeclaring text command \textglotstopvarii (encoding T
+U) on input line 2408.
+LaTeX Encoding Info:    Redeclaring text command \textbarcapitalb (encoding TU)
+ on input line 2409.
+LaTeX Encoding Info:    Redeclaring text command \textbarcapitalu (encoding TU)
+ on input line 2410.
+LaTeX Encoding Info:    Redeclaring text command \textturnedcapitalv (encoding 
+TU) on input line 2411.
+LaTeX Encoding Info:    Redeclaring text command \textstrokecapitale (encoding 
+TU) on input line 2412.
+LaTeX Encoding Info:    Redeclaring text command \textstrokee (encoding TU) on 
+input line 2413.
+LaTeX Encoding Info:    Redeclaring text command \textbarcapitalj (encoding TU)
+ on input line 2414.
+LaTeX Encoding Info:    Redeclaring text command \textbarj (encoding TU) on inp
+ut line 2415.
+LaTeX Encoding Info:    Redeclaring text command \texthtcapitalq (encoding TU) 
+on input line 2416.
+LaTeX Encoding Info:    Redeclaring text command \texthtq (encoding TU) on inpu
+t line 2417.
+LaTeX Encoding Info:    Redeclaring text command \textbarcapitalr (encoding TU)
+ on input line 2418.
+LaTeX Encoding Info:    Redeclaring text command \textbarr (encoding TU) on inp
+ut line 2419.
+LaTeX Encoding Info:    Redeclaring text command \textbarcapitaly (encoding TU)
+ on input line 2420.
+LaTeX Encoding Info:    Redeclaring text command \textbary (encoding TU) on inp
+ut line 2421.
+LaTeX Encoding Info:    Redeclaring text command \textturna (encoding TU) on in
+put line 2426.
+LaTeX Encoding Info:    Redeclaring text command \textscripta (encoding TU) on 
+input line 2428.
+LaTeX Encoding Info:    Redeclaring text command \textturnscripta (encoding TU)
+ on input line 2430.
+LaTeX Encoding Info:    Redeclaring text command \texthtb (encoding TU) on inpu
+t line 2433.
+LaTeX Encoding Info:    Redeclaring text command \textbhook (encoding TU) on in
+put line 2434.
+LaTeX Encoding Info:    Redeclaring text command \textopeno (encoding TU) on in
+put line 2436.
+LaTeX Encoding Info:    Redeclaring text command \textoopen (encoding TU) on in
+put line 2437.
+LaTeX Encoding Info:    Redeclaring text command \textctc (encoding TU) on inpu
+t line 2439.
+LaTeX Encoding Info:    Redeclaring text command \textrtaild (encoding TU) on i
+nput line 2441.
+LaTeX Encoding Info:    Redeclaring text command \textdtail (encoding TU) on in
+put line 2442.
+LaTeX Encoding Info:    Redeclaring text command \texthtd (encoding TU) on inpu
+t line 2444.
+LaTeX Encoding Info:    Redeclaring text command \textdhook (encoding TU) on in
+put line 2445.
+LaTeX Encoding Info:    Redeclaring text command \textreve (encoding TU) on inp
+ut line 2447.
+LaTeX Encoding Info:    Redeclaring text command \schwa (encoding TU) on input 
+line 2448.
+LaTeX Encoding Info:    Redeclaring text command \textschwa (encoding TU) on in
+put line 2449.
+LaTeX Encoding Info:    Redeclaring text command \textrhookschwa (encoding TU) 
+on input line 2452.
+LaTeX Encoding Info:    Redeclaring text command \textepsilon (encoding TU) on 
+input line 2454.
+LaTeX Encoding Info:    Redeclaring text command \texteopen (encoding TU) on in
+put line 2455.
+LaTeX Encoding Info:    Redeclaring text command \textrevepsilon (encoding TU) 
+on input line 2457.
+LaTeX Encoding Info:    Redeclaring text command \textrhookrevepsilon (encoding
+ TU) on input line 2460.
+LaTeX Encoding Info:    Redeclaring text command \textcloserevepsilon (encoding
+ TU) on input line 2462.
+LaTeX Encoding Info:    Redeclaring text command \textbardotlessj (encoding TU)
+ on input line 2464.
+LaTeX Encoding Info:    Redeclaring text command \textObardotlessj (encoding TU
+) on input line 2465.
+LaTeX Encoding Info:    Redeclaring text command \texthtg (encoding TU) on inpu
+t line 2467.
+LaTeX Encoding Info:    Redeclaring text command \textscriptg (encoding TU) on 
+input line 2469.
+LaTeX Encoding Info:    Redeclaring text command \textscg (encoding TU) on inpu
+t line 2472.
+LaTeX Encoding Info:    Redeclaring text command \textbabygamma (encoding TU) o
+n input line 2474.
+LaTeX Encoding Info:    Redeclaring text command \textgammalatinsmall (encoding
+ TU) on input line 2475.
+LaTeX Encoding Info:    Redeclaring text command \textramshorns (encoding TU) o
+n input line 2476.
+LaTeX Encoding Info:    Redeclaring text command \textturnh (encoding TU) on in
+put line 2478.
+LaTeX Encoding Info:    Redeclaring text command \texthth (encoding TU) on inpu
+t line 2481.
+LaTeX Encoding Info:    Redeclaring text command \texththeng (encoding TU) on i
+nput line 2483.
+LaTeX Encoding Info:    Redeclaring text command \textbari (encoding TU) on inp
+ut line 2485.
+LaTeX Encoding Info:    Redeclaring text command \textiota (encoding TU) on inp
+ut line 2487.
+LaTeX Encoding Info:    Redeclaring text command \textiotalatin (encoding TU) o
+n input line 2488.
+LaTeX Encoding Info:    Redeclaring text command \textsci (encoding TU) on inpu
+t line 2490.
+LaTeX Encoding Info:    Redeclaring text command \textltilde (encoding TU) on i
+nput line 2492.
+LaTeX Encoding Info:    Redeclaring text command \textbeltl (encoding TU) on in
+put line 2494.
+LaTeX Encoding Info:    Redeclaring text command \textrtaill (encoding TU) on i
+nput line 2496.
+LaTeX Encoding Info:    Redeclaring text command \textlyoghlig (encoding TU) on
+ input line 2498.
+LaTeX Encoding Info:    Redeclaring text command \textOlyoghlig (encoding TU) o
+n input line 2499.
+LaTeX Encoding Info:    Redeclaring text command \textturnm (encoding TU) on in
+put line 2501.
+LaTeX Encoding Info:    Redeclaring text command \textturnmrleg (encoding TU) o
+n input line 2503.
+LaTeX Encoding Info:    Redeclaring text command \textltailm (encoding TU) on i
+nput line 2505.
+LaTeX Encoding Info:    Redeclaring text command \textltailn (encoding TU) on i
+nput line 2507.
+LaTeX Encoding Info:    Redeclaring text command \textnhookleft (encoding TU) o
+n input line 2508.
+LaTeX Encoding Info:    Redeclaring text command \textrtailn (encoding TU) on i
+nput line 2510.
+LaTeX Encoding Info:    Redeclaring text command \textscn (encoding TU) on inpu
+t line 2512.
+LaTeX Encoding Info:    Redeclaring text command \textbaro (encoding TU) on inp
+ut line 2514.
+LaTeX Encoding Info:    Redeclaring text command \textscoelig (encoding TU) on 
+input line 2516.
+LaTeX Encoding Info:    Redeclaring text command \textcloseomega (encoding TU) 
+on input line 2518.
+LaTeX Encoding Info:    Redeclaring text command \textphi (encoding TU) on inpu
+t line 2519.
+LaTeX Encoding Info:    Redeclaring text command \textturnr (encoding TU) on in
+put line 2521.
+LaTeX Encoding Info:    Redeclaring text command \textturnlonglegr (encoding TU
+) on input line 2523.
+LaTeX Encoding Info:    Redeclaring text command \textturnrrtail (encoding TU) 
+on input line 2525.
+LaTeX Encoding Info:    Redeclaring text command \textlonglegr (encoding TU) on
+ input line 2527.
+LaTeX Encoding Info:    Redeclaring text command \textrtailr (encoding TU) on i
+nput line 2529.
+LaTeX Encoding Info:    Redeclaring text command \textfishhookr (encoding TU) o
+n input line 2531.
+LaTeX Encoding Info:    Redeclaring text command \textlhti (encoding TU) on inp
+ut line 2532.
+LaTeX Encoding Info:    Redeclaring text command \textlhtlongi (encoding TU) on
+ input line 2533.
+LaTeX Encoding Info:    Redeclaring text command \textscr (encoding TU) on inpu
+t line 2536.
+LaTeX Encoding Info:    Redeclaring text command \textinvscr (encoding TU) on i
+nput line 2538.
+LaTeX Encoding Info:    Redeclaring text command \textrtails (encoding TU) on i
+nput line 2540.
+LaTeX Encoding Info:    Redeclaring text command \esh (encoding TU) on input li
+ne 2542.
+LaTeX Encoding Info:    Redeclaring text command \textesh (encoding TU) on inpu
+t line 2543.
+LaTeX Encoding Info:    Redeclaring text command \texthtbardotlessj (encoding T
+U) on input line 2546.
+LaTeX Encoding Info:    Redeclaring text command \texthtObardotlessj (encoding 
+TU) on input line 2547.
+LaTeX Encoding Info:    Redeclaring text command \texthtbardotlessjvar (encodin
+g TU) on input line 2548.
+LaTeX Encoding Info:    Redeclaring text command \textvibyi (encoding TU) on in
+put line 2550.
+LaTeX Encoding Info:    Redeclaring text command \textctesh (encoding TU) on in
+put line 2553.
+LaTeX Encoding Info:    Redeclaring text command \textturnt (encoding TU) on in
+put line 2555.
+LaTeX Encoding Info:    Redeclaring text command \textrtailt (encoding TU) on i
+nput line 2557.
+LaTeX Encoding Info:    Redeclaring text command \texttretroflexhook (encoding 
+TU) on input line 2558.
+LaTeX Encoding Info:    Redeclaring text command \textbaru (encoding TU) on inp
+ut line 2560.
+LaTeX Encoding Info:    Redeclaring text command \textscupsilon (encoding TU) o
+n input line 2561.
+LaTeX Encoding Info:    Redeclaring text command \textscriptv (encoding TU) on 
+input line 2564.
+LaTeX Encoding Info:    Redeclaring text command \textvhook (encoding TU) on in
+put line 2565.
+LaTeX Encoding Info:    Redeclaring text command \textturnv (encoding TU) on in
+put line 2567.
+LaTeX Encoding Info:    Redeclaring text command \textturnw (encoding TU) on in
+put line 2569.
+LaTeX Encoding Info:    Redeclaring text command \textturny (encoding TU) on in
+put line 2571.
+LaTeX Encoding Info:    Redeclaring text command \textscy (encoding TU) on inpu
+t line 2573.
+LaTeX Encoding Info:    Redeclaring text command \textrtailz (encoding TU) on i
+nput line 2575.
+LaTeX Encoding Info:    Redeclaring text command \textctz (encoding TU) on inpu
+t line 2577.
+LaTeX Encoding Info:    Redeclaring text command \ezh (encoding TU) on input li
+ne 2579.
+LaTeX Encoding Info:    Redeclaring text command \textezh (encoding TU) on inpu
+t line 2580.
+LaTeX Encoding Info:    Redeclaring text command \textyogh (encoding TU) on inp
+ut line 2581.
+LaTeX Encoding Info:    Redeclaring text command \textctyogh (encoding TU) on i
+nput line 2583.
+LaTeX Encoding Info:    Redeclaring text command \textglotstop (encoding TU) on
+ input line 2584.
+LaTeX Encoding Info:    Redeclaring text command \textrevglotstop (encoding TU)
+ on input line 2585.
+LaTeX Encoding Info:    Redeclaring text command \textinvglotstop (encoding TU)
+ on input line 2586.
+LaTeX Encoding Info:    Redeclaring text command \textstretchc (encoding TU) on
+ input line 2587.
+LaTeX Encoding Info:    Redeclaring text command \textstretchcvar (encoding TU)
+ on input line 2588.
+LaTeX Encoding Info:    Redeclaring text command \textbullseye (encoding TU) on
+ input line 2589.
+LaTeX Encoding Info:    Redeclaring text command \textObullseye (encoding TU) o
+n input line 2590.
+LaTeX Encoding Info:    Redeclaring text command \textscb (encoding TU) on inpu
+t line 2592.
+LaTeX Encoding Info:    Redeclaring text command \textcloseepsilon (encoding TU
+) on input line 2594.
+LaTeX Encoding Info:    Redeclaring text command \texthtscg (encoding TU) on in
+put line 2596.
+LaTeX Encoding Info:    Redeclaring text command \textsch (encoding TU) on inpu
+t line 2598.
+LaTeX Encoding Info:    Redeclaring text command \textctj (encoding TU) on inpu
+t line 2600.
+LaTeX Encoding Info:    Redeclaring text command \textctjvar (encoding TU) on i
+nput line 2601.
+LaTeX Encoding Info:    Redeclaring text command \textturnk (encoding TU) on in
+put line 2603.
+LaTeX Encoding Info:    Redeclaring text command \textscl (encoding TU) on inpu
+t line 2605.
+LaTeX Encoding Info:    Redeclaring text command \texthtq (encoding TU) on inpu
+t line 2607.
+LaTeX Encoding Info:    Redeclaring text command \textbarglotstop (encoding TU)
+ on input line 2609.
+LaTeX Encoding Info:    Redeclaring text command \textbarrevglotstop (encoding 
+TU) on input line 2611.
+LaTeX Encoding Info:    Redeclaring text command \textdzlig (encoding TU) on in
+put line 2612.
+LaTeX Encoding Info:    Redeclaring text command \textdyoghlig (encoding TU) on
+ input line 2613.
+LaTeX Encoding Info:    Redeclaring text command \textdctzlig (encoding TU) on 
+input line 2614.
+LaTeX Encoding Info:    Redeclaring text command \texttslig (encoding TU) on in
+put line 2615.
+LaTeX Encoding Info:    Redeclaring text command \textteshlig (encoding TU) on 
+input line 2616.
+LaTeX Encoding Info:    Redeclaring text command \texttesh (encoding TU) on inp
+ut line 2617.
+LaTeX Encoding Info:    Redeclaring text command \texttctclig (encoding TU) on 
+input line 2618.
+LaTeX Encoding Info:    Redeclaring text command \textfenglig (encoding TU) on 
+input line 2619.
+LaTeX Encoding Info:    Redeclaring text command \textlslig (encoding TU) on in
+put line 2620.
+LaTeX Encoding Info:    Redeclaring text command \textlzlig (encoding TU) on in
+put line 2621.
+LaTeX Encoding Info:    Redeclaring text command \textlhtlongy (encoding TU) on
+ input line 2625.
+LaTeX Encoding Info:    Redeclaring text command \textvibyy (encoding TU) on in
+put line 2627.
+LaTeX Encoding Info:    Redeclaring text command \textsuph (encoding TU) on inp
+ut line 2630.
+LaTeX Encoding Info:    Redeclaring text command \textsuphth (encoding TU) on i
+nput line 2631.
+LaTeX Encoding Info:    Redeclaring text command \textsupj (encoding TU) on inp
+ut line 2632.
+LaTeX Encoding Info:    Redeclaring text command \textsupr (encoding TU) on inp
+ut line 2633.
+LaTeX Encoding Info:    Redeclaring text command \textsupturnr (encoding TU) on
+ input line 2634.
+LaTeX Encoding Info:    Redeclaring text command \textsupturnrrtail (encoding T
+U) on input line 2635.
+LaTeX Encoding Info:    Redeclaring text command \textsupinvscr (encoding TU) o
+n input line 2636.
+LaTeX Encoding Info:    Redeclaring text command \textsupw (encoding TU) on inp
+ut line 2637.
+LaTeX Encoding Info:    Redeclaring text command \textsupy (encoding TU) on inp
+ut line 2638.
+LaTeX Encoding Info:    Redeclaring text command \cprime (encoding TU) on input
+ line 2639.
+LaTeX Encoding Info:    Redeclaring text command \textceltpal (encoding TU) on 
+input line 2640.
+LaTeX Encoding Info:    Redeclaring text command \cdprime (encoding TU) on inpu
+t line 2642.
+LaTeX Encoding Info:    Redeclaring text command \textturncomma (encoding TU) o
+n input line 2643.
+LaTeX Encoding Info:    Redeclaring text command \rasp (encoding TU) on input l
+ine 2644.
+LaTeX Encoding Info:    Redeclaring text command \lasp (encoding TU) on input l
+ine 2645.
+LaTeX Encoding Info:    Redeclaring text command \textrevapostrophe (encoding T
+U) on input line 2646.
+LaTeX Encoding Info:    Redeclaring text command \texthamza (encoding TU) on in
+put line 2647.
+LaTeX Encoding Info:    Redeclaring text command \textain (encoding TU) on inpu
+t line 2648.
+LaTeX Encoding Info:    Redeclaring text command \textraiseglotstop (encoding T
+U) on input line 2649.
+LaTeX Encoding Info:    Redeclaring text command \textraiserevglotstop (encodin
+g TU) on input line 2650.
+LaTeX Encoding Info:    Redeclaring text command \textlptr (encoding TU) on inp
+ut line 2651.
+LaTeX Encoding Info:    Redeclaring text command \textrptr (encoding TU) on inp
+ut line 2652.
+LaTeX Encoding Info:    Redeclaring text command \textuptr (encoding TU) on inp
+ut line 2653.
+LaTeX Encoding Info:    Redeclaring text command \textdptr (encoding TU) on inp
+ut line 2654.
+LaTeX Encoding Info:    Redeclaring text command \textcircumaccent (encoding TU
+) on input line 2655.
+LaTeX Encoding Info:    Redeclaring text command \textasciicaron (encoding TU) 
+on input line 2656.
+LaTeX Encoding Info:    Redeclaring text command \textcaronaccent (encoding TU)
+ on input line 2657.
+LaTeX Encoding Info:    Redeclaring text command \textprimstress (encoding TU) 
+on input line 2658.
+LaTeX Encoding Info:    Redeclaring text command \textmacronaccent (encoding TU
+) on input line 2659.
+LaTeX Encoding Info:    Redeclaring text command \textmacron (encoding TU) on i
+nput line 2660.
+LaTeX Encoding Info:    Redeclaring text command \textacuteaccent (encoding TU)
+ on input line 2661.
+LaTeX Encoding Info:    Redeclaring text command \textacute (encoding TU) on in
+put line 2662.
+LaTeX Encoding Info:    Redeclaring text command \textgraveaccent (encoding TU)
+ on input line 2663.
+LaTeX Encoding Info:    Redeclaring text command \textgrave (encoding TU) on in
+put line 2664.
+LaTeX Encoding Info:    Redeclaring text command \textsecstress (encoding TU) o
+n input line 2665.
+LaTeX Encoding Info:    Redeclaring text command \textlowmacron (encoding TU) o
+n input line 2666.
+LaTeX Encoding Info:    Redeclaring text command \textlowgrave (encoding TU) on
+ input line 2667.
+LaTeX Encoding Info:    Redeclaring text command \textlowacute (encoding TU) on
+ input line 2668.
+LaTeX Encoding Info:    Redeclaring text command \textlengthmark (encoding TU) 
+on input line 2670.
+LaTeX Encoding Info:    Redeclaring text command \texthalflength (encoding TU) 
+on input line 2671.
+LaTeX Encoding Info:    Redeclaring text command \textrhalfring (encoding TU) o
+n input line 2672.
+LaTeX Encoding Info:    Redeclaring text command \textlhalfring (encoding TU) o
+n input line 2673.
+LaTeX Encoding Info:    Redeclaring text command \textraised (encoding TU) on i
+nput line 2674.
+LaTeX Encoding Info:    Redeclaring text command \textlowered (encoding TU) on 
+input line 2675.
+LaTeX Encoding Info:    Redeclaring text command \textadvanced (encoding TU) on
+ input line 2676.
+LaTeX Encoding Info:    Redeclaring text command \textretracted (encoding TU) o
+n input line 2677.
+LaTeX Encoding Info:    Redeclaring text command \textbreveaccent (encoding TU)
+ on input line 2678.
+LaTeX Encoding Info:    Redeclaring text command \textbreve (encoding TU) on in
+put line 2679.
+LaTeX Encoding Info:    Redeclaring text command \textasciibreve (encoding TU) 
+on input line 2680.
+LaTeX Encoding Info:    Redeclaring text command \textdotabove (encoding TU) on
+ input line 2681.
+LaTeX Encoding Info:    Redeclaring text command \textdotaccent (encoding TU) o
+n input line 2682.
+LaTeX Encoding Info:    Redeclaring text command \textringabove (encoding TU) o
+n input line 2683.
+LaTeX Encoding Info:    Redeclaring text command \textringaccent (encoding TU) 
+on input line 2684.
+LaTeX Encoding Info:    Redeclaring text command \textcedillaaccent (encoding T
+U) on input line 2685.
+LaTeX Encoding Info:    Redeclaring text command \textogonek (encoding TU) on i
+nput line 2686.
+LaTeX Encoding Info:    Redeclaring text command \texttildeaccent (encoding TU)
+ on input line 2687.
+LaTeX Encoding Info:    Redeclaring text command \textsmalltilde (encoding TU) 
+on input line 2688.
+LaTeX Encoding Info:    Redeclaring text command \textacutedbl (encoding TU) on
+ input line 2689.
+LaTeX Encoding Info:    Redeclaring text command \textdoubleacute (encoding TU)
+ on input line 2690.
+LaTeX Encoding Info:    Redeclaring text command \textrhoticity (encoding TU) o
+n input line 2691.
+LaTeX Encoding Info:    Redeclaring text command \ipacrossaccent (encoding TU) 
+on input line 2692.
+LaTeX Encoding Info:    Redeclaring text command \ipasupgamma (encoding TU) on 
+input line 2693.
+LaTeX Encoding Info:    Redeclaring text command \ipasupl (encoding TU) on inpu
+t line 2694.
+LaTeX Encoding Info:    Redeclaring text command \ipasups (encoding TU) on inpu
+t line 2695.
+LaTeX Encoding Info:    Redeclaring text command \ipasupx (encoding TU) on inpu
+t line 2696.
+LaTeX Encoding Info:    Redeclaring text command \ipasuprerglotstpp (encoding T
+U) on input line 2697.
+LaTeX Encoding Info:    Redeclaring text command \tonebar (encoding TU) on inpu
+t line 2789.
+LaTeX Encoding Info:    Redeclaring text command \stonebar (encoding TU) on inp
+ut line 2791.
+LaTeX Encoding Info:    Redeclaring text command \rtonebar (encoding TU) on inp
+ut line 2793.
+LaTeX Encoding Info:    Redeclaring text command \tonebarextrahigh (encoding TU
+) on input line 2794.
+LaTeX Encoding Info:    Redeclaring text command \tonebarhigh (encoding TU) on 
+input line 2798.
+LaTeX Encoding Info:    Redeclaring text command \tonebarmiddle (encoding TU) o
+n input line 2802.
+LaTeX Encoding Info:    Redeclaring text command \tonebarmid (encoding TU) on i
+nput line 2803.
+LaTeX Encoding Info:    Redeclaring text command \tonebarlow (encoding TU) on i
+nput line 2807.
+LaTeX Encoding Info:    Redeclaring text command \tonebarextralow (encoding TU)
+ on input line 2811.
+LaTeX Encoding Info:    Redeclaring text command \tonebaryindeparting (encoding
+ TU) on input line 2815.
+LaTeX Encoding Info:    Redeclaring text command \tonebaryangdeparting (encodin
+g TU) on input line 2816.
+LaTeX Encoding Info:    Redeclaring text command \ipavoicing (encoding TU) on i
+nput line 2818.
+LaTeX Encoding Info:    Redeclaring text command \ipaunaspirated (encoding TU) 
+on input line 2819.
+LaTeX Encoding Info:    Redeclaring text command \textAlpha (encoding TU) on in
+put line 2885.
+LaTeX Encoding Info:    Redeclaring text command \textBeta (encoding TU) on inp
+ut line 2886.
+LaTeX Encoding Info:    Redeclaring text command \textGamma (encoding TU) on in
+put line 2887.
+LaTeX Encoding Info:    Redeclaring text command \textDelta (encoding TU) on in
+put line 2888.
+LaTeX Encoding Info:    Redeclaring text command \textEpsilon (encoding TU) on 
+input line 2889.
+LaTeX Encoding Info:    Redeclaring text command \textZeta (encoding TU) on inp
+ut line 2890.
+LaTeX Encoding Info:    Redeclaring text command \textEta (encoding TU) on inpu
+t line 2891.
+LaTeX Encoding Info:    Redeclaring text command \textTheta (encoding TU) on in
+put line 2892.
+LaTeX Encoding Info:    Redeclaring text command \textIota (encoding TU) on inp
+ut line 2893.
+LaTeX Encoding Info:    Redeclaring text command \textKappa (encoding TU) on in
+put line 2894.
+LaTeX Encoding Info:    Redeclaring text command \textLambda (encoding TU) on i
+nput line 2895.
+LaTeX Encoding Info:    Redeclaring text command \textMu (encoding TU) on input
+ line 2896.
+LaTeX Encoding Info:    Redeclaring text command \textNu (encoding TU) on input
+ line 2897.
+LaTeX Encoding Info:    Redeclaring text command \textXi (encoding TU) on input
+ line 2898.
+LaTeX Encoding Info:    Redeclaring text command \textOmicron (encoding TU) on 
+input line 2899.
+LaTeX Encoding Info:    Redeclaring text command \textPi (encoding TU) on input
+ line 2900.
+LaTeX Encoding Info:    Redeclaring text command \textRho (encoding TU) on inpu
+t line 2901.
+LaTeX Encoding Info:    Redeclaring text command \textSigma (encoding TU) on in
+put line 2903.
+LaTeX Encoding Info:    Redeclaring text command \textTau (encoding TU) on inpu
+t line 2904.
+LaTeX Encoding Info:    Redeclaring text command \textUpsilon (encoding TU) on 
+input line 2905.
+LaTeX Encoding Info:    Redeclaring text command \textPhi (encoding TU) on inpu
+t line 2906.
+LaTeX Encoding Info:    Redeclaring text command \textChi (encoding TU) on inpu
+t line 2907.
+LaTeX Encoding Info:    Redeclaring text command \textPsi (encoding TU) on inpu
+t line 2908.
+LaTeX Encoding Info:    Redeclaring text command \textOmega (encoding TU) on in
+put line 2909.
+LaTeX Encoding Info:    Redeclaring text command \textalpha (encoding TU) on in
+put line 2911.
+LaTeX Encoding Info:    Redeclaring text command \textbeta (encoding TU) on inp
+ut line 2912.
+LaTeX Encoding Info:    Redeclaring text command \textgrgamma (encoding TU) on 
+input line 2913.
+LaTeX Encoding Info:    Redeclaring text command \textdelta (encoding TU) on in
+put line 2914.
+LaTeX Encoding Info:    Redeclaring text command \textzeta (encoding TU) on inp
+ut line 2916.
+LaTeX Encoding Info:    Redeclaring text command \texteta (encoding TU) on inpu
+t line 2917.
+LaTeX Encoding Info:    Redeclaring text command \texttheta (encoding TU) on in
+put line 2918.
+LaTeX Encoding Info:    Redeclaring text command \textgriota (encoding TU) on i
+nput line 2919.
+LaTeX Encoding Info:    Redeclaring text command \textkappa (encoding TU) on in
+put line 2920.
+LaTeX Encoding Info:    Redeclaring text command \textlambda (encoding TU) on i
+nput line 2921.
+LaTeX Encoding Info:    Redeclaring text command \textmu (encoding TU) on input
+ line 2922.
+LaTeX Encoding Info:    Redeclaring text command \textnu (encoding TU) on input
+ line 2923.
+LaTeX Encoding Info:    Redeclaring text command \textxi (encoding TU) on input
+ line 2924.
+LaTeX Encoding Info:    Redeclaring text command \textomicron (encoding TU) on 
+input line 2925.
+LaTeX Encoding Info:    Redeclaring text command \textpi (encoding TU) on input
+ line 2926.
+LaTeX Encoding Info:    Redeclaring text command \textrho (encoding TU) on inpu
+t line 2927.
+LaTeX Encoding Info:    Redeclaring text command \textgrsigma (encoding TU) on 
+input line 2928.
+LaTeX Encoding Info:    Redeclaring text command \textsigma (encoding TU) on in
+put line 2929.
+LaTeX Encoding Info:    Redeclaring text command \texttau (encoding TU) on inpu
+t line 2930.
+LaTeX Encoding Info:    Redeclaring text command \textupsilon (encoding TU) on 
+input line 2931.
+LaTeX Encoding Info:    Redeclaring text command \textgrphi (encoding TU) on in
+put line 2932.
+LaTeX Encoding Info:    Redeclaring text command \textchi (encoding TU) on inpu
+t line 2933.
+LaTeX Encoding Info:    Redeclaring text command \textpsi (encoding TU) on inpu
+t line 2934.
+LaTeX Encoding Info:    Redeclaring text command \textomega (encoding TU) on in
+put line 2935.
+LaTeX Encoding Info:    Redeclaring text command \textsoftsign (encoding TU) on
+ input line 2937.
+LaTeX Encoding Info:    Redeclaring text command \texthardsign (encoding TU) on
+ input line 2938.
+LaTeX Encoding Info:    Redeclaring text command \textalef (encoding TU) on inp
+ut line 2940.
+LaTeX Encoding Info:    Redeclaring text command \textbet (encoding TU) on inpu
+t line 2941.
+LaTeX Encoding Info:    Redeclaring text command \textgimel (encoding TU) on in
+put line 2942.
+LaTeX Encoding Info:    Redeclaring text command \textdalet (encoding TU) on in
+put line 2943.
+LaTeX Encoding Info:    Redeclaring text command \textbaht (encoding TU) on inp
+ut line 2945.
+LaTeX Encoding Info:    Redeclaring text command \textsca (encoding TU) on inpu
+t line 2947.
+LaTeX Encoding Info:    Redeclaring text command \textsce (encoding TU) on inpu
+t line 2954.
+LaTeX Encoding Info:    Redeclaring text command \textscj (encoding TU) on inpu
+t line 2957.
+LaTeX Encoding Info:    Redeclaring text command \textsck (encoding TU) on inpu
+t line 2958.
+LaTeX Encoding Info:    Redeclaring text command \textscm (encoding TU) on inpu
+t line 2960.
+LaTeX Encoding Info:    Redeclaring text command \textscp (encoding TU) on inpu
+t line 2971.
+LaTeX Encoding Info:    Redeclaring text command \textrevscr (encoding TU) on i
+nput line 2972.
+LaTeX Encoding Info:    Redeclaring text command \textsct (encoding TU) on inpu
+t line 2974.
+LaTeX Encoding Info:    Redeclaring text command \textscu (encoding TU) on inpu
+t line 2975.
+LaTeX Encoding Info:    Redeclaring text command \textscv (encoding TU) on inpu
+t line 2979.
+LaTeX Encoding Info:    Redeclaring text command \textscw (encoding TU) on inpu
+t line 2980.
+LaTeX Encoding Info:    Redeclaring text command \textscz (encoding TU) on inpu
+t line 2981.
+LaTeX Encoding Info:    Redeclaring text command \textscezh (encoding TU) on in
+put line 2982.
+LaTeX Encoding Info:    Redeclaring text command \textain (encoding TU) on inpu
+t line 2984.
+LaTeX Encoding Info:    Redeclaring text command \textscgamma (encoding TU) on 
+input line 2985.
+LaTeX Encoding Info:    Redeclaring text command \textsclambda (encoding TU) on
+ input line 2986.
+LaTeX Encoding Info:    Redeclaring text command \textscpi (encoding TU) on inp
+ut line 2987.
+LaTeX Encoding Info:    Redeclaring text command \textscrho (encoding TU) on in
+put line 2988.
+LaTeX Encoding Info:    Redeclaring text command \textscpsi (encoding TU) on in
+put line 2989.
+LaTeX Encoding Info:    Redeclaring text command \textscel (encoding TU) on inp
+ut line 2990.
+LaTeX Encoding Info:    Redeclaring text command \textlhookb (encoding TU) on i
+nput line 3071.
+LaTeX Encoding Info:    Redeclaring text command \textlhookd (encoding TU) on i
+nput line 3073.
+LaTeX Encoding Info:    Redeclaring text command \textlhookf (encoding TU) on i
+nput line 3075.
+LaTeX Encoding Info:    Redeclaring text command \textlhookg (encoding TU) on i
+nput line 3077.
+LaTeX Encoding Info:    Redeclaring text command \textlhookk (encoding TU) on i
+nput line 3079.
+LaTeX Encoding Info:    Redeclaring text command \textlhookl (encoding TU) on i
+nput line 3081.
+LaTeX Encoding Info:    Redeclaring text command \textlhookm (encoding TU) on i
+nput line 3083.
+LaTeX Encoding Info:    Redeclaring text command \textlhookn (encoding TU) on i
+nput line 3085.
+LaTeX Encoding Info:    Redeclaring text command \textlhookp (encoding TU) on i
+nput line 3087.
+LaTeX Encoding Info:    Redeclaring text command \textlhookr (encoding TU) on i
+nput line 3089.
+LaTeX Encoding Info:    Redeclaring text command \textlhooks (encoding TU) on i
+nput line 3091.
+LaTeX Encoding Info:    Redeclaring text command \textlhookesh (encoding TU) on
+ input line 3093.
+LaTeX Encoding Info:    Redeclaring text command \textlhookv (encoding TU) on i
+nput line 3095.
+LaTeX Encoding Info:    Redeclaring text command \textlhookx (encoding TU) on i
+nput line 3097.
+LaTeX Encoding Info:    Redeclaring text command \textlhookz (encoding TU) on i
+nput line 3099.
+LaTeX Encoding Info:    Redeclaring text command \textrhooka (encoding TU) on i
+nput line 3101.
+LaTeX Encoding Info:    Redeclaring text command \textrhookalpha (encoding TU) 
+on input line 3103.
+LaTeX Encoding Info:    Redeclaring text command \texthtrtaild (encoding TU) on
+ input line 3105.
+LaTeX Encoding Info:    Redeclaring text command \textrhooke (encoding TU) on i
+nput line 3107.
+LaTeX Encoding Info:    Redeclaring text command \textrhookepsilon (encoding TU
+) on input line 3110.
+LaTeX Encoding Info:    Redeclaring text command \textrhookturne (encoding TU) 
+on input line 3115.
+LaTeX Encoding Info:    Redeclaring text command \textrhooki (encoding TU) on i
+nput line 3117.
+LaTeX Encoding Info:    Redeclaring text command \textrhookopeno (encoding TU) 
+on input line 3119.
+LaTeX Encoding Info:    Redeclaring text command \textrhookesh (encoding TU) on
+ input line 3121.
+LaTeX Encoding Info:    Redeclaring text command \textrhooku (encoding TU) on i
+nput line 3123.
+LaTeX Encoding Info:    Redeclaring text command \textrhookezh (encoding TU) on
+ input line 3125.
+LaTeX Encoding Info:    Redeclaring text command \textthreequartersemdash (enco
+ding TU) on input line 3518.
+LaTeX Encoding Info:    Redeclaring text command \textendash (encoding TU) on i
+nput line 3519.
+LaTeX Encoding Info:    Redeclaring text command \textemdash (encoding TU) on i
+nput line 3520.
+LaTeX Encoding Info:    Redeclaring text command \texttwelveudash (encoding TU)
+ on input line 3521.
+LaTeX Encoding Info:    Redeclaring text command \textbardbl (encoding TU) on i
+nput line 3522.
+LaTeX Encoding Info:    Redeclaring text command \textdoublevertline (encoding 
+TU) on input line 3523.
+LaTeX Encoding Info:    Redeclaring text command \textquoteleft (encoding TU) o
+n input line 3525.
+LaTeX Encoding Info:    Redeclaring text command \textquoteright (encoding TU) 
+on input line 3526.
+LaTeX Encoding Info:    Redeclaring text command \quotesinglbase (encoding TU) 
+on input line 3527.
+LaTeX Encoding Info:    Redeclaring text command \textquotestraightbase (encodi
+ng TU) on input line 3528.
+LaTeX Encoding Info:    Redeclaring text command \textquotedblleft (encoding TU
+) on input line 3530.
+LaTeX Encoding Info:    Redeclaring text command \textquotedblright (encoding T
+U) on input line 3531.
+LaTeX Encoding Info:    Redeclaring text command \quotedblbase (encoding TU) on
+ input line 3532.
+LaTeX Encoding Info:    Redeclaring text command \textquotestraightdblbase (enc
+oding TU) on input line 3533.
+LaTeX Encoding Info:    Redeclaring text command \textdagger (encoding TU) on i
+nput line 3535.
+LaTeX Encoding Info:    Redeclaring text command \textdaggerdbl (encoding TU) o
+n input line 3536.
+LaTeX Encoding Info:    Redeclaring text command \textbullet (encoding TU) on i
+nput line 3537.
+LaTeX Encoding Info:    Redeclaring text command \textellipsis (encoding TU) on
+ input line 3538.
+LaTeX Encoding Info:    Redeclaring text command \textperthousand (encoding TU)
+ on input line 3539.
+LaTeX Encoding Info:    Redeclaring text command \textpertenthousand (encoding 
+TU) on input line 3540.
+LaTeX Encoding Info:    Redeclaring text command \textpermille (encoding TU) on
+ input line 3541.
+LaTeX Encoding Info:    Redeclaring text command \textcaret (encoding TU) on in
+put line 3542.
+LaTeX Encoding Info:    Redeclaring text command \guilsinglleft (encoding TU) o
+n input line 3543.
+LaTeX Encoding Info:    Redeclaring text command \guilsinglright (encoding TU) 
+on input line 3544.
+LaTeX Encoding Info:    Redeclaring text command \textreferencemark (encoding T
+U) on input line 3545.
+LaTeX Encoding Info:    Redeclaring text command \textinterrobang (encoding TU)
+ on input line 3547.
+LaTeX Encoding Info:    Redeclaring text command \textbottomtiebar (encoding TU
+) on input line 3548.
+LaTeX Encoding Info:    Redeclaring text command \textasterism (encoding TU) on
+ input line 3549.
+LaTeX Encoding Info:    Redeclaring text command \textfractionsolidus (encoding
+ TU) on input line 3550.
+LaTeX Encoding Info:    Redeclaring text command \textlquill (encoding TU) on i
+nput line 3551.
+LaTeX Encoding Info:    Redeclaring text command \textrquill (encoding TU) on i
+nput line 3552.
+LaTeX Encoding Info:    Redeclaring text command \textdiscount (encoding TU) on
+ input line 3557.
+LaTeX Encoding Info:    Redeclaring text command \textcolonmonetary (encoding T
+U) on input line 3611.
+LaTeX Encoding Info:    Redeclaring text command \textlira (encoding TU) on inp
+ut line 3614.
+LaTeX Encoding Info:    Redeclaring text command \textnaira (encoding TU) on in
+put line 3616.
+LaTeX Encoding Info:    Redeclaring text command \textwon (encoding TU) on inpu
+t line 3619.
+LaTeX Encoding Info:    Redeclaring text command \textdong (encoding TU) on inp
+ut line 3621.
+LaTeX Encoding Info:    Redeclaring text command \texteuro (encoding TU) on inp
+ut line 3622.
+LaTeX Encoding Info:    Redeclaring text command \textpeso (encoding TU) on inp
+ut line 3627.
+LaTeX Encoding Info:    Redeclaring text command \textcelsius (encoding TU) on 
+input line 3634.
+LaTeX Encoding Info:    Redeclaring text command \textnumero (encoding TU) on i
+nput line 3637.
+LaTeX Encoding Info:    Redeclaring text command \textcircledP (encoding TU) on
+ input line 3638.
+LaTeX Encoding Info:    Redeclaring text command \textrecipe (encoding TU) on i
+nput line 3639.
+LaTeX Encoding Info:    Redeclaring text command \textservicemark (encoding TU)
+ on input line 3640.
+LaTeX Encoding Info:    Redeclaring text command \texttrademark (encoding TU) o
+n input line 3641.
+LaTeX Encoding Info:    Redeclaring text command \textohm (encoding TU) on inpu
+t line 3643.
+LaTeX Encoding Info:    Redeclaring text command \textmho (encoding TU) on inpu
+t line 3644.
+LaTeX Encoding Info:    Redeclaring text command \textestimated (encoding TU) o
+n input line 3647.
+LaTeX Encoding Info:    Redeclaring text command \textleftarrow (encoding TU) o
+n input line 3680.
+LaTeX Encoding Info:    Redeclaring text command \textuparrow (encoding TU) on 
+input line 3681.
+LaTeX Encoding Info:    Redeclaring text command \textupfullarrow (encoding TU)
+ on input line 3683.
+LaTeX Encoding Info:    Redeclaring text command \textrightarrow (encoding TU) 
+on input line 3684.
+LaTeX Encoding Info:    Redeclaring text command \textdownarrow (encoding TU) o
+n input line 3685.
+LaTeX Encoding Info:    Redeclaring text command \textdownfullarrow (encoding T
+U) on input line 3687.
+LaTeX Encoding Info:    Redeclaring text command \textleftrightarrow (encoding 
+TU) on input line 3688.
+LaTeX Encoding Info:    Redeclaring text command \textupdownarrow (encoding TU)
+ on input line 3689.
+LaTeX Encoding Info:    Redeclaring text command \textnwarrow (encoding TU) on 
+input line 3690.
+LaTeX Encoding Info:    Redeclaring text command \textglobrise (encoding TU) on
+ input line 3691.
+LaTeX Encoding Info:    Redeclaring text command \textnearrow (encoding TU) on 
+input line 3692.
+LaTeX Encoding Info:    Redeclaring text command \textsearrow (encoding TU) on 
+input line 3693.
+LaTeX Encoding Info:    Redeclaring text command \textglobfall (encoding TU) on
+ input line 3694.
+LaTeX Encoding Info:    Redeclaring text command \textswarrow (encoding TU) on 
+input line 3695.
+LaTeX Encoding Info:    Redeclaring text command \textminus (encoding TU) on in
+put line 3697.
+LaTeX Encoding Info:    Redeclaring text command \textsurd (encoding TU) on inp
+ut line 3699.
+LaTeX Encoding Info:    Redeclaring text command \textblank (encoding TU) on in
+put line 3702.
+LaTeX Encoding Info:    Redeclaring text command \textvisiblespace (encoding TU
+) on input line 3703.
+LaTeX Encoding Info:    Redeclaring text command \textopenbullet (encoding TU) 
+on input line 3704.
+LaTeX Encoding Info:    Redeclaring text command \textfemale (encoding TU) on i
+nput line 3705.
+LaTeX Encoding Info:    Redeclaring text command \textmusicalnote (encoding TU)
+ on input line 3706.
+LaTeX Encoding Info:    Redeclaring text command \textmarried (encoding TU) on 
+input line 3707.
+LaTeX Encoding Info:    Redeclaring text command \textdivorced (encoding TU) on
+ input line 3708.
+LaTeX Encoding Info:    Redeclaring text command \textuncrfemale (encoding TU) 
+on input line 3709.
+LaTeX Encoding Info:    Redeclaring text command \textlhookfour (encoding TU) o
+n input line 3714.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalheng (encoding TU)
+ on input line 3717.
+LaTeX Encoding Info:    Redeclaring text command \textheng (encoding TU) on inp
+ut line 3718.
+LaTeX Encoding Info:    Redeclaring text command \textcapitaltzlig (encoding TU
+) on input line 3720.
+LaTeX Encoding Info:    Redeclaring text command \texttzlig (encoding TU) on in
+put line 3721.
+LaTeX Encoding Info:    Redeclaring text command \textcapitaltresillo (encoding
+ TU) on input line 3722.
+LaTeX Encoding Info:    Redeclaring text command \texttresillo (encoding TU) on
+ input line 3723.
+LaTeX Encoding Info:    Redeclaring text command \textscf (encoding TU) on inpu
+t line 3724.
+LaTeX Encoding Info:    Redeclaring text command \textscs (encoding TU) on inpu
+t line 3725.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalaalig (encoding TU
+) on input line 3726.
+LaTeX Encoding Info:    Redeclaring text command \textaalig (encoding TU) on in
+put line 3727.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalaolig (encoding TU
+) on input line 3728.
+LaTeX Encoding Info:    Redeclaring text command \textaolig (encoding TU) on in
+put line 3729.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalaulig (encoding TU
+) on input line 3730.
+LaTeX Encoding Info:    Redeclaring text command \textaulig (encoding TU) on in
+put line 3731.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalavlig (encoding TU
+) on input line 3732.
+LaTeX Encoding Info:    Redeclaring text command \textavlig (encoding TU) on in
+put line 3733.
+LaTeX Encoding Info:    Redeclaring text command \textbarcapitalavlig (encoding
+ TU) on input line 3734.
+LaTeX Encoding Info:    Redeclaring text command \textbaravlig (encoding TU) on
+ input line 3735.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalaylig (encoding TU
+) on input line 3736.
+LaTeX Encoding Info:    Redeclaring text command \textaylig (encoding TU) on in
+put line 3737.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalrevcdot (encoding 
+TU) on input line 3738.
+LaTeX Encoding Info:    Redeclaring text command \textrevcdot (encoding TU) on 
+input line 3739.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalinsd (encoding TU)
+ on input line 3741.
+LaTeX Encoding Info:    Redeclaring text command \textinsd (encoding TU) on inp
+ut line 3742.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalinsf (encoding TU)
+ on input line 3743.
+LaTeX Encoding Info:    Redeclaring text command \textinsf (encoding TU) on inp
+ut line 3744.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalinsg (encoding TU)
+ on input line 3745.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalturninsg (encoding
+ TU) on input line 3746.
+LaTeX Encoding Info:    Redeclaring text command \textturninsg (encoding TU) on
+ input line 3747.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalturnl (encoding TU
+) on input line 3748.
+LaTeX Encoding Info:    Redeclaring text command \textturnl (encoding TU) on in
+put line 3749.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalinsr (encoding TU)
+ on input line 3750.
+LaTeX Encoding Info:    Redeclaring text command \textinsr (encoding TU) on inp
+ut line 3751.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalinss (encoding TU)
+ on input line 3752.
+LaTeX Encoding Info:    Redeclaring text command \textinss (encoding TU) on inp
+ut line 3753.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalinst (encoding TU)
+ on input line 3754.
+LaTeX Encoding Info:    Redeclaring text command \textinst (encoding TU) on inp
+ut line 3755.
+LaTeX Encoding Info:    Redeclaring text command \textcapitalsaltillo (encoding
+ TU) on input line 3756.
+LaTeX Encoding Info:    Redeclaring text command \textsaltillo (encoding TU) on
+ input line 3757.
+) (c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xunicode-extra.def
+File: xunicode-extra.def 2022/08/05 v3.9.1 extra definition for xunicode
+LaTeX Encoding Info:    Redeclaring text command \textsuperscript (encoding TU)
+ on input line 37.
+LaTeX Encoding Info:    Redeclaring text command \textsubscript (encoding TU) o
+n input line 38.
+LaTeX Encoding Info:    Redeclaring text command \textsbleftarrow (encoding TU)
+ on input line 38.
+LaTeX Encoding Info:    Redeclaring text command \` (encoding TU) on input line
+ 39.
+LaTeX Encoding Info:    Redeclaring text command \capitalgrave (encoding TU) on
+ input line 40.
+LaTeX Encoding Info:    Redeclaring text command \' (encoding TU) on input line
+ 41.
+LaTeX Encoding Info:    Redeclaring text command \capitalacute (encoding TU) on
+ input line 42.
+LaTeX Encoding Info:    Redeclaring text command \^ (encoding TU) on input line
+ 43.
+LaTeX Encoding Info:    Redeclaring text command \capitalcircumflex (encoding T
+U) on input line 44.
+LaTeX Encoding Info:    Redeclaring text command \~ (encoding TU) on input line
+ 45.
+LaTeX Encoding Info:    Redeclaring text command \capitaltilde (encoding TU) on
+ input line 46.
+LaTeX Encoding Info:    Redeclaring text command \= (encoding TU) on input line
+ 47.
+LaTeX Encoding Info:    Redeclaring text command \capitalmacron (encoding TU) o
+n input line 48.
+LaTeX Encoding Info:    Redeclaring text command \textoverline (encoding TU) on
+ input line 49.
+LaTeX Encoding Info:    Redeclaring text command \u (encoding TU) on input line
+ 50.
+LaTeX Encoding Info:    Redeclaring text command \capitalbreve (encoding TU) on
+ input line 51.
+LaTeX Encoding Info:    Redeclaring text command \. (encoding TU) on input line
+ 52.
+LaTeX Encoding Info:    Redeclaring text command \capitaldotaccent (encoding TU
+) on input line 53.
+LaTeX Encoding Info:    Redeclaring text command \" (encoding TU) on input line
+ 54.
+LaTeX Encoding Info:    Redeclaring text command \capitaldieresis (encoding TU)
+ on input line 55.
+LaTeX Encoding Info:    Redeclaring text command \m (encoding TU) on input line
+ 56.
+LaTeX Encoding Info:    Redeclaring text command \texthookabove (encoding TU) o
+n input line 57.
+LaTeX Encoding Info:    Redeclaring text command \r (encoding TU) on input line
+ 58.
+LaTeX Encoding Info:    Redeclaring text command \capitalring (encoding TU) on 
+input line 59.
+LaTeX Encoding Info:    Redeclaring text command \H (encoding TU) on input line
+ 60.
+LaTeX Encoding Info:    Redeclaring text command \capitalhungarumlaut (encoding
+ TU) on input line 61.
+LaTeX Encoding Info:    Redeclaring text command \v (encoding TU) on input line
+ 62.
+LaTeX Encoding Info:    Redeclaring text command \capitalcaron (encoding TU) on
+ input line 63.
+LaTeX Encoding Info:    Redeclaring text command \textvbaraccent (encoding TU) 
+on input line 64.
+LaTeX Encoding Info:    Redeclaring text command \textdoublevbaraccent (encodin
+g TU) on input line 65.
+LaTeX Encoding Info:    Redeclaring text command \U (encoding TU) on input line
+ 66.
+LaTeX Encoding Info:    Redeclaring text command \textdoublegrave (encoding TU)
+ on input line 67.
+LaTeX Encoding Info:    Redeclaring text command \G (encoding TU) on input line
+ 68.
+LaTeX Encoding Info:    Redeclaring text command \textdotbreve (encoding TU) on
+ input line 69.
+LaTeX Encoding Info:    Redeclaring text command \textroundcap (encoding TU) on
+ input line 70.
+LaTeX Encoding Info:    Redeclaring text command \newtie (encoding TU) on input
+ line 71.
+LaTeX Encoding Info:    Redeclaring text command \capitalnewtie (encoding TU) o
+n input line 72.
+LaTeX Encoding Info:    Redeclaring text command \textturncommaabove (encoding 
+TU) on input line 73.
+LaTeX Encoding Info:    Redeclaring text command \textcommaabove (encoding TU) 
+on input line 74.
+LaTeX Encoding Info:    Redeclaring text command \textrevcommaabove (encoding T
+U) on input line 75.
+LaTeX Encoding Info:    Redeclaring text command \overbridge (encoding TU) on i
+nput line 76.
+LaTeX Encoding Info:    Redeclaring text command \crtilde (encoding TU) on inpu
+t line 77.
+LaTeX Encoding Info:    Redeclaring text command \dottedtilde (encoding TU) on 
+input line 78.
+LaTeX Encoding Info:    Redeclaring text command \doubletilde (encoding TU) on 
+input line 79.
+LaTeX Encoding Info:    Redeclaring text command \textrightarrowhead (encoding 
+TU) on input line 80.
+LaTeX Encoding Info:    Redeclaring text command \textlefthalfring (encoding TU
+) on input line 81.
+LaTeX Encoding Info:    Redeclaring text command \textrighthalfring (encoding T
+U) on input line 82.
+LaTeX Encoding Info:    Redeclaring text command \textdoublebrevebelow (encodin
+g TU) on input line 83.
+LaTeX Encoding Info:    Redeclaring text command \textdoublebreve (encoding TU)
+ on input line 84.
+LaTeX Encoding Info:    Redeclaring text command \textdoublemacron (encoding TU
+) on input line 85.
+LaTeX Encoding Info:    Redeclaring text command \textdoublemacronbelow (encodi
+ng TU) on input line 86.
+LaTeX Encoding Info:    Redeclaring text command \textdoubletilde (encoding TU)
+ on input line 87.
+LaTeX Encoding Info:    Redeclaring text command \t (encoding TU) on input line
+ 88.
+LaTeX Encoding Info:    Redeclaring text command \capitaltie (encoding TU) on i
+nput line 89.
+LaTeX Encoding Info:    Redeclaring text command \texttoptiebar (encoding TU) o
+n input line 90.
+LaTeX Encoding Info:    Redeclaring text command \sliding (encoding TU) on inpu
+t line 91.
+LaTeX Encoding Info:    Redeclaring text command \t (encoding TU) on input line
+ 92.
+LaTeX Encoding Info:    Redeclaring text command \capitaltie (encoding TU) on i
+nput line 93.
+LaTeX Encoding Info:    Redeclaring text command \texttoptiebar (encoding TU) o
+n input line 94.
+LaTeX Encoding Info:    Redeclaring text command \sliding (encoding TU) on inpu
+t line 95.
+LaTeX Encoding Info:    Redeclaring text command \texthighrise (encoding TU) on
+ input line 96.
+LaTeX Encoding Info:    Redeclaring text command \textlowrise (encoding TU) on 
+input line 97.
+LaTeX Encoding Info:    Redeclaring text command \textrisefall (encoding TU) on
+ input line 98.
+LaTeX Encoding Info:    Redeclaring text command \textfallrise (encoding TU) on
+ input line 99.
+LaTeX Encoding Info:    Redeclaring text command \textaolig (encoding TU) on in
+put line 100.
+LaTeX Encoding Info:    Redeclaring text command \textgimel (encoding TU) on in
+put line 107.
+LaTeX Encoding Info:    Redeclaring text command \textbigcircle (encoding TU) o
+n input line 112.
+LaTeX Encoding Info:    Redeclaring text command \textlnot (encoding TU) on inp
+ut line 273.
+LaTeX Encoding Info:    Redeclaring text command \j (encoding TU) on input line
+ 304.
+LaTeX Encoding Info:    Redeclaring text command \texttildelow (encoding TU) on
+ input line 317.
+LaTeX Encoding Info:    Redeclaring text command \textcompwordmark (encoding TU
+) on input line 668.
+LaTeX Encoding Info:    Redeclaring text command \textguarani (encoding TU) on 
+input line 721.
+LaTeX Encoding Info:    Redeclaring text command \textlangle (encoding TU) on i
+nput line 1064.
+LaTeX Encoding Info:    Redeclaring text command \textrangle (encoding TU) on i
+nput line 1065.
+LaTeX Encoding Info:    Redeclaring text command \textlbrackdbl (encoding TU) o
+n input line 1269.
+LaTeX Encoding Info:    Redeclaring text command \textrbrackdbl (encoding TU) o
+n input line 1270.
+LaTeX Encoding Info:    Redeclaring text command \textinterrobangdown (encoding
+ TU) on input line 1406.
+)
+(./paper_final.aux)
+\openout1 = `paper_final.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 47.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 47
+.
+ (c:/texlive/2026/texmf-dist/tex/latex/tipa/t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 47.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 47.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 47.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 47.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 47.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 47.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 47.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 47.
+LaTeX Font Info:    Redeclaring math accent \check on input line 47.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 47.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 47.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 47.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 47.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 47.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 47.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 47.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 47.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 47.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 47.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 47.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 47.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 47.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 47.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 47.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 47.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 47.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: threeparttable package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\symgns@font=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/lmr/m/n --> TS1/lmr/b/n on input line 47.
+Package gensymb Info: Math companion symbols declared on input line 47.
+LaTeX Info: Redefining \degree on input line 47.
+LaTeX Info: Redefining \celsius on input line 47.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 47.
+LaTeX Info: Redefining \ohm on input line 47.
+Package gensymb Info: Using \textohm for \ohm on input line 47.
+Package gensymb Info: Using \textmu for \micro on input line 47.
+\c@lstlisting=\count376
+LaTeX Font Info:    Calculating math sizes for size <12.1> on input line 59.
+[1
+
+]
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimHei/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimHei/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimHei/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'SimHei(0)' created for font 'SimHei' with
+(fontspec)             options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"SimHei/OT:script=hani;language=dflt;"
+
+ (./paper_final.toc [2])
+\tf@toc=\write3
+\openout3 = `paper_final.toc'.
+
+ [3] [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+[]|\TU/SimSun(0)/m/n/10.53937 离 散 单 元、|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\TU/lmr/m/n/10.53937 EVP/mEVP\TU/SimSun(0)/m/n/10.53937 、|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+[]|\TU/SimSun(0)/m/n/10.53937 采 用 \TU/lmr/m/n/10.53937 VP \TU/SimSun(0)/m/n/10.
+53937 保 留
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+\TU/SimSun(0)/m/n/10.53937 大 尺 度 应 力 传 递；|
+ []
+
+
+Underfull \hbox (badness 5607) in paragraph at lines 161--162
+\TU/lmr/m/n/10.53937 EVP/mEVP \TU/SimSun(0)/m/n/10.53937 仅 作
+ []
+
+
+Underfull \hbox (badness 3068) in paragraph at lines 162--163
+\TU/SimSun(0)/m/n/10.53937 性 与 重 复 正 演 成 本
+ []
+
+
+Underfull \hbox (badness 3068) in paragraph at lines 163--164
+[]|\TU/SimSun(0)/m/n/10.53937 二 维 参 数 采 用 确 定
+ []
+
+
+Underfull \hbox (badness 3068) in paragraph at lines 163--164
+\TU/SimSun(0)/m/n/10.53937 性 网 格 与 差 分 进 化
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+[]|\TU/SimSun(0)/m/n/10.53937 采 用 连 续 时 间
+ []
+
+[6]
+Underfull \hbox (badness 4872) in paragraph at lines 196--196
+[]|\TU/SimSun(0)/m/n/10.53937 量 纲 分 析、|  五 力 量
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--197
+\TU/SimSun(0)/m/n/10.53937 确 切 向 牛 顿、| \TU/lmr/m/n/10.53937 CN–
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
+[]|\TU/SimSun(0)/m/n/10.53937 残 差\TU/lmr/m/n/10.53937 /\TU/SimSun(0)/m/n/10.539
+37 守 恒\TU/lmr/m/n/10.53937 /\TU/SimSun(0)/m/n/10.53937 正 性、|
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 198--198
+[]|\TU/SimSun(0)/m/n/10.53937 网 格 搜 索、| \TU/lmr/m/n/10.53937 Nelder–
+ []
+
+
+Underfull \hbox (badness 4872) in paragraph at lines 198--199
+[]|\TU/SimSun(0)/m/n/10.53937 孪 生 试 验  |（误 差 分
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+[]|\TU/SimSun(0)/m/n/10.53937 时 变 图 搜 索
+ []
+
+[7]
+Underfull \hbox (badness 1057) in paragraph at lines 227--228
+[]|\TU/SimSun(0)/m/n/10.53937 决 定 空 间 分 辨 率 和 每 一 步 推 进
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 231--232
+[]|\TU/SimSun(0)/m/n/10.53937 将 单 位 质 量 加 速 度 换 算 为 单 位
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 232--233
+[]|\TU/SimSun(0)/m/n/10.53937 表 示 地 球 自 转 引 起 的 水 平 速 度
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 234--235
+[]|\TU/SimSun(0)/m/n/10.53937 控 制 冰 水 相 对 运 动 产 生 的 界 面
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 236--237
+[]|\TU/SimSun(0)/m/n/10.53937 分 别 表 示 海 水 对 海 冰 的 摩 擦 作
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 242--243
+[]|\TU/SimSun(0)/m/n/10.53937 低 于 该 厚 度 的 网 格 不 再 求 解 连
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 244--245
+[]|\TU/SimSun(0)/m/n/10.53937 控 制 初 始 冰 厚 修 正 及 其 背 景 偏
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 246--247
+[]|\TU/SimSun(0)/m/n/10.53937 构 成 问 题 五 每 条 航 段 的 时 间 代
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 247--248
+[]|\TU/SimSun(0)/m/n/10.53937 用 于 在 时 变 冰 场 中 计 算 航 段 可
+ []
+
+[8] [9]
+File: figures/q1_force_magnitudes.png Graphic file (type bmp)
+<figures/q1_force_magnitudes.png>
+ [10] [11] [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 467--467
+[]|\TU/SimSun(0)/m/n/10.53937 海 水 浅 水  |（双
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--467
+\TU/SimSun(0)/m/n/10.53937 曲 型，|  重 力 波
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--467
+[]|\TU/lmr/bx/n/10.53937 Crank–Nicolson +
+ []
+
+[14] [15]
+File: figures/q2_3d_thickness_24h.png Graphic file (type bmp)
+<figures/q2_3d_thickness_24h.png>
+File: figures/q2_3d_thickness_evolution.png Graphic file (type bmp)
+<figures/q2_3d_thickness_evolution.png>
+ [16]
+File: figures/q2_center_thickness_timeseries.png Graphic file (type bmp)
+<figures/q2_center_thickness_timeseries.png>
+File: figures/q2_speed_mean_timeseries.png Graphic file (type bmp)
+<figures/q2_speed_mean_timeseries.png>
+ [17] [18]
+File: figures/problem3_objective_contour.png Graphic file (type bmp)
+<figures/problem3_objective_contour.png>
+ [19]
+File: figures/problem3_twin_contour.png Graphic file (type bmp)
+<figures/problem3_twin_contour.png>
+ [20] [21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 773--773
+[]|\TU/SimSun(0)/m/n/10.53937 需 要 大 量 集 合 正
+ []
+
+
+Underfull \hbox (badness 4072) in paragraph at lines 775--775
+[]|\TU/SimSun(0)/m/n/10.53937 低 频 谱 \TU/lmr/m/n/10.53937 + L-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 775--775
+[]|\TU/SimSun(0)/m/n/10.53937 难 恢 复 小 尺 度 结
+ []
+
+[23]
+File: figures/p4_48h_fields.png Graphic file (type bmp)
+<figures/p4_48h_fields.png>
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 888--888
+[]|\TU/SimSun(0)/m/n/10.53937 静 态
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 889--889
+[]|\TU/SimSun(0)/m/n/10.53937 遗 传 算 法\TU/lmr/m/n/10.53937 /\TU/SimSun(0)/m/n/10
+.53937 粒 子
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 889--889
+[]|\TU/SimSun(0)/m/n/10.53937 禁 行 约 束 修 复 困
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 891--891
+[]|\TU/SimSun(0)/m/n/10.53937 连 续 时 间
+ []
+
+[25]
+File: figures/p5_route_leading.png Graphic file (type bmp)
+<figures/p5_route_leading.png>
+File: figures/p5_concentration_52_60_72h.png Graphic file (type bmp)
+<figures/p5_concentration_52_60_72h.png>
+ [26]
+Underfull \hbox (badness 3138) in paragraph at lines 988--989
+[]|\TU/lmr/m/n/10.53937 M0/$\OML/cmm/m/it/10.53937 M[]$\TU/lmr/m/n/10.53937 /$\
+OML/cmm/m/it/10.53937 M[]$ \TU/SimSun(0)/m/n/10.53937 对
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 990--990
+[]|\TU/SimSun(0)/m/n/10.53937 观 测 误 差 与 代
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 992--992
+[]|\TU/SimSun(0)/m/n/10.53937 时 间 层 与 标 签
+ []
+
+[27] [28] [29] [30] [31] (./paper_final.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2022/08/05>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 23259 strings out of 467983
+ 498565 string characters out of 5432881
+ 906924 words of memory out of 5000000
+ 51816 multiletter control sequences out of 15000+600000
+ 651168 words of font info for 178 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 93i,15n,120p,1216b,509s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on paper_final.pdf (31 pages).

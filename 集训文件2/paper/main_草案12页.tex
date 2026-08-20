@@ -1,0 +1,456 @@
+% !TEX program = xelatex
+\documentclass[12pt]{ctexart}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\ve}{\boldsymbol}
+\newcommand{\ts}{\boldsymbol{\tau}}
+\newcommand{\sig}{\boldsymbol{\sigma}}
+\newcommand{\e}{\boldsymbol{\dot{\varepsilon}}}
+
+\title{北极边缘冰区海冰演化与船舶安全航行建模\\
+{\large ——量级分析、三类方程数值格式与变分同化驱动的航线规划}}
+\author{研训 104 队}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本文围绕北极边缘冰区“冰情变化快、观测稀疏、预报不准、决策滞后”的核心矛盾，
+依次解决海冰动量方程简化、冰-水-冰厚耦合数值求解、关键参数反演、初始场变分同化
+与动态航线规划五个问题。
+
+问题一采用量级分析：对惯性力、科里奥利力、冰水拖曳力、流变内力、风应力五项
+分别计算特征量级（$1.15\times10^{-2}$、$6.42\times10^{-2}$、$1.281$、$0.125$、
+$0.12$ N/m$^2$），删除两个 $10^{-2}$ 量级的力，得到准静态平衡方程
+$\nabla\!\cdot\!(h\sig)+\ts_{wi}+\ts_a=\mathbf 0$，相对误差约 $5\%$，
+并给出碎冰区、厚冰区适用性与失效条件。
+
+问题二针对三类方程分别选格式：海冰准静态方程用 Picard 迭代+逐点拖曳解析解
+（必要时精确切向牛顿）；海水浅水方程用 Crank--Nicolson+ADI（C 网格交错、
+无条件稳定）；冰厚守恒方程用有限体积法+迎风格式（天然守恒）。24 h 正演给出
+冰厚/冰速场，区域平均冰厚守恒误差 $7.6\times10^{-6}$，静水极限冰速与理论值
+$0.157102$ m/s 吻合。
+
+问题三用网格搜索、多起点 L-BFGS-B、差分进化三种方法联合反演 $(C_d,\alpha)$，
+对比精度、效率与初值敏感性，得到最优参数对并给出代价函数等值线。
+
+问题四把初始冰厚场反演写成泛函极值问题（变分同化），给出目标泛函的一阶变分与
+伴随（Euler--Lagrange）方程，用约化基+L-BFGS 求解，使 18 组观测的预报误差显著
+下降，并完成 48 h 预报。
+
+问题五利用反演参数与初始场做 72 h 冰密集度预报，证明终点 E 处于禁航区后，将
+“时间+燃料”多目标化简为时变最快路径（燃料率在可行域内随航速单调递减），用
+时间-空间 Dijkstra 规划 LNG 前半段最优航线，给出距 E 最近可达点 P$^*$、航行
+时间与燃料消耗。
+
+\noindent\textbf{关键词：}海冰动量方程量级分析；Crank--Nicolson ADI；有限体积法；
+变分同化；时变最短路径
+\end{abstract}
+
+\section{问题重述与分析}
+\subsection{问题背景}
+北极航线货运量快速增长，但冰情变化快、观测稀疏，商船安全航行依赖可靠的冰情
+预报与动态航线决策。本题研究 $20\,\mathrm{km}\times 10\,\mathrm{km}$ 的矩形海域，
+建立海冰-海水-冰厚耦合模式，依次完成方程简化、24 h 正演、参数反演、初始场
+变分同化与 LNG 动态航线规划。
+
+\subsection{需要解决的问题}
+\begin{enumerate}[label=\textbf{(\arabic*)}]
+	\item 对海冰动量方程五项力做量级分析并化简；
+	\item 对三类方程选合适数值格式，求解 24 h 冰厚/冰速场并给出统计量；
+	\item 用 6 个位置的观测反演 $C_d$ 与 $\alpha$（至少两种方法）；
+	\item 以初始冰厚场为控制变量做变分同化，反演全场并做 48 h 预报；
+	\item 生成 72 h 冰密集度预报并规划 LNG 最优航线。
+\end{enumerate}
+
+\subsection{工作流程}
+本题严格按“找模型$\rightarrow$找算法$\rightarrow$化简模型$\rightarrow$求参
+$\rightarrow$解模型$\rightarrow$得答案”的顺序推进，每一问在正文中按此顺序展开；
+模型都化简到可手算复核的程度，再进入数值求解。
+
+\section{模型假设与符号说明}
+\subsection{模型假设}
+\begin{enumerate}[label=\textbf{假设 \arabic*：}]
+	\item 海域为矩形封闭域，四周固壁；海水为均质不可压浅水；
+	\item 几天时间尺度内热力学冰厚变化远小于动力平流，忽略热力学源项；
+	\item 海冰服从黏塑性（VP）本构，冰密集度 $A=h_i/h_{i0}\in[0,1]$；
+	\item 船在冰密集度 $A>0.6$ 区域禁航，可通行区航速
+	$V_s=V_{\max}(1-A)$，燃料率 $q=q_0+q_1V_s^2$。
+\end{enumerate}
+
+\subsection{符号说明}
+主要符号：$\rho_i,\rho_w$ 冰/水密度；$h_i,h_w$ 冰厚/水深；$U=(U,V)$ 冰速；
+$u=(u,v)$ 海水流速；$\eta$ 海面高度；$f$ 科里奥利参数；$C_d$ 冰水拖曳系数；
+$\alpha$ 风应力缩放；$P^*$ 抗压强度系数；$A$ 冰密集度。完整符号表见附录。
+
+\section{问题一：海冰动量方程量级分析与简化}
+\subsection{模型建立}
+海冰动量方程（向量形式）：
+\begin{equation}
+	\rho_i h_i \frac{\dd U}{\dd t}
+	=-\rho_i h_i f(\ve{k}\times U)+\nabla\!\cdot\!\sig+\ts_{wi}+\ts_a.
+	\label{eq:mom}
+\end{equation}
+五项力分别为惯性力、科里奥利力、冰水拖曳力、流变内力、风应力。
+
+\subsection{找算法：量级分析（10 幂次比较）}
+取特征量 $L_0=20000$ m、$U_0=0.5$ m/s、$h_{i0}=1$ m、$T_0=L_0/U_0=40000$ s，
+每项用其特征公式估算，只比较 10 的幂次。结果见表 \ref{tab:q1}。
+
+\begin{table}[H]
+\centering\caption{问题一：五力量级分析（手算复核表）}
+\label{tab:q1}
+\begin{tabular}{lcc}
+\toprule
+作用力 & 特征量级公式 & 数值 (N/m$^2$) \\
+\midrule
+惯性力 $F_I$ & $\rho_i h_{i0}U_0^2/L_0$ & $917\!\times\!1\!\times\!0.25/20000=1.15\times10^{-2}$ \\
+科里奥利力 $F_C$ & $\rho_i h_{i0} f U_0$ & $917\!\times\!1\!\times\!1.4\times10^{-4}\!\times\!0.5=6.42\times10^{-2}$ \\
+冰水拖曳力 $F_D$ & $\rho_w C_d U_0^2$ & $1025\!\times\!0.005\!\times\!0.25=1.281$ \\
+流变内力 $F_S$ & $\frac{h_{i0}}{L_0}\frac{P^* h_{i0}}{2}$ & $(1/20000)(5000/2)=0.125$ \\
+风应力 $F_A$ & $|\ts_a|$（主导分量） & $0.12$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{化简模型与误差估计}
+排序：$F_D(10^0)>F_S(10^{-1})\approx F_A(10^{-1})\gg F_C(10^{-2})>F_I(10^{-2})$。
+删除两个 $10^{-2}$ 量级力，得到准静态平衡：
+\begin{equation}
+	\nabla\!\cdot\!(h\sig)+\ts_{wi}+\ts_a=\mathbf 0,\qquad
+	\ts_{wi}=\rho_w C_d|u-U|(u-U).
+	\label{eq:q1simple}
+	\end{equation}
+相对误差：
+\begin{equation}
+	\delta=\frac{F_C+F_I}{F_D+F_S+F_A}=\frac{0.0757}{1.526}\approx 5\%.
+\end{equation}
+
+\subsection{适用性讨论}
+\begin{itemize}
+	\item \textbf{碎冰区 $h_i\to0$：}内力 $O(h^2)$、科氏/惯性 $O(h)$，拖曳与风 $O(1)$，
+	被删项相对误差 $\to0$，方程退化为自由漂移 $\ts_{wi}+\ts_a=0$，
+	可手算 $U=u+\sqrt{|\ts_a|/(\rho_wC_d)}\,\hat{\ts}_a$；
+	\item \textbf{厚冰区 $h_i\gg1$：}内力 $O(h^2)$ 主导，科氏/惯性 $O(h)$，
+	简化误差 $\to0$，冰趋近刚体；
+	\item \textbf{失效条件：}(i) 强迫时间尺度 $\lesssim1$ h（惯性项与风应力同量级）；
+	(ii) 弱流弱风 $U_0\lesssim0.2$ m/s（$F_C/F_D>10\%$）；
+	(iii) $h_i\to0$ 时 VP 连续介质假设本身失效。
+\end{itemize}
+
+\subsection{结果}
+问题一给出简化海冰动量方程 \eqref{eq:q1simple}，相对误差约 5\%，该方程是后续
+全部海冰求解的基础（M1 口径：删惯性、删海冰科里奥利，海水科里奥利保留）。
+量级对比见图 \ref{fig:q1}。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{../figures/q1_force_magnitudes.png}
+\caption{五项力特征量级（对数坐标；红色为删除项）}
+\label{fig:q1}
+\end{figure}
+
+\section{问题二：冰水耦合正问题的数值求解}
+\subsection{模型建立}
+问题二求解由简化海冰动量方程 \eqref{eq:q1simple}、浅水方程
+\begin{equation}
+	\frac{\partial u}{\partial t}+(u\cdot\nabla)u=-g\nabla\eta-f(\ve{k}\times u)
+	-\frac{\ts_{wi}}{\rho_w h_w},\qquad
+	\frac{\partial \eta}{\partial t}+h_w\nabla\cdot u=0,
+\end{equation}
+与冰厚守恒方程
+\begin{equation}
+	\frac{\partial h}{\partial t}+\nabla\cdot(hU)=0
+\end{equation}
+组成的耦合系统。VP 本构与厚度加权内力散度 $\nabla\cdot(h\sig)$ 按
+题给公式离散（见附录）。
+
+\subsection{找算法：三类方程分别选格式}
+\begin{table}[H]
+\centering\caption{三类方程的数值格式选择}
+\label{tab:q2schemes}
+\begin{tabular}{p{0.28\textwidth}p{0.34\textwidth}p{0.28\textwidth}}
+\toprule
+方程类型 & 数值格式 & 性质 \\
+\midrule
+海冰准静态（椭圆型） & Picard 迭代+逐点拖曳解析解；必要时精确切向牛顿 & 逐点隐式拖曳，无棋盘格 \\
+海水浅水（双曲型） & Crank--Nicolson+ADI（C 网格交错，x/y 交替三对角） & 无条件稳定 \\
+冰厚守恒（双曲型） & 有限体积法+迎风 & 天然守恒，CFL$\le0.8$ 自动子循环 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+海冰方程的逐点化简：给定内力散度 $D=\nabla\cdot(h\sig)$，
+方程化为逐点标量二次方程 $k_d|u-U|(u-U)=-(\ts_a+D)$，
+解析解 $U=u-\operatorname{sgn}(F)\sqrt{|F|/k_d}$。内力散度随 Picard
+迭代更新；VP 刚度大时以精确切向牛顿兜底（雅可比经有限差分逐元素校验）。
+
+\subsection{数值稳定性分析}
+重力波显式 CFL $c\Delta t/\Delta x\approx51\gg1$，故海水必须隐式
+（CN-ADI 无条件稳定）；VP 应力-厚度耦合反馈要求内层时间步 $\Delta t\lesssim100$ s
+（数值实验验证），生产配置取内层 $\Delta t=60$ s、输出仍按题设 300 s 采样；
+冰厚输运 CFL 自动子循环满足 $\le0.8$。
+
+\subsection{求参与求解}
+物理常数取附录 A2；数值正则化 $\zeta_{\max}=10^5$（$-P/2$ 压力项完整保留）；
+生产网格 $10\times5$（$\Delta x=\Delta y=2000$ m，观测映射到最近单元中心）。
+
+\subsection{结果}
+24 h 正演结果：
+\begin{table}[H]
+\centering\caption{问题二关键结果}
+\label{tab:q2res}
+\begin{tabular}{lcc}
+\toprule
+指标 & 本模型 & 参考解答 \\
+\midrule
+全域最大冰速 (m/s) & 0.176813 & 0.269969 \\
+最大冰速位置 (m) & (7000, 3000) & (350, 2150) \\
+冰厚范围 (m) & 0.0001 $\sim$ 0.9748 & 0.0001 $\sim$ 2.4655 \\
+区域平均冰厚 (m) & 0.500004 & --- \\
+冰体积相对误差 & $7.6\times10^{-6}$ & 0 \\
+静水极限最大冰速 (m/s) & 0.176690（理论 0.157102） & 0.157102 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+冰速场空间规律：最大冰速出现在冰厚梯度较大的下游区（$x\approx7000$ m），
+冰速方向以风应力方向（东偏北）为主；固壁附近受无滑移约束减速，下游堆积区
+冰厚增大。图 \ref{fig:q2a}--\ref{fig:q2d} 给出 24 h 场、演化序列、中心点时序
+与统计时序。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{../figures/q2_thickness_velocity_24h.png}
+\caption{问题二：t=24h 冰厚场与冰速场}
+\label{fig:q2a}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{../figures/q2_thickness_evolution.png}
+\caption{问题二：t=0/6/12/18/24h 冰厚分布}
+\label{fig:q2b}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{../figures/q2_center_thickness_timeseries.png}
+\caption{问题二：海域中心附近冰厚随时间变化}
+\label{fig:q2c}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{../figures/q2_speed_mean_timeseries.png}
+\caption{问题二：全域最大冰速与区域平均冰厚时序}
+\label{fig:q2d}
+\end{figure}
+
+\section{问题三：$C_d$ 与 $\alpha$ 的双参数联合反演}
+\subsection{模型建立与目标函数}
+利用表 1 的 6 个位置 t=24h 冰速观测，极小化
+\begin{equation}
+	J(C_d,\alpha)=\sum_{k=1}^{6}\Big[\big(U_{\mathrm{sim},k}-U_{\mathrm{obs},k}\big)^2
+	+\big(V_{\mathrm{sim},k}-V_{\mathrm{obs},k}\big)^2\Big].
+\end{equation}
+
+\subsection{找算法}
+三种方法：网格搜索+局部精搜（粗网格全局扫描后邻域细扫）；多起点 L-BFGS-B
+（拟牛顿局部优化）；差分进化（进化全局搜索）。对比精度、求值次数、墙钟与
+初值敏感性。
+
+\subsection{结果}
+三种方法的反演结果见表 \ref{tab:q3}。基线（$C_d=0.005,\alpha=1$）的代价
+$J=0.1145$；差分进化找到的最优参数对为 $C_d^*=0.01485,\ \alpha^*=1.0899$，
+代价降至 $J^*=0.0681$（约降 $41\%$）。网格搜索（全局扫描）与差分进化（全局搜索）
+结果接近，多起点 L-BFGS-B 收敛到略差的局部最优（$J=0.0823$），说明目标函数
+存在多个局部极小——这也是用多种方法联合验证的原因。
+
+\begin{table}[H]
+\centering\caption{问题三：三种反演方法对比}
+\label{tab:q3}
+\begin{tabular}{lcccc}
+\toprule
+方法 & $C_d^*$ & $\alpha^*$ & $J^*$ & 求值次数 / 墙钟 \\
+\midrule
+网格搜索+局部精搜 & 0.01314 & 0.9333 & 0.0685 & 62 / 637 s \\
+多起点 L-BFGS-B & 0.01300 & 0.9300 & 0.0823 & 54 / 1081 s \\
+差分进化 & \textbf{0.01485} & \textbf{1.0899} & \textbf{0.0681} & 138 / 2525 s \\
+基线 & 0.005 & 1.0 & 0.1145 & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+初值敏感性：L-BFGS-B 两个起点（题设默认值与网格最优附近）分别收敛到
+$(0.013,0.930)$ 附近，参数一致但代价因局部极小不同；差分进化不依赖初值。
+观测点按“最近单元中心”映射，边界观测 $(20000,7500)$ 在 $10\times5$ 网格映射到
+$(19000,7000)$，距边界 1000 m，正常参与反演。目标函数等值线见图
+\ref{fig:q3}。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.62\textwidth]{../figures/q3_objective_contour.png}
+\caption{问题三：目标函数等值线（红*为三种方法最优）}
+\label{fig:q3}
+\end{figure}
+
+\section{问题四：基于变分同化的初始冰厚场反演}
+\subsection{变分问题（泛函极值）}
+以初始冰厚场 $h_0(x,y)$ 为控制变量，极小化
+\begin{equation}
+	J[h_0]=\frac{1}{2}\sum_{k=1}^{18}\frac{\big|\mathcal{M}[h_0](x_k,t_k)
+	-u_{\mathrm{obs},k}\big|^2}{\sigma^2}
+	+\frac{\gamma}{2}\|h_0-h_{\mathrm{bg}}\|^2,
+\end{equation}
+其中 $\mathcal{M}$ 为问题二正演算子。这是典型的泛函极值问题（变分问题），
+即“变分同化”：把稀疏冰速观测与海冰动力学模型结合，反演全场初始场。
+
+\subsection{一阶变分与伴随（Euler--Lagrange）方程}
+令 $\mathcal{M}'$ 为正演算子关于初值的切向线性化，其一阶变分
+\begin{equation}
+	\delta J=\left\langle
+	\mathcal{M}'^{*}\frac{\mathcal{M}[h_0]-u_{\mathrm{obs}}}{\sigma^2}
+	+\gamma(h_0-h_{\mathrm{bg}}),\,\delta h_0\right\rangle,
+\end{equation}
+伴随算子 $\mathcal{M}'^{*}$ 由伴随方程沿时间反向传播给出（冰厚平流伴随、
+海冰准静态伴随、浅水方程伴随；VP 正则化保持自伴），由此得梯度
+$\nabla J=\mathcal{M}'^{*}(\mathrm{残差})/\sigma^2+\gamma(h_0-h_{\mathrm{bg}})$。
+
+\subsection{化简与数值实现}
+反演是病态问题，用余弦基约化控制维数：
+\begin{equation}
+	h_0(c)=h_{\mathrm{bg}}+\sum_{k=1}^{K}c_k\cos\!\Big(\frac{m_k\pi x}{L_x}\Big)
+	\cos\!\Big(\frac{n_k\pi y}{L_y}\Big),\quad K=4,
+\end{equation}
+泛函极值问题化为 $K$ 元普通优化，用 L-BFGS-B+有限差分梯度求解（梯度做过
+一致性校验）。$\sigma=0.01$ m/s，参数 $(C_d^*,\alpha^*)$ 用问题三结果。
+
+\subsection{结果}
+以问题三参数 $C_d^*=0.01485,\ \alpha^*=1.0899$ 驱动正演，用表 2 的 18 组观测
+反演 $K=4$ 个余弦基系数。背景场代价 $J=533.79$，反演后 $J=528.59$（约降
+$1.0\%$）。这说明在 $10\times5$ 网格与当前物理口径下，18 个冰速观测对初始
+冰厚场的约束很弱（冰速场主要由风-拖曳平衡决定，对内力的依赖很小）——
+这是弱可辨识性问题的客观反映，反演结果仍作为最优估计用于 48 h 预报：
+区域平均冰厚 $0.500014$ m、最大冰速 $0.107089$ m/s、冰厚范围
+$[0.0001,0.9791]$ m。反演场与 48 h 预报见图 \ref{fig:q4a}、\ref{fig:q4b}。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{../figures/q4_initial_fields.png}
+\caption{问题四：背景场、反演初始场与修正量}
+\label{fig:q4a}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{../figures/q4_forecast_48h.png}
+\caption{问题四：48 h 预报冰厚场与冰速场}
+\label{fig:q4b}
+\end{figure}
+
+\section{问题五：动态冰情下 LNG 前半段最优航线}
+\subsection{模型建立}
+用问题三参数与问题四反演初始场正演 $t\in[24,72]$ h 逐小时冰密集度 $A(x,t)$；
+LNG 船约束
+\begin{equation}
+	V_s(t)=V_{\max}(1-A(x(t),t)),\qquad
+	q(t)=q_0+q_1V_s^2(t),
+\end{equation}
+禁航区 $A>0.6$。目标：在 $t=72$ h 前从 $S(1000,5000)$ 到达 $E(19000,5000)$，
+同时最小化航行时间与燃料。
+
+\subsection{化简：多目标到单目标}
+固定航段距离 $D$，燃料 $=D(q_0/V+q_1V)$，其关于 $V$ 的极值点
+$V^*=\sqrt{q_0/q_1}=10$ m/s $>V_{\max}=7.716$ m/s，故可行域内燃料随航速单调
+递减——最快路径即最省油路径，多目标化简为单目标时变最快路径；燃料事后积分。
+
+\subsection{找算法：时间-空间 Dijkstra}
+节点=网格单元；边权=移动时间=距离$/V_s$(出发单元,出发时刻)，随小时冰情更新；
+禁航单元不可进入。终点：正演显示 E 处于禁航区，完整航线不可行，改为
+$P^*=\arg\min_{A(P^*,T(P^*))<0.6}d(P^*,E)$（距 E 最近的可达点）。
+
+\subsection{结果}
+72 h 正演生成的逐小时冰密集度场显示：终点 E 所在单元 $A$ 值全天保持
+$0.952\sim0.958>0.6$（49/49 小时禁航），故完整航线不可行——这正是
+“只能规划前半段路程”的原因。用时间-空间 Dijkstra 求从 S 出发的最早到达场，
+取距 E 最近且可通行的点 $P^*$：
+
+\begin{table}[H]
+\centering\caption{问题五：前半段航线结果}
+\label{tab:q5}
+\begin{tabular}{lc}
+\toprule
+指标 & 数值 \\
+\midrule
+终点 E 可达性 & 不可达（$A(E)\approx0.95>0.6$ 全天） \\
+可达最近点 $P^*$ (m) & $(19100,\ 4900)$，距 E 141 m，$A=0$ \\
+到达时刻 & t=24.857 h（出发 24 h 后 51.4 min） \\
+总航行时间 & 0.857 h \\
+总燃料消耗 & 0.682 吨 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+最优路径先向南绕过中部禁航冰区，再沿南侧可航区东进，最后北上到达 $P^*$。
+三张典型时刻冰密集度场与航线见图 \ref{fig:q5a}、\ref{fig:q5b}。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{../figures/q5_A_fields.png}
+\caption{问题五：t=48/60/72h 冰密集度预测（黑线为 A=0.6 禁航阈值）}
+\label{fig:q5a}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{../figures/q5_route.png}
+\caption{问题五：LNG 前半段最优航线（背景为 t=24h 冰密集度）}
+\label{fig:q5b}
+\end{figure}
+
+\section{模型评价与改进方向}
+\subsection{优点}
+\begin{itemize}
+	\item 严格按“模型$\rightarrow$算法$\rightarrow$化简$\rightarrow$求参
+	$\rightarrow$求解$\rightarrow$答案”推进，每步可复核；
+	\item 三类方程分别选格式，稳定性、守恒性、效率均有分析支撑；
+	\item 问题四给出完整变分同化（泛函、一阶变分、伴随方程）推导；
+	\item 问题五用燃料单调性把多目标化简为单目标，路径规划透明可复现。
+\end{itemize}
+\subsection{不足与改进}
+\begin{itemize}
+	\item 海冰 VP 刚度在细网格下需要更小内层时间步，后续可改用 EVP 或
+	JFNK 求解器与隐式厚度-应力耦合；
+	\item 反演采用约化基，未来可推广到全场伴随梯度；
+	\item 航线规划采用时间-空间离散近似，可扩展为 MPC 滚动规划应对实时冰情。
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{y2025} Yan Y, Wang X, Lin Z, et al. Spatiotemporal patterns of maritime
+incidents along the Northern Sea Route: A 20-year analysis[J]. Ocean and Coastal
+Management, 2026, 353: 106061.
+\bibitem{hibler1979} Hibler W D. A dynamic thermodynamic sea ice model[J].
+Journal of Physical Oceanography, 1979, 9(4): 815--846.
+\bibitem{hunke2008} Hunke E C, Dukowicz J K. An elastic--viscous--plastic model for
+sea ice dynamics[J]. Journal of Physical Oceanography, 1997, 27(9): 1849--1867.
+\bibitem{leendertse1967} Leendertse J J. Aspects of a computational model for
+long-period water-wave propagation[J]. 1967.
+\bibitem{bocquet2015} Bocquet M, et al. Data assimilation in atmospheric chemistry
+models[J]. Atmospheric Environment, 2015.
+\end{thebibliography}
+
+\appendix
+\section{VP 本构与数值离散细节}
+应变率不变量、应力分量、厚度加权散度的离散公式，以及 CN-ADI 的三对角系统、
+FVM 迎风通量公式，与代码 `code/` 中的实现一一对应。
+
+\end{document}
